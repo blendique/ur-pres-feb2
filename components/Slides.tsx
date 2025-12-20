@@ -273,7 +273,7 @@ export const DataSlide: React.FC = () => {
              <ShieldCheck className="text-gray-500 w-6 h-6 lg:w-8 lg:h-8" />
           </div>
           <div className="mt-3 text-xs lg:text-sm text-gray-400">
-             Самый частый страх клиентов перед обращением в новый сервис.
+             Самый частый страх клиентов перед обращением в новый сервис, согласно проведенному опросу.
           </div>
         </motion.div>
 
@@ -305,13 +305,13 @@ export const DataSlide: React.FC = () => {
         >
           <div className="flex justify-between items-start">
              <div>
-                <div className="text-4xl lg:text-5xl font-bold text-uremont-accent mb-1">4.8+</div>
+                <div className="text-4xl lg:text-5xl font-bold text-uremont-accent mb-1">56.9%+</div>
                 <div className="text-base lg:text-lg font-medium text-white">Доверяют рейтингу больше</div>
              </div>
              <ThumbsUp className="text-gray-500 w-6 h-6 lg:w-8 lg:h-8" />
           </div>
           <div className="mt-3 text-xs lg:text-sm text-gray-400">
-             56.9% пользователей доверяют рейтингу, и только 17.5% — сертификатам.
+             Пользователи в большей части доверяют рейтингу и живым отзывам на платформе, и только 17.5% — сертификатам.
           </div>
         </motion.div>
 
@@ -330,7 +330,7 @@ export const DataSlide: React.FC = () => {
              <Search className="text-gray-500 w-6 h-6 lg:w-8 lg:h-8" />
           </div>
           <div className="mt-3 text-xs lg:text-sm text-gray-400">
-             Удобнее выбрать Марку → Модель → Проблему, чем писать в свободной форме.
+             Удобнее выбрать Марку → Модель из предоставленного списка, а проблему - описывать в свободной форме.
           </div>
         </motion.div>
       </div>
@@ -625,8 +625,8 @@ export const SolutionSlide4: React.FC = () => {
                     <Headphones size={20} />
                   </div>
                   <div>
-                    <h3 className="font-bold text-white text-base">Новые скрипты поддержки</h3>
-                    <p className="text-xs text-gray-400">Переработанные скрипты службы поддержки и улучшенное взаимодействие</p>
+                    <h3 className="font-bold text-white text-base">Улучшения в процессах СП</h3>
+                    <p className="text-xs text-gray-400">Переработанные скрипты, ускоренное взаимодействие с пользователем</p>
                   </div>
                </div>
            </div>
@@ -689,17 +689,17 @@ export const PlanSlide: React.FC = () => {
     {
        icon: TrendingUp,
        title: "Экспертное УТП",
-       desc: "Доработка текстов и лендингов для помощи в принятии решений."
+       desc: "Доработка текстов и лендингов в сторону помощи в принятии решений."
     },
     {
        icon: Bot,
        title: "ИИ-автомеханик",
-       desc: "Умный помощник, который поддерживает пользователя 24/7."
+       desc: "Умный помощник, который помогает пользователю с автомобильными вопросами 24/7."
     },
     {
        icon: Repeat,
        title: "Retention & LTV",
-       desc: "Подписочные механики для удержания клиентов."
+       desc: "Проработка подписочных механик для удержания клиентов."
     },
     {
        icon: Car,
@@ -711,7 +711,7 @@ export const PlanSlide: React.FC = () => {
   const dataPlan = {
        icon: FileBarChart,
        title: "Data-driven Dev",
-       desc: "Доработки по данным A/B тестирования и воронки."
+       desc: "Доработки по данным, полученным в рамках A/B тестирования и анализу воронки на трафике."
   };
 
   return (
