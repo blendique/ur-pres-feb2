@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Logo } from './components/Logo';
 import { Navigation } from './components/Navigation';
-import { WelcomeSlide, AgendaSlide, ProblemSlide, DataSlide, SolutionSlide1, SolutionSlide2, SolutionSlide3, PlanSlide, DiscussionSlide } from './components/Slides';
+import { WelcomeSlide, AgendaSlide, ProblemSlide, DataSlide, SolutionSlide1, SolutionSlide2, SolutionSlide3, SolutionSlide4, PlanSlide, DiscussionSlide } from './components/Slides';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const TOTAL_SLIDES = 9;
+const TOTAL_SLIDES = 10;
 
 const App: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -74,7 +74,7 @@ const App: React.FC = () => {
       scale: 1,
       transition: {
         duration: 0.8,
-        ease: [0.16, 1, 0.3, 1], // Custom expensive easing
+        ease: [0.16, 1, 0.3, 1] as [number, number, number, number], // Custom expensive easing
       }
     },
     exit: (dir: number) => ({
@@ -83,7 +83,7 @@ const App: React.FC = () => {
       scale: 1.05,
       transition: {
         duration: 0.8,
-        ease: [0.16, 1, 0.3, 1],
+        ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
       }
     })
   };
@@ -97,8 +97,9 @@ const App: React.FC = () => {
       case 4: return <SolutionSlide1 />;
       case 5: return <SolutionSlide2 />;
       case 6: return <SolutionSlide3 />;
-      case 7: return <PlanSlide />;
-      case 8: return <DiscussionSlide />;
+      case 7: return <SolutionSlide4 />;
+      case 8: return <PlanSlide />;
+      case 9: return <DiscussionSlide />;
       default: return <WelcomeSlide />;
     }
   };
@@ -134,7 +135,7 @@ const App: React.FC = () => {
               </div>
               <div className="h-8 w-[1px] bg-gray-700"></div>
               <div className="text-xl font-mono text-gray-500">
-                0{currentSlide + 1} <span className="text-gray-700 text-sm">/ 0{TOTAL_SLIDES}</span>
+                {currentSlide < 9 ? `0${currentSlide + 1}` : currentSlide + 1} <span className="text-gray-700 text-sm">/ {TOTAL_SLIDES}</span>
               </div>
             </div>
           </motion.div>

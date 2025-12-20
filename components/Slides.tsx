@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, BarChart3, ShieldCheck, Zap, Users, MessageSquare, Search, ThumbsUp, Wallet, Database, BrainCircuit, MousePointerClick, TrendingUp, Bot, Repeat, Car, PlayCircle, ChevronLeft, ChevronRight, FileBarChart } from 'lucide-react';
+import { ArrowRight, BarChart3, ShieldCheck, Zap, Users, MessageSquare, Search, ThumbsUp, Wallet, Database, BrainCircuit, MousePointerClick, TrendingUp, Bot, Repeat, Car, PlayCircle, ChevronLeft, ChevronRight, FileBarChart, Phone, Star, CheckCircle } from 'lucide-react';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -70,7 +70,7 @@ export const WelcomeSlide: React.FC = () => {
         <motion.p variants={itemVariants} className="text-xl md:text-3xl text-gray-400 font-light max-w-4xl">
           Глобальные изменения в продукте.
           <br />
-          Улучшение пользовательского опыта и новый взгляд на УТП сервиса.
+          Улучшение пользовательского опыта. Новый взгляд на УТП.
         </motion.p>
       </motion.div>
       
@@ -523,8 +523,7 @@ export const SolutionSlide3: React.FC = () => {
            <span className="text-uremont-accent font-mono text-sm tracking-wider">РЕШЕНИЕ #3</span>
            <h2 className="text-4xl font-bold mt-2 mb-6">Доработки в <br /><span className="text-uremont-blue">алгоритм искусственного интеллекта</span></h2>
            <p className="text-xl text-gray-300 leading-relaxed mb-6">
-             Обновили алгоритм сопоставления запросов пользователей и ИИ-ответа. <br/><br/>
-             Система теперь понимает контекст и предлагает максимально релевантные решения.
+             Обновили алгоритм сопоставления запросов пользователей и ИИ-ответа. Система теперь понимает контекст и предлагает максимально релевантные решения.
            </p>
         </motion.div>
 
@@ -575,9 +574,98 @@ export const SolutionSlide3: React.FC = () => {
   );
 };
 
-// --- Slide 8: Future Plans (PlanSlide) ---
+// --- Slide 8: Solution 4 (Customer Path & Quality) ---
+export const SolutionSlide4: React.FC = () => {
+  return (
+    <div className="h-full flex flex-col justify-center px-6 md:px-24">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <motion.div
+           initial="hidden"
+           whileInView="visible"
+           variants={containerVariants}
+        >
+           <span className="text-uremont-accent font-mono text-sm tracking-wider">РЕШЕНИЕ #4</span>
+           <h2 className="text-4xl font-bold mt-2 mb-6">Новый <span className="text-uremont-blue">клиентский путь</span> и <span className="text-uremont-accent">Качество СТО</span></h2>
+           <p className="text-xl text-gray-300 leading-relaxed mb-8">
+             Переработали клиентский путь с приоритетом в простой звонок в один клик, а также пересмотрели подход к подключенным СТО, улучшив их качество.
+           </p>
+
+           <div className="flex flex-col gap-4">
+               <div className="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
+                  <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center text-green-500 shrink-0">
+                    <Phone size={24} />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-white text-lg">Звонок в 1 клик</h3>
+                    <p className="text-sm text-gray-400">Минимизация шагов до контакта с сервисом</p>
+                  </div>
+               </div>
+               <div className="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
+                  <div className="w-12 h-12 rounded-full bg-yellow-500/20 flex items-center justify-center text-yellow-500 shrink-0">
+                    <Star size={24} />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-white text-lg">Стандарт качества</h3>
+                    <p className="text-sm text-gray-400">Строгий отбор и регулярная проверка партнеров</p>
+                  </div>
+               </div>
+           </div>
+        </motion.div>
+
+        <motion.div 
+           initial={{ x: 50, opacity: 0 }}
+           whileInView={{ x: 0, opacity: 1 }}
+           transition={{ duration: 0.7 }}
+           className="relative"
+        >
+             {/* Abstract Visualization of Connection */}
+             <div className="relative w-full aspect-square max-w-[500px] mx-auto">
+                 {/* Center Circle (User) */}
+                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+                    <div className="w-24 h-24 bg-uremont-blue rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(37,99,235,0.5)]">
+                        <Phone size={40} className="text-white animate-pulse" />
+                    </div>
+                 </div>
+
+                 {/* Orbiting Circles (STO) */}
+                 {[0, 72, 144, 216, 288].map((deg, i) => (
+                    <motion.div
+                       key={i}
+                       className="absolute top-1/2 left-1/2 w-16 h-16 -ml-8 -mt-8 bg-gray-800 rounded-full border-2 border-green-500 flex items-center justify-center z-10"
+                       initial={{ rotate: deg, translateX: 140 }}
+                       animate={{ rotate: deg + 360 }}
+                       transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                       style={{ transformOrigin: "50% 50%" }} // Not quite working with simple framer animate needing complex transform
+                    >
+                       <div className="absolute inset-0 flex items-center justify-center" style={{ transform: `rotate(-${deg}deg)` }}>
+                          <CheckCircle size={24} className="text-green-500" />
+                       </div>
+                    </motion.div>
+                 ))}
+
+                 {/* Connecting Lines ring */}
+                 <div className="absolute inset-0 rounded-full border border-dashed border-gray-700 animate-spin-slow" />
+                 
+                 {/* Static representation for simplicity/reliability in code generation without external assets */}
+                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div className="w-[300px] h-[300px] rounded-full border border-gray-700 opacity-50"></div>
+                 </div>
+                 
+                 {/* Badges positioned statically for layout stability */}
+                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#020617] px-4 py-2 rounded-full border border-green-500/50 shadow-lg flex items-center gap-2">
+                    <ShieldCheck size={16} className="text-green-500" />
+                    <span className="text-xs font-bold text-green-500 uppercase">Verified Partner</span>
+                 </div>
+             </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+// --- Slide 9: Future Plans (PlanSlide) ---
 export const PlanSlide: React.FC = () => {
-  const plans = [
+  const mainPlans = [
     {
        icon: TrendingUp,
        title: "Экспертное УТП",
@@ -597,13 +685,14 @@ export const PlanSlide: React.FC = () => {
        icon: Car,
        title: "Новые вертикали",
        desc: "Расширение в мойки, детейлинг и другие смежные услуги."
-    },
-    {
+    }
+  ];
+
+  const dataPlan = {
        icon: FileBarChart,
        title: "Data-driven Dev",
        desc: "Доработки по данным, полученным в ходе A/B тестирования и анализа воронки на трафике."
-    }
-  ];
+  };
 
   return (
     <div className="h-full flex flex-col justify-center px-12 md:px-24">
@@ -624,31 +713,55 @@ export const PlanSlide: React.FC = () => {
          variants={containerVariants}
          initial="hidden"
          whileInView="visible"
-         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl"
+         className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-7xl h-auto lg:h-[450px]"
       >
-         {plans.map((plan, i) => (
-            <motion.div 
-               key={i}
-               variants={itemVariants}
-               className="bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-uremont-blue hover:bg-white/10 transition-all flex items-start gap-6 group"
-            >
-               <div className="bg-uremont-blue/20 p-4 rounded-xl text-uremont-blue group-hover:bg-uremont-blue group-hover:text-white transition-colors shrink-0">
-                  <plan.icon size={24} />
-               </div>
-               <div>
-                  <h3 className="text-lg font-bold text-white mb-2">{plan.title}</h3>
-                  <p className="text-gray-400 text-xs leading-relaxed">
-                     {plan.desc}
-                  </p>
-               </div>
-            </motion.div>
-         ))}
+         {/* Left Column: 2x2 Grid */}
+         <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 h-full">
+            {mainPlans.map((plan, i) => (
+                <motion.div 
+                   key={i}
+                   variants={itemVariants}
+                   className="bg-white/5 p-6 rounded-2xl border border-white/10 hover:border-uremont-blue hover:bg-white/10 transition-all flex flex-col justify-between group h-full"
+                >
+                   <div className="bg-uremont-blue/20 w-12 h-12 flex items-center justify-center rounded-xl text-uremont-blue group-hover:bg-uremont-blue group-hover:text-white transition-colors mb-4">
+                      <plan.icon size={24} />
+                   </div>
+                   <div>
+                      <h3 className="text-lg font-bold text-white mb-2">{plan.title}</h3>
+                      <p className="text-gray-400 text-xs leading-relaxed">
+                         {plan.desc}
+                      </p>
+                   </div>
+                </motion.div>
+            ))}
+         </div>
+
+         {/* Right Column: Big Highlighted Block */}
+         <motion.div 
+            variants={itemVariants}
+            className="lg:col-span-1 bg-gradient-to-br from-uremont-blue/20 to-uremont-dark border border-uremont-blue/50 p-8 rounded-2xl flex flex-col justify-center items-center text-center relative overflow-hidden group h-full"
+         >
+            <div className="absolute inset-0 bg-uremont-blue/10 blur-3xl group-hover:bg-uremont-blue/20 transition-colors" />
+            
+            <div className="relative z-10">
+                <div className="bg-uremont-blue w-20 h-20 mx-auto flex items-center justify-center rounded-2xl text-white shadow-lg shadow-uremont-blue/30 mb-6 scale-100 group-hover:scale-110 transition-transform duration-500">
+                    <dataPlan.icon size={40} />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">{dataPlan.title}</h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                   {dataPlan.desc}
+                </p>
+                <div className="mt-8 px-4 py-1 rounded-full border border-uremont-blue/50 text-uremont-blue text-xs font-mono">
+                    CORE METHODOLOGY
+                </div>
+            </div>
+         </motion.div>
       </motion.div>
     </div>
   );
 };
 
-// --- Slide 9: Discussion (DiscussionSlide) ---
+// --- Slide 10: Discussion (DiscussionSlide) ---
 export const DiscussionSlide: React.FC = () => {
   return (
     <div className="h-full flex flex-col justify-center px-12 md:px-24">
