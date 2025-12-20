@@ -600,6 +600,14 @@ export const SolutionSlide4: React.FC = () => {
     return () => clearInterval(timer);
   }, []);
 
+  const otherPins = [
+      { top: '30%', left: '20%' },
+      { top: '45%', left: '75%' },
+      { top: '65%', left: '30%' },
+      { top: '25%', left: '60%' },
+      { top: '70%', left: '80%' }
+  ];
+
   return (
     <div className="h-full flex flex-col justify-center px-6 md:px-24">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -612,8 +620,8 @@ export const SolutionSlide4: React.FC = () => {
            <h2 className="text-3xl lg:text-4xl font-bold mt-2 mb-6">Новый <span className="text-uremont-blue">клиентский путь</span> и качество сервиса</h2>
            
            <div className="flex flex-col gap-3">
-               <div className={`flex items-center gap-4 p-3 rounded-xl border transition-colors ${animStep === 2 || animStep === 3 ? 'bg-white/10 border-uremont-blue' : 'bg-white/5 border-white/10'}`}>
-                  <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 transition-colors ${animStep === 2 || animStep === 3 ? 'bg-uremont-blue text-white' : 'bg-green-500/20 text-green-500'}`}>
+               <div className={`flex items-center gap-4 p-3 rounded-xl border transition-colors ${animStep === 3 ? 'bg-white/10 border-uremont-blue' : 'bg-white/5 border-white/10'}`}>
+                  <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 transition-colors ${animStep === 3 ? 'bg-uremont-blue text-white' : 'bg-green-500/20 text-green-500'}`}>
                     <Phone size={20} />
                   </div>
                   <div>
@@ -621,8 +629,8 @@ export const SolutionSlide4: React.FC = () => {
                     <p className="text-xs text-gray-400">Минимизация шагов до контакта с сервисом</p>
                   </div>
                </div>
-               <div className="flex items-center gap-4 bg-white/5 p-3 rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
-                  <div className="w-10 h-10 rounded-full bg-yellow-500/20 flex items-center justify-center text-yellow-500 shrink-0">
+               <div className={`flex items-center gap-4 p-3 rounded-xl border transition-colors ${animStep === 2 ? 'bg-white/10 border-yellow-500' : 'bg-white/5 border-white/10'}`}>
+                  <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 transition-colors ${animStep === 2 ? 'bg-yellow-500 text-white' : 'bg-yellow-500/20 text-yellow-500'}`}>
                     <Star size={20} />
                   </div>
                   <div>
@@ -657,7 +665,11 @@ export const SolutionSlide4: React.FC = () => {
                 <div className="flex-1 bg-gradient-to-br from-gray-800 to-gray-950 relative overflow-hidden">
                     
                     {/* Background Map Effect */}
-                    <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle, #4b5563 1px, transparent 1px)', backgroundSize: '10px 10px' }}></div>
+                    <img 
+                        src="https://placehold.co/300x600/111827/374151?text=Moscow+Map+Dark" 
+                        alt="Map"
+                        className="absolute inset-0 w-full h-full object-cover opacity-50"
+                    />
 
                     <AnimatePresence mode='wait'>
                         {/* Step 0 & 1: Form Input */}
@@ -667,7 +679,7 @@ export const SolutionSlide4: React.FC = () => {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
-                                className="absolute inset-0 flex flex-col justify-center px-4 space-y-3 z-10"
+                                className="absolute inset-0 flex flex-col justify-center px-4 space-y-3 z-10 bg-gray-900/80 backdrop-blur-sm"
                             >
                                 <motion.div 
                                     initial={{ x: -20, opacity: 0 }}
@@ -705,20 +717,35 @@ export const SolutionSlide4: React.FC = () => {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
-                                className="absolute inset-0 flex items-center justify-center z-10"
+                                className="absolute inset-0 z-10"
                             >
+                                {/* Background Pins */}
+                                {otherPins.map((pos, i) => (
+                                    <motion.div
+                                        key={i}
+                                        initial={{ opacity: 0, scale: 0 }}
+                                        animate={{ opacity: 0.7, scale: 1 }}
+                                        transition={{ delay: 0.1 * i }}
+                                        className="absolute text-gray-500"
+                                        style={{ top: pos.top, left: pos.left }}
+                                    >
+                                        <MapPin size={24} className="fill-current" />
+                                    </motion.div>
+                                ))}
+
+                                {/* Main Active Pin */}
                                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                                      <motion.div 
                                         initial={{ scale: 0, y: 20 }}
                                         animate={{ scale: 1, y: 0 }}
-                                        transition={{ type: "spring", stiffness: 300, damping: 15 }}
+                                        transition={{ type: "spring", stiffness: 300, damping: 15, delay: 0.3 }}
                                         className="relative"
                                      >
                                          <MapPin size={40} className="text-red-500 fill-current" />
                                          <motion.div 
                                             initial={{ opacity: 0, y: 10 }}
                                             animate={{ opacity: 1, y: 0 }}
-                                            transition={{ delay: 0.3 }}
+                                            transition={{ delay: 0.5 }}
                                             className="absolute -top-8 left-1/2 -translate-x-1/2 bg-white text-black text-[10px] font-bold px-2 py-1 rounded shadow-lg whitespace-nowrap"
                                          >
                                             5 400 ₽
@@ -729,7 +756,7 @@ export const SolutionSlide4: React.FC = () => {
                                     initial={{ y: 50, opacity: 0 }}
                                     animate={{ y: 0, opacity: 1 }}
                                     transition={{ delay: 0.8 }}
-                                    className="absolute bottom-6 w-[80%]"
+                                    className="absolute bottom-6 w-full px-4"
                                 >
                                     <div className="bg-green-500 text-white text-xs font-bold py-2 rounded-lg text-center shadow-lg flex items-center justify-center gap-2">
                                         <Phone size={12} />
@@ -762,7 +789,7 @@ export const SolutionSlide4: React.FC = () => {
                                             <span className="text-[8px] text-gray-500">Сейчас</span>
                                         </div>
                                         <p className="text-[10px] text-gray-300 leading-tight">
-                                            Вы записаны на сервис. <br/> Audi Q8, 14:00. <br/>Предварительная стоимость: 3.000 рублей.
+                                            Вы записаны на сервис. <br/> Audi Q8, 14:00. Предварительная стоимость: 3.000 рублей.
                                         </p>
                                     </div>
                                 </motion.div>
