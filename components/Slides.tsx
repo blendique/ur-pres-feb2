@@ -138,14 +138,6 @@ export const AgendaSlide: React.FC = () => {
 export const ProblemSlide: React.FC = () => {
   const [activeProblem, setActiveProblem] = useState<number>(1);
 
-  // Map hover index to image URL.
-  const problemImages: Record<number, string> = {
-    1: 'https://placehold.co/800x600/e2e8f0/1e293b?text=Old+Landing+(Screen+1)',
-    2: 'https://placehold.co/800x600/e2e8f0/1e293b?text=Old+Landing+(Screen+1)',
-    3: 'https://placehold.co/800x600/e2e8f0/1e293b?text=Map+Interface+(Screen+2)',
-    4: 'https://placehold.co/800x600/e2e8f0/1e293b?text=Car+Database+(Screen+3)'
-  };
-
   return (
     <div className="h-full flex flex-col justify-center px-8 md:px-24">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -223,14 +215,14 @@ export const ProblemSlide: React.FC = () => {
            initial={{ opacity: 0, scale: 0.9 }}
            whileInView={{ opacity: 1, scale: 1 }}
            transition={{ duration: 0.5 }}
-           className="h-[35vh] min-h-[300px] w-full hidden lg:block"
+           className="w-full aspect-video relative hidden lg:block"
         >
            <BrowserWindow title="uremont.com (v1.0)">
-              <div className="w-full h-full bg-gray-100 flex items-center justify-center overflow-hidden">
+              <div className="w-full h-full bg-black flex items-center justify-center overflow-hidden">
                 <img 
-                  src={problemImages[activeProblem]} 
-                  alt={`Problem Screen ${activeProblem}`}
-                  className="w-full h-full object-cover object-top transition-opacity duration-300"
+                  src="https://pim4y1v96ezxxeus.public.blob.vercel-storage.com/6.png" 
+                  alt="Старый интерфейс лендинга"
+                  className="w-full h-full object-cover"
                 />
               </div>
            </BrowserWindow>
@@ -353,7 +345,7 @@ export const SolutionSlide1: React.FC = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % content.length);
-    }, 10000); // 10 seconds
+    }, 15000); // 15 seconds
     return () => clearInterval(timer);
   }, [content.length]);
 
@@ -381,6 +373,10 @@ export const SolutionSlide1: React.FC = () => {
              <div className="bg-white/5 p-3 rounded-lg border-l-2 border-uremont-accent">
                <h3 className="text-white font-semibold text-sm mb-1">Действие в 1 клик</h3>
                <p className="text-gray-400 text-xs">Добавлена возможность перейти на карту с активным действием. <br />Всё внимание акцентировано вокруг него.</p>
+             </div>
+             <div className="bg-white/5 p-3 rounded-lg border-l-2 border-purple-500">
+               <h3 className="text-white font-semibold text-sm mb-1">AI-Ready Дизайн</h3>
+               <p className="text-gray-400 text-xs">Минималистичный интерфейс, привычный пользователям современных нейросетей.</p>
              </div>
            </div>
         </motion.div>
@@ -450,7 +446,7 @@ export const SolutionSlide1: React.FC = () => {
               transition={{ delay: 0.5 }}
               className="text-center text-xs lg:text-sm text-gray-400 font-mono"
             >
-              4 варианта (Фото/Видео), основанные на CustDev.
+              4 варианта лендингов, основанные на CustDev.
             </motion.p>
         </div>
       </div>
@@ -460,91 +456,38 @@ export const SolutionSlide1: React.FC = () => {
 
 // --- Slide 6: Solution 2 (Database & Services) ---
 export const SolutionSlide2: React.FC = () => {
-  const brands = ["Audi", "BMW", "Exeed", "Tank", "Toyota", "Mercedes", "Haval", "Geely", "Chery"];
-  const audiModels = [
-    { name: "A3", gen: "8Y" },
-    { name: "A4", gen: "B9" },
-    { name: "A5", gen: "F5" },
-    { name: "A6", gen: "C8" },
-    { name: "Q3", gen: "F3" },
-    { name: "Q5", gen: "FY" },
-    { name: "Q7", gen: "4M" },
-    { name: "Q8", gen: "4M" },
-  ];
-
   return (
     <div className="h-full flex flex-col justify-center px-6 md:px-24">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <motion.div
+       <motion.div
            initial="hidden"
            whileInView="visible"
            variants={containerVariants}
-           className="order-2 md:order-1"
+           className="max-w-4xl mx-auto text-center"
         >
-           <span className="text-uremont-accent font-mono text-sm tracking-wider">РЕШЕНИЕ #2</span>
-           <h2 className="text-3xl lg:text-4xl font-bold mt-2 mb-4">Масштабирование <br /><span className="text-uremont-blue">базы данных</span></h2>
+           <motion.span variants={itemVariants} className="text-uremont-accent font-mono text-sm tracking-wider">РЕШЕНИЕ #2</motion.span>
+           <motion.h2 variants={itemVariants} className="text-3xl lg:text-5xl font-bold mt-2 mb-10">Масштабирование <br /><span className="text-uremont-blue">базы данных</span></motion.h2>
            
-           <div className="grid grid-cols-2 gap-4 mb-6">
-              <div className="bg-white/5 p-3 rounded-xl text-center flex flex-col items-center justify-center">
+           <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-2 gap-6 mb-10 max-w-2xl mx-auto">
+              <div className="bg-white/5 p-6 rounded-xl text-center flex flex-col items-center justify-center border border-white/10 hover:border-uremont-blue transition-colors">
                  <div className="flex items-baseline gap-2">
                     <span className="text-gray-500 line-through text-base">78</span>
-                    <div className="text-3xl font-bold text-uremont-blue mb-1">400+</div>
+                    <div className="text-5xl font-bold text-uremont-blue mb-1">400+</div>
                  </div>
-                 <div className="text-xs text-gray-400">Услуг</div>
+                 <div className="text-sm text-gray-400 uppercase tracking-widest mt-2">Услуг</div>
               </div>
-              <div className="bg-white/5 p-3 rounded-xl text-center flex flex-col items-center justify-center">
+              <div className="bg-white/5 p-6 rounded-xl text-center flex flex-col items-center justify-center border border-white/10 hover:border-uremont-accent transition-colors">
                  <div className="flex items-baseline gap-2">
                     <span className="text-gray-500 line-through text-base">2023</span>
-                    <div className="text-3xl font-bold text-uremont-accent mb-1">2025</div>
+                    <div className="text-5xl font-bold text-uremont-accent mb-1">2025</div>
                  </div>
-                 <div className="text-xs text-gray-400">Модельный год</div>
+                 <div className="text-sm text-gray-400 uppercase tracking-widest mt-2">Модельный год</div>
               </div>
-           </div>
+           </motion.div>
 
-           <p className="text-base lg:text-lg text-gray-300 leading-relaxed mb-6">
+           <motion.p variants={itemVariants} className="text-lg md:text-xl text-gray-300 leading-relaxed mx-auto max-w-2xl">
              Полностью переработанные справочники. Теперь пользователи могут найти любую специфическую услугу и выбрать автомобиль любой комплектации, включая новинки рынка.
-           </p>
+           </motion.p>
         </motion.div>
-
-        <motion.div 
-           initial={{ y: 50, opacity: 0 }}
-           whileInView={{ y: 0, opacity: 1 }}
-           transition={{ duration: 0.7 }}
-           className="h-[45vh] min-h-[350px] w-full order-1 md:order-2"
-        >
-          <BrowserWindow title="uremont.com/catalog">
-             <div className="p-4 md:p-6 flex flex-col gap-4 h-full text-white bg-[#020617]">
-                <div className="w-full h-8 bg-gray-800 rounded flex items-center px-3 gap-2 border border-gray-700 shrink-0">
-                   <Search className="w-4 h-4 text-gray-500" />
-                   <div className="w-32 h-2 bg-gray-600 rounded"></div>
-                </div>
-                
-                <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide shrink-0">
-                   {brands.map((brand, i) => (
-                      <div 
-                        key={i} 
-                        className={`px-3 py-1 rounded-full text-[10px] whitespace-nowrap border cursor-pointer transition-colors ${brand === 'Audi' ? 'bg-uremont-blue/20 text-uremont-blue border-uremont-blue/50' : 'bg-gray-800 text-gray-400 border-gray-700 hover:bg-gray-700'}`}
-                      >
-                        {brand}
-                      </div>
-                   ))}
-                </div>
-
-                <div className="flex-1 overflow-y-auto grid grid-cols-2 gap-3 content-start pr-1 custom-scrollbar">
-                   {audiModels.map((model, i) => (
-                      <div key={i} className="bg-gray-800/50 p-3 rounded border border-gray-700 hover:border-uremont-blue transition-colors flex flex-col">
-                         <div className="w-full aspect-video bg-gray-700 rounded mb-2 flex items-center justify-center">
-                             <Car className="text-gray-600 w-6 h-6" />
-                         </div>
-                         <div className="font-bold text-sm text-gray-200">{model.name}</div>
-                         <div className="text-[10px] text-gray-500">{model.gen}</div>
-                      </div>
-                   ))}
-                </div>
-             </div>
-          </BrowserWindow>
-        </motion.div>
-      </div>
     </div>
   );
 };
@@ -571,41 +514,18 @@ export const SolutionSlide3: React.FC = () => {
            initial={{ y: 50, opacity: 0 }}
            whileInView={{ y: 0, opacity: 1 }}
            transition={{ duration: 0.7 }}
-           className="h-[40vh] min-h-[300px] w-full order-1 md:order-2"
+           className="w-full max-w-[500px] aspect-square mx-auto order-1 md:order-2"
         >
           <BrowserWindow title="uremont.com/ai-chat">
-             <div className="p-4 md:p-6 flex flex-col h-full justify-between bg-[#020617] text-white">
-                <div className="space-y-4 overflow-y-auto">
-                   {/* User Message */}
-                   <div className="flex justify-end">
-                      <div className="bg-uremont-blue px-4 py-2 rounded-2xl rounded-tr-none text-white text-xs md:text-sm max-w-[80%]">
-                         Стук в двигателе при разгоне, Audi Q8 2024
-                      </div>
-                   </div>
-                   
-                   {/* Processing Animation */}
-                   <div className="flex gap-2 items-center text-[10px] md:text-xs text-gray-500 my-2">
-                      <div className="w-3 h-3 md:w-4 md:h-4 border-2 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
-                      AI анализирует симптомы...
-                   </div>
-
-                   {/* AI Response */}
-                   <div className="flex justify-start">
-                      <div className="bg-gray-800 border border-purple-500/30 px-4 py-3 rounded-2xl rounded-tl-none text-gray-200 text-xs md:text-sm max-w-[95%] shadow-[0_0_15px_rgba(168,85,247,0.1)]">
-                         <div className="font-bold text-purple-400 mb-1 text-[10px] uppercase tracking-wider">Рекомендация</div>
-                         Вероятно проблема с ТНВД или гидрокомпенсаторами. <br/>
-                         Подобрал 3 профильных сервиса по VAG:
-                         <div className="mt-2 space-y-1">
-                            <div className="bg-gray-900/50 p-2 rounded border border-gray-700 text-[10px]">🛠 VAG-Expert (2.1 км)</div>
-                            <div className="bg-gray-900/50 p-2 rounded border border-gray-700 text-[10px]">🛠 Audi-Center (5.4 км)</div>
-                         </div>
-                      </div>
-                   </div>
-                </div>
-                
-                <div className="w-full h-10 bg-gray-800 rounded border border-gray-700 mt-4 flex items-center px-4 text-gray-500 text-xs md:text-sm shrink-0">
-                   Напишите сообщение...
-                </div>
+             <div className="w-full h-full bg-black overflow-hidden">
+                <video
+                   src="https://pim4y1v96ezxxeus.public.blob.vercel-storage.com/5.mp4"
+                   autoPlay
+                   muted
+                   loop
+                   playsInline
+                   className="w-full h-full object-cover"
+                />
              </div>
           </BrowserWindow>
         </motion.div>
