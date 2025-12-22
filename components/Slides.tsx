@@ -33,7 +33,7 @@ const BrowserWindow: React.FC<{ children: React.ReactNode; title?: string }> = (
       </div>
     </div>
     {/* Browser Content */}
-    <div className="flex-1 bg-[#020617] overflow-hidden relative p-4 flex flex-col">
+    <div className="flex-1 bg-[#020617] overflow-hidden relative p-2 flex flex-col">
        <div className="w-full h-full bg-white rounded-lg border border-gray-800 overflow-hidden relative text-black">
           {children}
        </div>
@@ -140,7 +140,7 @@ export const ProblemSlide: React.FC = () => {
 
   return (
     <div className="h-full flex flex-col justify-center px-8 md:px-24">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.2fr] gap-8 lg:gap-12 items-center">
         <motion.div
            initial="hidden"
            whileInView="visible"
@@ -215,7 +215,7 @@ export const ProblemSlide: React.FC = () => {
            initial={{ opacity: 0, scale: 0.9 }}
            whileInView={{ opacity: 1, scale: 1 }}
            transition={{ duration: 0.5 }}
-           className="w-full aspect-video relative hidden lg:block"
+           className="w-full aspect-[16/10] relative hidden lg:block"
         >
            <BrowserWindow title="uremont.com (v1.0)">
               <div className="w-full h-full bg-black flex items-center justify-center overflow-hidden">
@@ -345,7 +345,7 @@ export const SolutionSlide1: React.FC = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % content.length);
-    }, 15000); // 15 seconds
+    }, 150000); // 15 seconds
     return () => clearInterval(timer);
   }, [content.length]);
 
@@ -386,7 +386,7 @@ export const SolutionSlide1: React.FC = () => {
                initial={{ y: 50, opacity: 0 }}
                whileInView={{ y: 0, opacity: 1 }}
                transition={{ duration: 0.7 }}
-               className="w-full aspect-video relative"
+               className="w-full aspect-[16/10] relative"
             >
               <BrowserWindow title="uremont.com/ab-test">
                  <div className="relative w-full h-full group bg-black">
@@ -506,7 +506,7 @@ export const SolutionSlide3: React.FC = () => {
            <span className="text-uremont-accent font-mono text-sm tracking-wider">РЕШЕНИЕ #3</span>
            <h2 className="text-3xl lg:text-4xl font-bold mt-2 mb-6">Доработки алгоритма <br /><span className="text-uremont-blue">искусственного интеллекта</span></h2>
            <p className="text-lg text-gray-300 leading-relaxed mb-6">
-             Обновили алгоритм сопоставления запросов пользователей и ИИ-ответа. Система теперь понимает контекст и предлагает максимально релевантные решения.
+             Обновили алгоритм сопоставления запросов пользователей и ИИ-ответа. Система теперь понимает контекст и предлагает максимально релевантные решения. В настоящее время алгоритм проходит дообучение, точность будет улучшаться в процессе использования.
            </p>
         </motion.div>
 
@@ -514,7 +514,7 @@ export const SolutionSlide3: React.FC = () => {
            initial={{ y: 50, opacity: 0 }}
            whileInView={{ y: 0, opacity: 1 }}
            transition={{ duration: 0.7 }}
-           className="w-full max-w-[500px] aspect-square mx-auto order-1 md:order-2"
+           className="w-full max-w-[700px] aspect-square mx-auto order-1 md:order-2"
         >
           <BrowserWindow title="uremont.com/ai-chat">
              <div className="w-full h-full bg-black overflow-hidden">
