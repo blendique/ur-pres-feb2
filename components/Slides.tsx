@@ -87,7 +87,7 @@ export const AgendaSlide: React.FC = () => {
     { id: 2, title: "CustDev и цифры", desc: "Данные, на которых основаны решения: аудитория и боли, факторы доверия" },
     { id: 3, title: "Новые решения", desc: "Переработанное УТП, новая база данных, обновление AI-алгоритмов" },
     { id: 4, title: "Обновленная операционная модель", desc: "Технологичность, скорость и контроль качества звонков через AI" },
-    { id: 5, title: "Новая стратегия партнеров", desc: "Измененные стандарты для партнеров и план масштабирования" },
+    { id: 5, title: "Новая система отбора СТО", desc: "Измененные стандарты для партнеров и план масштабирования" },
     { id: 6, title: "План доработок", desc: "Список запланированных работ на Q1 2026" },
     { id: 7, title: "Свободное обсуждение", desc: "Q&A сессия по результатам презентации" },
   ];
@@ -247,7 +247,7 @@ export const DataSlide: React.FC = () => {
       >
         <span className="text-uremont-accent font-mono text-sm tracking-wider">02 / АУДИТОРИЯ И БОЛИ</span>
         <h2 className="text-3xl md:text-5xl font-bold mt-2">
-          В основе решений — <span className="text-uremont-blue">реальный контекст</span>
+          В основе решений — <span className="text-uremont-blue">настоящие проблемы</span>
         </h2>
       </motion.div>
 
@@ -345,7 +345,7 @@ export const DataSlide2: React.FC = () => {
       >
         <span className="text-uremont-accent font-mono text-sm tracking-wider">02 / ФАКТОРЫ ДОВЕРИЯ И РЕШЕНИЯ</span>
         <h2 className="text-3xl md:text-5xl font-bold mt-2">
-          Что <span className="text-uremont-blue">работает</span> для клиента
+          Что говорят <span className="text-uremont-blue">потенциальные</span> клиенты?
         </h2>
       </motion.div>
 
@@ -570,14 +570,12 @@ export const SolutionSlide2: React.FC = () => {
            <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-2 gap-6 mb-10 max-w-2xl mx-auto">
               <div className="bg-white/5 p-6 rounded-xl text-center flex flex-col items-center justify-center border border-white/10 hover:border-uremont-blue transition-colors">
                  <div className="flex items-baseline gap-2">
-                    <span className="text-gray-500 line-through text-base">78</span>
-                    <div className="text-5xl font-bold text-uremont-blue mb-1">400+</div>
+                    <div className="text-5xl font-bold text-uremont-blue mb-1">428</div>
                  </div>
                  <div className="text-sm text-gray-400 uppercase tracking-widest mt-2">Услуг</div>
               </div>
               <div className="bg-white/5 p-6 rounded-xl text-center flex flex-col items-center justify-center border border-white/10 hover:border-uremont-accent transition-colors">
                  <div className="flex items-baseline gap-2">
-                    <span className="text-gray-500 line-through text-base">2023</span>
                     <div className="text-5xl font-bold text-uremont-accent mb-1">2025</div>
                  </div>
                  <div className="text-sm text-gray-400 uppercase tracking-widest mt-2">Модельный год</div>
@@ -585,7 +583,7 @@ export const SolutionSlide2: React.FC = () => {
            </motion.div>
 
            <motion.p variants={itemVariants} className="text-lg md:text-xl text-gray-300 leading-relaxed mx-auto max-w-2xl">
-             Полностью переработанные справочники. Теперь пользователи могут найти любую специфическую услугу и выбрать автомобиль любой комплектации, включая новинки рынка.
+             Полностью переработанные справочники. Теперь пользователи могут найти любую специфическую услугу и выбрать автомобиль любой комплектации, включая новинки рынка. Внедрена поддержка добавления автомобилей и услуг вручную.
            </motion.p>
         </motion.div>
     </div>
