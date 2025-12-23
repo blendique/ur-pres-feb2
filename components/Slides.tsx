@@ -436,10 +436,10 @@ export const SolutionSlide1: React.FC = () => {
   
   // Mixed content from Public folder
   const content = [
-    { type: 'video', src: 'https://pim4y1v96ezxxeus.public.blob.vercel-storage.com/1.mp4' },
+    { type: 'video', src: 'https://pim4y1v96ezxxeus.public.blob.vercel-storage.com/U1ntitled.mp4' },
     { type: 'image', src: 'https://pim4y1v96ezxxeus.public.blob.vercel-storage.com/2.jpg' },
     { type: 'image', src: 'https://pim4y1v96ezxxeus.public.blob.vercel-storage.com/3.jpg' },
-    { type: 'video', src: 'https://pim4y1v96ezxxeus.public.blob.vercel-storage.com/4.mp4' }
+    { type: 'image', src: 'https://pim4y1v96ezxxeus.public.blob.vercel-storage.com/4.jpg' }
   ];
 
   useEffect(() => {
@@ -1290,20 +1290,18 @@ export const DiscussionSlide: React.FC = () => {
            initial={{ opacity: 0, scale: 0.9 }}
            whileInView={{ opacity: 1, scale: 1 }}
            transition={{ delay: 0.3, duration: 0.6 }}
-           className="w-full max-w-3xl aspect-video h-[40vh] min-h-[300px]"
+           className="w-full max-w-5xl aspect-[16/10]"
         >
            <BrowserWindow title="uremont.com/demo">
-              <div className="w-full h-full bg-black flex items-center justify-center relative overflow-hidden group cursor-pointer">
-                 {/* Video Placeholder */}
-                 <div className="absolute inset-0 bg-gradient-to-br from-gray-900 to-black"></div>
-                 <div className="relative z-10 flex flex-col items-center text-gray-500 group-hover:text-uremont-blue transition-colors">
-                    <PlayCircle size={64} className="mb-4" />
-                    <span className="font-mono text-sm uppercase tracking-widest">Демонстрация работы</span>
-                 </div>
-                 {/* Simulated Progress Bar */}
-                 <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-800">
-                    <div className="w-1/3 h-full bg-uremont-blue"></div>
-                 </div>
+              <div className="w-full h-full bg-black">
+                  <video 
+                     src="https://pim4y1v96ezxxeus.public.blob.vercel-storage.com/U3ntitled.mp4" 
+                     className="w-full h-full object-cover"
+                     autoPlay
+                     muted
+                     loop
+                     playsInline
+                   />
               </div>
            </BrowserWindow>
         </motion.div>
