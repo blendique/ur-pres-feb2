@@ -705,12 +705,9 @@ export const SolutionSlide3: React.FC = () => {
         >
           <BrowserWindow title="uremont.com/ai-chat">
              <div className="w-full h-full bg-black overflow-hidden">
-                <video
-                   src="https://pim4y1v96ezxxeus.public.blob.vercel-storage.com/5.mp4"
-                   autoPlay
-                   muted
-                   loop
-                   playsInline
+                <img
+                   src="https://pim4y1v96ezxxeus.public.blob.vercel-storage.com/8.jpg"
+                   alt="AI Chat Interface"
                    className="w-full h-full object-cover"
                 />
              </div>
