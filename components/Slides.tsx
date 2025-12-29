@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, BarChart3, ShieldCheck, Zap, Users, MessageSquare, Search, ThumbsUp, Wallet, Database, BrainCircuit, MousePointerClick, TrendingUp, Bot, Repeat, Car, PlayCircle, ChevronLeft, ChevronRight, FileBarChart, Phone, Star, CheckCircle, Headphones, LayoutGrid, MapPin, Wrench, MessageCircle, Percent, AlertCircle, FileCheck, PhoneCall, Timer, UserCheck, Building2, Map, Crosshair, ArrowDown, Activity, Clock, Coffee, MonitorCheck, MapPinned, LayoutDashboard, GripVertical, HelpCircle, FileText, Terminal } from 'lucide-react';
+import { ArrowRight, BarChart3, ShieldCheck, Zap, Users, MessageSquare, Search, ThumbsUp, Wallet, Database, BrainCircuit, MousePointerClick, TrendingUp, Bot, Repeat, Car, PlayCircle, ChevronLeft, ChevronRight, FileBarChart, Phone, Star, CheckCircle, Headphones, LayoutGrid, MapPin, Wrench, MessageCircle, Percent, AlertCircle, FileCheck, PhoneCall, Timer, UserCheck, Building2, Map, Crosshair, ArrowDown, Activity, Clock, Coffee, MonitorCheck, MapPinned, LayoutDashboard, GripVertical, HelpCircle, FileText, Terminal, CreditCard, Calendar } from 'lucide-react';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -89,11 +89,11 @@ export const AgendaSlide: React.FC<AgendaSlideProps> = ({ onNavigate }) => {
   const points = [
     { id: 1, title: "Основа изменений", desc: "Проблемы старой версии, требующие решения", targetSlide: 2 },
     { id: 2, title: "CustDev и цифры", desc: "Данные, на которых основаны решения: аудитория и боли, факторы доверия", targetSlide: 3 },
-    { id: 3, title: "Новые решения", desc: "Переработанное УТП, новая база данных, обновление AI-алгоритмов", targetSlide: 5 },
-    { id: 4, title: "Обновленная операционная модель", desc: "Технологичность, скорость и контроль качества звонков через AI", targetSlide: 9 },
-    { id: 5, title: "Новая система отбора СТО", desc: "Измененные стандарты для партнеров и план масштабирования", targetSlide: 10 },
-    { id: 6, title: "План доработок", desc: "Список запланированных работ на Q1 2026", targetSlide: 11 },
-    { id: 7, title: "Свободное обсуждение", desc: "Q&A сессия по результатам презентации", targetSlide: 12 },
+    { id: 3, title: "Новые решения", desc: "Переработанное УТП, новая база данных, обновление AI-алгоритмов", targetSlide: 6 },
+    { id: 4, title: "Обновленная операционная модель", desc: "Технологичность, скорость и контроль качества звонков через AI", targetSlide: 10 },
+    { id: 5, title: "Новая система отбора СТО", desc: "Измененные стандарты для партнеров и план масштабирования", targetSlide: 11 },
+    { id: 6, title: "План доработок", desc: "Список запланированных работ на Q1 2026", targetSlide: 12 },
+    { id: 7, title: "Свободное обсуждение", desc: "Q&A сессия по результатам презентации", targetSlide: 13 },
   ];
 
   return (
@@ -285,13 +285,13 @@ export const DataSlide: React.FC = () => {
         >
           <div className="flex justify-between items-start">
              <div>
-                <div className="text-4xl lg:text-5xl font-bold text-red-500 mb-1">62%</div>
+                <div className="text-4xl lg:text-5xl font-bold text-red-500 mb-1">63%</div>
                 <div className="text-base lg:text-lg font-medium text-white">Страх навязывания</div>
              </div>
              <AlertCircle className="text-gray-500 w-6 h-6 lg:w-8 lg:h-8" />
           </div>
           <div className="mt-3 text-xs lg:text-sm text-gray-400">
-             Ключевая боль рынка — стресс. 62% боятся лишних работ, 38% — переплатить. Ядро боли: недоверие + непрозрачность.
+             Ключевая боль рынка — стресс. 63% боятся лишних работ, 37% — переплатить. Ядро боли: недоверие + непрозрачность.
           </div>
         </motion.div>
 
@@ -304,13 +304,13 @@ export const DataSlide: React.FC = () => {
         >
           <div className="flex justify-between items-start">
              <div>
-                <div className="text-4xl lg:text-5xl font-bold text-uremont-accent mb-1">97%</div>
+                <div className="text-4xl lg:text-5xl font-bold text-uremont-accent mb-1">69%</div>
                 <div className="text-base lg:text-lg font-medium text-white">Важно знать цену заранее</div>
              </div>
              <Wallet className="text-gray-500 w-6 h-6 lg:w-8 lg:h-8" />
           </div>
           <div className="mt-3 text-xs lg:text-sm text-gray-400">
-             Пользователи считают важным знать честную стоимость услуг заранее. При этом 67% из них не понимают структуру ценообразования. 
+             При этом 66,18% из опрошенных респодентов не понимают структуру ценообразования.
           </div>
         </motion.div>
 
@@ -323,7 +323,7 @@ export const DataSlide: React.FC = () => {
         >
           <div className="flex justify-between items-start">
              <div>
-                <div className="text-4xl lg:text-5xl font-bold text-purple-500 mb-1">59%</div>
+                <div className="text-4xl lg:text-5xl font-bold text-purple-500 mb-1">57%</div>
                 <div className="text-base lg:text-lg font-medium text-white">Боятся некачественных работ</div>
              </div>
              <HelpCircle className="text-gray-500 w-6 h-6 lg:w-8 lg:h-8" />
@@ -364,13 +364,13 @@ export const DataSlide2: React.FC = () => {
         >
           <div className="flex justify-between items-start">
              <div>
-                <div className="text-4xl lg:text-5xl font-bold text-yellow-500 mb-1">49%</div>
+                <div className="text-4xl lg:text-5xl font-bold text-yellow-500 mb-1">51%</div>
                 <div className="text-base lg:text-lg font-medium text-white">Рейтинг решает</div>
              </div>
              <Star className="text-gray-500 w-6 h-6 lg:w-8 lg:h-8" />
           </div>
           <div className="mt-3 text-xs lg:text-sm text-gray-400">
-             Главный триггер доверия — высокий рейтинг для 49%. Количество проведенных ремонтов автосервисом важно для 22%.
+             Главный триггер доверия — высокий рейтинг для 51%. Количество проведенных ремонтов автосервисом важно для 17%.
           </div>
         </motion.div>
 
@@ -383,8 +383,8 @@ export const DataSlide2: React.FC = () => {
         >
           <div className="flex justify-between items-start">
              <div>
-                <div className="text-4xl lg:text-5xl font-bold text-uremont-blue mb-1">57%</div>
-                <div className="text-base lg:text-lg font-medium text-white">«Честные цены»</div>
+                <div className="text-4xl lg:text-5xl font-bold text-uremont-blue mb-1">54%</div>
+                <div className="text-base lg:text-lg font-medium text-white">Честные цены</div>
              </div>
              <MessageSquare className="text-gray-500 w-6 h-6 lg:w-8 lg:h-8" />
           </div>
@@ -402,13 +402,13 @@ export const DataSlide2: React.FC = () => {
         >
           <div className="flex justify-between items-start">
              <div>
-                <div className="text-4xl lg:text-5xl font-bold text-green-500 mb-1">66%</div>
+                <div className="text-4xl lg:text-5xl font-bold text-green-500 mb-1">64%</div>
                 <div className="text-base lg:text-lg font-medium text-white">Цена до визита</div>
              </div>
              <FileText className="text-gray-500 w-6 h-6 lg:w-8 lg:h-8" />
           </div>
           <div className="mt-3 text-xs lg:text-sm text-gray-400">
-             Главное ожидание от продукта — показать предварительную цену. Реальные отзывы важны для 44%, наличие всего в одном месте для 38%.
+             Главное ожидание от продукта — показать предварительную цену. Реальные отзывы важны для 48%, наличие всего в одном месте для 43%.
           </div>
         </motion.div>
 
@@ -428,6 +428,104 @@ export const DataSlide2: React.FC = () => {
           </div>
           <div className="mt-3 text-xs lg:text-sm text-gray-400">
              Роль платформы — верификация. Для 95% опрошенных критически важно, что СТО проверяются агрегатором.
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+// --- Slide: Subscription Data ---
+export const SubscriptionSlide: React.FC = () => {
+  return (
+    <div className="h-full flex flex-col justify-center px-12 md:px-24">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={containerVariants}
+        className="mb-8"
+      >
+        <span className="text-uremont-accent font-mono text-sm tracking-wider">02 / ПОДПИСНАЯ МОДЕЛЬ</span>
+        <h2 className="text-3xl md:text-5xl font-bold mt-2">
+          Готовность к <span className="text-uremont-blue">подпискам</span>
+        </h2>
+      </motion.div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 max-w-6xl">
+        {/* Stat 1 */}
+        <motion.div 
+           initial={{ opacity: 0, scale: 0.95 }}
+           whileInView={{ opacity: 1, scale: 1 }}
+           transition={{ delay: 0.1 }}
+           className="bg-white/5 p-5 rounded-xl border border-white/10 flex flex-col justify-between hover:bg-white/10 transition-colors"
+        >
+          <div className="flex justify-between items-start">
+             <div>
+                <div className="text-4xl lg:text-5xl font-bold text-uremont-blue mb-1">63%</div>
+                <div className="text-base lg:text-lg font-medium text-white">Уже платят за подписки</div>
+             </div>
+             <CreditCard className="text-gray-500 w-6 h-6 lg:w-8 lg:h-8" />
+          </div>
+          <div className="mt-3 text-xs lg:text-sm text-gray-400">
+             формат привычен и не вызывает отторжения.
+          </div>
+        </motion.div>
+
+        {/* Stat 2 */}
+        <motion.div 
+           initial={{ opacity: 0, scale: 0.95 }}
+           whileInView={{ opacity: 1, scale: 1 }}
+           transition={{ delay: 0.2 }}
+           className="bg-white/5 p-5 rounded-xl border border-white/10 flex flex-col justify-between hover:bg-white/10 transition-colors"
+        >
+          <div className="flex justify-between items-start">
+             <div>
+                <div className="text-4xl lg:text-5xl font-bold text-green-500 mb-1">54%</div>
+                <div className="text-base lg:text-lg font-medium text-white">Месячная подписка понятнее</div>
+             </div>
+             <Calendar className="text-gray-500 w-6 h-6 lg:w-8 lg:h-8" />
+          </div>
+          <div className="mt-3 text-xs lg:text-sm text-gray-400">
+             Формат «500 ₽ в месяц и −20%» воспринимается заметно лучше, чем покупка пакета услуг заранее.
+          </div>
+        </motion.div>
+
+        {/* Stat 3 */}
+        <motion.div 
+           initial={{ opacity: 0, scale: 0.95 }}
+           whileInView={{ opacity: 1, scale: 1 }}
+           transition={{ delay: 0.3 }}
+           className="bg-white/5 p-5 rounded-xl border border-white/10 flex flex-col justify-between hover:bg-white/10 transition-colors"
+        >
+          <div className="flex justify-between items-start">
+             <div>
+                <div className="text-4xl lg:text-5xl font-bold text-yellow-500 mb-1">38%</div>
+                <div className="text-base lg:text-lg font-medium text-white">Решает гарантированная экономия</div>
+             </div>
+             <Percent className="text-gray-500 w-6 h-6 lg:w-8 lg:h-8" />
+          </div>
+          <div className="mt-3 text-xs lg:text-sm text-gray-400">
+             Ключевой триггер оформления — чётко зафиксированная выгода и прозрачные условия.
+          </div>
+        </motion.div>
+
+         {/* Stat 4 */}
+         <motion.div 
+           initial={{ opacity: 0, scale: 0.95 }}
+           whileInView={{ opacity: 1, scale: 1 }}
+           transition={{ delay: 0.4 }}
+           className="bg-white/5 p-5 rounded-xl border border-white/10 flex flex-col justify-between hover:bg-white/10 transition-colors"
+        >
+          <div className="flex justify-between items-start">
+             <div>
+                <div className="text-4xl lg:text-5xl font-bold text-red-500 mb-1">19%</div>
+                <div className="text-base lg:text-lg font-medium text-white">Бренд пока неизвестен</div>
+             </div>
+             <HelpCircle className="text-gray-500 w-6 h-6 lg:w-8 lg:h-8" />
+          </div>
+          <div className="mt-3 text-xs lg:text-sm text-gray-400">
+             Почти 70% слышат о Uremont впервые — подписка требует сильного объяснения ценности и доверия.
           </div>
         </motion.div>
       </div>

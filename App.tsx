@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Logo } from './components/Logo';
 import { Navigation } from './components/Navigation';
-import { WelcomeSlide, AgendaSlide, ProblemSlide, DataSlide, DataSlide2, SolutionSlide1, SolutionSlide2, SolutionSlide3, SolutionSlide4, OperationsSlide, PartnersSlide, PlanSlide, DiscussionSlide } from './components/Slides';
+import { WelcomeSlide, AgendaSlide, ProblemSlide, DataSlide, DataSlide2, SubscriptionSlide, SolutionSlide1, SolutionSlide2, SolutionSlide3, SolutionSlide4, OperationsSlide, PartnersSlide, PlanSlide, DiscussionSlide } from './components/Slides';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const TOTAL_SLIDES = 13;
+const TOTAL_SLIDES = 14;
 
 const App: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -95,14 +95,15 @@ const App: React.FC = () => {
       case 2: return <ProblemSlide />;
       case 3: return <DataSlide />;
       case 4: return <DataSlide2 />;
-      case 5: return <SolutionSlide1 />;
-      case 6: return <SolutionSlide2 />;
-      case 7: return <SolutionSlide3 />;
-      case 8: return <SolutionSlide4 />;
-      case 9: return <OperationsSlide />;
-      case 10: return <PartnersSlide />;
-      case 11: return <PlanSlide />;
-      case 12: return <DiscussionSlide />;
+      case 5: return <SubscriptionSlide />;
+      case 6: return <SolutionSlide1 />;
+      case 7: return <SolutionSlide2 />;
+      case 8: return <SolutionSlide3 />;
+      case 9: return <SolutionSlide4 />;
+      case 10: return <OperationsSlide />;
+      case 11: return <PartnersSlide />;
+      case 12: return <PlanSlide />;
+      case 13: return <DiscussionSlide />;
       default: return <WelcomeSlide />;
     }
   };
