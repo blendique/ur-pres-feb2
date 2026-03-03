@@ -1148,23 +1148,23 @@ export const MarketingForecastSlide: React.FC = () => {
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
                 <td className="p-1.5 px-3 text-gray-400 border-r border-white/10">CR звонок → ремонт</td>
                 <td className="p-1.5 text-center font-mono font-bold border-r border-white/10 text-yellow-500">0%</td>
-                <td className="p-1.5 text-center font-mono border-r border-white/10 text-blue-400">0,0%</td>
-                <td className="p-1.5 text-center font-mono border-r border-white/10 text-blue-400">10,0%</td>
-                <td className="p-1.5 text-center font-mono text-blue-400">15,0%</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-blue-400">0%</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-blue-400">10%</td>
+                <td className="p-1.5 text-center font-mono text-blue-400">15%</td>
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
                 <td className="p-1.5 px-3 text-gray-400 border-r border-white/10">CR заявка → ремонт</td>
                 <td className="p-1.5 text-center font-mono font-bold border-r border-white/10 text-yellow-500">38%</td>
                 <td className="p-1.5 text-center font-mono border-r border-white/10 text-blue-400">30%</td>
-                <td className="p-1.5 text-center font-mono border-r border-white/10 text-blue-400">30,0%</td>
-                <td className="p-1.5 text-center font-mono text-blue-400">30,0%</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-blue-400">30%</td>
+                <td className="p-1.5 text-center font-mono text-blue-400">30%</td>
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
                 <td className="p-1.5 px-3 text-gray-400 border-r border-white/10">Повторы от лояльности к первичным</td>
-                <td className="p-1.5 text-center font-mono font-bold border-r border-white/10 text-blue-400">0,0%</td>
-                <td className="p-1.5 text-center font-mono border-r border-white/10 text-blue-400">0,0%</td>
-                <td className="p-1.5 text-center font-mono border-r border-white/10 text-blue-400">0,0%</td>
-                <td className="p-1.5 text-center font-mono text-blue-400">2,0%</td>
+                <td className="p-1.5 text-center font-mono font-bold border-r border-white/10 text-blue-400">0%</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-blue-400">0%</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-blue-400">0%</td>
+                <td className="p-1.5 text-center font-mono text-blue-400">2%</td>
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
                 <td className="p-1.5 px-3 text-gray-400 border-r border-white/10">СТО на карте, шт</td>
@@ -1239,7 +1239,7 @@ export const MarketingForecastSlide: React.FC = () => {
               <tr className="hover:bg-white/5 transition-colors">
                 <td className="p-1.5 px-3 font-medium text-gray-200 border-r border-white/10">CR: Лиды (звонок+заявка) → ремонт</td>
                 <td className="p-1.5 text-center font-mono font-medium text-gray-200 border-r border-white/10">12%</td>
-                <td className="p-1.5 text-center font-mono font-medium text-gray-200 border-r border-white/10">9,0%</td>
+                <td className="p-1.5 text-center font-mono font-medium text-gray-200 border-r border-white/10">9%</td>
                 <td className="p-1.5 text-center font-mono font-medium text-gray-200 border-r border-white/10">27,1%</td>
                 <td className="p-1.5 text-center font-mono font-medium text-gray-200">43,4%</td>
               </tr>
