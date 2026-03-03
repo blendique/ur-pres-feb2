@@ -131,7 +131,7 @@ export const CallFunnelSlide: React.FC = () => {
   const metrics = [
     { label: "Всего звонков", value: "120", sub: " / 87 человек", icon: Phone, color: "text-white" },
     { label: "Дозвонились сразу", value: "99", sub: " / 83%", icon: CheckCircle, color: "text-green-400" },
-    { label: "Переведено на ГЛ", value: "15", sub: " / 16%", icon: Headphones, color: "text-blue-400" },
+    { label: "Переведено на ГЛ", value: "15", sub: " / 12%", icon: Headphones, color: "text-blue-400" },
     { label: "Потери", value: "6", valueClass: "text-red-500", sub: " / 5%", icon: AlertCircle, color: "text-red-500" },
   ];
 
@@ -172,13 +172,13 @@ export const CallFunnelSlide: React.FC = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="mt-12 p-5 bg-blue-500/5 border border-blue-500/20 rounded-2xl max-w-3xl"
+        className="mt-12 p-5 bg-blue-500/5 border border-blue-500/20 rounded-2xl w-fit"
       >
         <div className="text-uremont-blue font-bold mb-2 flex items-center gap-2">
           <Activity size={16} /> Эффективность Answer Rate
         </div>
         <p className="text-gray-400 text-sm">
-          Answer Rate по СТО составил 83% — оставшийся объем звонков был переведен на горячую линию для предотвращения упущенных обращений.
+          Answer Rate по СТО составил 83% — оставшийся объем звонков был переведен<br></br>на горячую линию для предотвращения упущенных обращений.
         </p>
       </motion.div>
     </div>
@@ -237,13 +237,13 @@ export const RequestFunnelSlide: React.FC = () => {
           <div className="text-green-400 font-bold mb-2 flex items-center gap-2">
             <TrendingUp size={16} /> Перевыполнение AR
           </div>
-          <p className="text-gray-400 text-sm">План 45% vs Факт 60%. СТО стали активнее брать заявки в работу.</p>
+          <p className="text-gray-400 text-sm">СТО достаточно активно забирают заявки в работу.</p>
         </div>
         <div className="p-5 bg-uremont-blue/5 border border-uremont-blue/20 rounded-2xl">
           <div className="text-uremont-blue font-bold mb-2 flex items-center gap-2">
             <CheckCircle size={16} /> Высокий CR
           </div>
-          <p className="text-gray-400 text-sm">38% конверсия из заявки в итоговый ремонт подтверждает качество лидов.</p>
+          <p className="text-gray-400 text-sm">Из заявки в итоговый ремонт подтверждает качество лидов.</p>
         </div>
       </motion.div>
     </div>
@@ -257,15 +257,12 @@ interface AgendaSlideProps {
 
 export const AgendaSlide: React.FC<AgendaSlideProps> = ({ onNavigate }) => {
   const points = [
-    { id: 1, title: "Результаты UREMONT AI 2.0", desc: "Ключевые метрики и расчет воронки", targetSlide: 1 },
-    { id: 2, title: "Воронка звонков", desc: "Анализ Answer Rate и переводов", targetSlide: 2 },
-    { id: 3, title: "Воронка заявок", desc: "Эффективность СТО и конверсия в ремонт", targetSlide: 3 },
-    { id: 4, title: "Решение: Звонок -> Ремонт", desc: "Новый путь обработки и регистрация", targetSlide: 4 },
-    { id: 5, title: "Процесс клиента", desc: "Личный кабинет и PDF-направление", targetSlide: 5 },
-    { id: 6, title: "Программа лояльности", desc: "Статусы, скидки и преимущества клиентов", targetSlide: 6 },
-    { id: 7, title: "Маркетинг план", desc: "Спецпроект, выбранные каналы трафика и бюджетирование", targetSlide: 7 },
-    { id: 8, title: "Таймлайн и бюджет", desc: "Детализация запуска и финансовые показатели", targetSlide: 13 },
-    { id: 9, title: "Свободное обсуждение", desc: "Q&A сессия по результатам презентации", targetSlide: 16 },
+    { id: 1, title: "Результаты UREMONT AI 2.0", desc: "Ключевые метрики и показатели с релиза нового продукта", targetSlide: 1 },
+    { id: 2, title: "Звонки -> Ремонты", desc: "Отслеживание ремонтов из звонков и обновленный клиентский путь", targetSlide: 4 },
+    { id: 3, title: "Программа лояльности", desc: "Статусы, скидки и преимущества клиентов", targetSlide: 6 },
+    { id: 4, title: "Маркетинг-план", desc: "Спецпроект, выбранные каналы трафика и бюджетирование", targetSlide: 7 },
+    { id: 5, title: "Таймлайн и бюджет", desc: "Детализация запуска и финансовые показатели", targetSlide: 13 },
+    { id: 6, title: "Свободное обсуждение", desc: "Q&A сессия по результатам презентации", targetSlide: 16 },
   ];
 
   return (
@@ -475,7 +472,7 @@ export const SolutionSlide: React.FC = () => {
         variants={containerVariants}
         className="mb-8"
       >
-        <span className="text-uremont-accent font-mono text-sm tracking-wider">02 / РЕШЕНИЕ: ЗВОНОК → РЕМОНТ</span>
+        <span className="text-uremont-accent font-mono text-sm tracking-wider">02 / ОТСЛЕЖИВАНИЕ РЕМОНТОВ ИЗ ЗВОНКОВ</span>
         <h2 className="text-3xl md:text-5xl font-bold mt-2">
           Новый путь <span className="text-uremont-blue">обработки клиента</span>
         </h2>
