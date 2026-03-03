@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Logo } from './components/Logo';
 import { Navigation } from './components/Navigation';
-import { FunnelResultsSlide, CallFunnelSlide, RequestFunnelSlide, AgendaSlide, SolutionSlide, CustomerProcessSlide2, LoyaltyProgramSlide, MarketingStatsSlide, MarketingProblemSlide, MarketingPromoSlide, MarketingPostcampSlide, MarketingChannelsSlide, MarketingBudgetSlide, MarketingForecastSlide, DiscussionSlide } from './components/Slides';
+import { FunnelResultsSlide, CallFunnelSlide, RequestFunnelSlide, AgendaSlide, SolutionSlide, CustomerProcessSlide2, LoyaltyProgramSlide, MarketingProblemSlide, MarketingPromoSlide, MarketingPostcampSlide, MarketingChannelsSlide, MarketingBudgetSlide, MarketingForecastSlide, DiscussionSlide } from './components/Slides';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const TOTAL_SLIDES = 15;
+const TOTAL_SLIDES = 14;
 
 const App: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -97,14 +97,13 @@ const App: React.FC = () => {
       case 4: return <SolutionSlide />;
       case 5: return <CustomerProcessSlide2 />;
       case 6: return <LoyaltyProgramSlide />;
-      case 7: return <MarketingStatsSlide />;
-      case 8: return <MarketingProblemSlide />;
-      case 9: return <MarketingPromoSlide />;
-      case 10: return <MarketingPostcampSlide />;
-      case 11: return <MarketingChannelsSlide />;
-      case 12: return <MarketingBudgetSlide />;
-      case 13: return <MarketingForecastSlide />;
-      case 14: return <DiscussionSlide />;
+      case 7: return <MarketingProblemSlide />;
+      case 8: return <MarketingPromoSlide />;
+      case 9: return <MarketingPostcampSlide />;
+      case 10: return <MarketingChannelsSlide />;
+      case 11: return <MarketingBudgetSlide />;
+      case 12: return <MarketingForecastSlide />;
+      case 13: return <DiscussionSlide />;
       default: return <AgendaSlide onNavigate={changeSlide} />;
     }
   };
@@ -151,7 +150,7 @@ const App: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
-          className="absolute bottom-8 right-12 z-40 hidden md:block"
+          className="fixed bottom-8 right-12 z-40 hidden md:block"
         >
           <div className="flex items-center gap-4">
             <div className="text-right">

@@ -116,7 +116,7 @@ export const FunnelResultsSlide: React.FC = () => {
             </div>
           </div>
 
-          <div className="text-center w-full lg:w-[18%] shrink-0">
+          <div className="text-center w-full lg:w-[22%] shrink-0 lg:-translate-x-6">
             <div className="text-5xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-uremont-blue drop-shadow-lg mb-2">20</div>
             <div className="text-sm font-bold text-white uppercase tracking-wider">Ремонты (итого)</div>
           </div>
@@ -787,52 +787,7 @@ export const LoyaltyProgramSlide: React.FC = () => {
   );
 };
 
-// --- Marketing Slide 0: PR Stats ---
-export const MarketingStatsSlide: React.FC = () => {
-  return (
-    <div className="h-full flex flex-col justify-start pt-64 px-12 md:px-24">
-      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="mb-12">
-        <span className="text-uremont-accent font-mono text-sm tracking-wider">05 / МАРКЕТИНГ ПЛАН</span>
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mt-2 text-white">
-          Отчетность <span className="text-blue-400">PR-агентства Redline</span>
-        </h2>
-      </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl w-full">
-        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-[#0f172a] p-8 lg:p-10 rounded-[2rem] border border-blue-500/20 flex flex-col justify-center items-center text-center shadow-2xl relative overflow-hidden group">
-          <div className="absolute inset-x-0 -bottom-24 h-48 bg-blue-500/10 blur-[50px] rounded-full group-hover:bg-blue-500/30 transition-all duration-500"></div>
-          <FileText className="text-blue-400 mb-6 opacity-80" size={48} />
-          <div className="text-6xl md:text-7xl font-black text-white mb-4 tracking-tighter shadow-blue-500/20 drop-shadow-lg">94</div>
-          <div className="text-lg text-gray-400 font-medium uppercase tracking-widest">Публикации</div>
-        </motion.div>
-
-        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-[#0f172a] p-8 lg:p-10 rounded-[2rem] border border-purple-500/20 flex flex-col justify-center items-center text-center shadow-2xl relative overflow-hidden group md:scale-105 z-10">
-          <div className="absolute inset-x-0 -bottom-24 h-48 bg-purple-500/10 blur-[50px] rounded-full group-hover:bg-purple-500/30 transition-all duration-500"></div>
-          <Users className="text-purple-400 mb-6 opacity-80" size={48} />
-          <div className="text-5xl md:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-br from-white to-purple-200 mb-4 tracking-tighter drop-shadow-xl">
-            24.5<span className="text-purple-200 uppercase">M</span>
-          </div>
-          <div className="text-lg text-gray-300 font-bold uppercase tracking-widest leading-tight">Охват</div>
-          <div className="text-xs text-purple-400 mt-2 font-mono opacity-80">по данным Медиалогии <br /> (24 516 106)</div>
-        </motion.div>
-
-        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-[#0f172a] p-8 lg:p-10 rounded-[2rem] border border-green-500/20 flex flex-col justify-center items-center text-center shadow-2xl relative overflow-hidden group">
-          <div className="absolute inset-x-0 -bottom-24 h-48 bg-green-500/10 blur-[50px] rounded-full group-hover:bg-green-500/30 transition-all duration-500"></div>
-          <TrendingUp className="text-green-400 mb-6 opacity-80" size={48} />
-          <div className="text-6xl md:text-7xl font-black text-white mb-4 tracking-tighter drop-shadow-lg shadow-green-500/20">511.7</div>
-          <div className="text-lg text-gray-400 font-medium uppercase tracking-widest">МедиаИндекс</div>
-        </motion.div>
-
-        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 0.5 }} className="flex justify-center md:col-start-2 mt-4 md:-translate-y-4">
-          <div className="inline-flex items-center gap-2 bg-white/5 px-6 py-3 rounded-full border border-white/10 shadow-inner">
-            <Calendar size={18} className="text-blue-400" />
-            <span className="text-gray-300 font-mono text-sm tracking-widest">01.02.2026 – 28.02.2026</span>
-          </div>
-        </motion.div>
-      </div>
-    </div>
-  );
-};
 
 // --- Marketing Slide 1: Problem and Goal ---
 export const MarketingProblemSlide: React.FC = () => {
@@ -1195,7 +1150,7 @@ export const MarketingForecastSlide: React.FC = () => {
 // --- Marketing Slide 11: Budget ---
 export const MarketingBudgetSlide: React.FC = () => {
   return (
-    <div className="h-full flex flex-col justify-start pt-48 px-8 md:px-12 lg:px-24 relative overflow-hidden">
+    <div className="h-full flex flex-col justify-start pt-24 px-8 md:px-12 lg:px-24 relative overflow-hidden">
       {/* Background Vertical Labels - Enhanced and Correctly Positioned */}
       <div className="absolute left-2 inset-y-0 w-16 flex flex-col pointer-events-none z-0">
         <div className="flex-1 flex items-center justify-center">
@@ -1387,7 +1342,7 @@ export const MarketingBudgetSlide: React.FC = () => {
 // --- Slide 17: Discussion ---
 export const DiscussionSlide: React.FC = () => {
   return (
-    <div className="h-full flex flex-col justify-start pt-64 px-12 md:px-24">
+    <div className="h-full flex flex-col justify-start pt-32 px-12 md:px-24">
       <div className="flex flex-col items-center justify-start text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
