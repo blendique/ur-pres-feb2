@@ -75,8 +75,8 @@ export const FunnelResultsSlide: React.FC = () => {
         <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-l from-cyan-500/10 to-transparent pointer-events-none"></div>
         <h3 className="text-lg font-bold text-cyan-400 uppercase tracking-widest mb-6 border-b border-cyan-500/20 pb-4">Расчёт воронки</h3>
 
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-8">
-          <div className="text-center w-full lg:w-[20%] shrink-0">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-6">
+          <div className="text-center w-full lg:w-[18%] shrink-0">
             <div className="text-4xl lg:text-5xl font-black text-white mb-2">1 773</div>
             <div className="text-sm font-medium text-gray-300">Запросы ИИ (всего)</div>
             <div className="text-xs text-gray-400 mt-2 flex flex-col gap-1 border border-white/5 bg-black/20 p-2 rounded-lg">
@@ -85,18 +85,18 @@ export const FunnelResultsSlide: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-center justify-center relative w-full lg:w-[10%] shrink-0 lg:translate-y-4">
+          <div className="flex flex-col items-center justify-center relative w-full lg:w-[8%] shrink-0 lg:translate-y-4">
             <ArrowRight className="text-cyan-500/50 hidden lg:block" size={32} />
             <ArrowDown className="text-cyan-500/50 block lg:hidden my-2" size={24} />
-            <div className="lg:absolute lg:-top-7 bg-cyan-500/20 text-cyan-400 text-xs font-bold px-3 py-1 rounded-full border border-cyan-500/30 whitespace-nowrap">
+            <div className="lg:absolute lg:-top-7 bg-cyan-500/20 text-cyan-400 text-[10px] font-bold px-2 py-0.5 rounded-full border border-cyan-500/30 whitespace-nowrap">
               CR 10%
             </div>
           </div>
 
-          <div className="text-center bg-white/5 p-4 rounded-2xl border border-white/5 w-full lg:w-[40%] shrink-0 shadow-inner">
+          <div className="text-center bg-white/5 p-4 rounded-2xl border border-white/5 w-full lg:w-[38%] shrink-0 shadow-inner">
             <div className="text-4xl lg:text-5xl font-black text-white mb-2">173</div>
             <div className="text-sm font-medium text-gray-300 mb-3">Лиды (звонки 69% + 31% заявки)</div>
-            <div className="flex xl:flex-row flex-col justify-center gap-2 xl:gap-4 text-xs">
+            <div className="flex xl:flex-row flex-col justify-center gap-2 xl:gap-4 text-[10px] lg:text-xs">
               <div className="bg-black/30 px-3 py-2 rounded-lg text-left flex-1 border border-white/5 whitespace-nowrap">
                 <div className="text-gray-400">Звонки: <span className="text-white font-bold">120 шт</span></div>
                 <div className="text-gray-500 mt-1">CR в ремонт: <span className="font-bold text-gray-400">N/A</span></div>
@@ -108,15 +108,15 @@ export const FunnelResultsSlide: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-center justify-center relative w-full lg:w-[10%] shrink-0 lg:translate-y-4">
+          <div className="flex flex-col items-center justify-center relative w-full lg:w-[8%] shrink-0 lg:translate-y-4">
             <ArrowRight className="text-cyan-500/50 hidden lg:block" size={32} />
             <ArrowDown className="text-cyan-500/50 block lg:hidden my-2" size={24} />
-            <div className="lg:absolute lg:-top-7 bg-cyan-500/20 text-cyan-400 text-xs font-bold px-3 py-1 rounded-full border border-cyan-500/30 whitespace-nowrap">
+            <div className="lg:absolute lg:-top-7 bg-cyan-500/20 text-cyan-400 text-[10px] font-bold px-2 py-0.5 rounded-full border border-cyan-500/30 whitespace-nowrap">
               CR 12%
             </div>
           </div>
 
-          <div className="text-center w-full lg:w-[20%] shrink-0">
+          <div className="text-center w-full lg:w-[18%] shrink-0">
             <div className="text-5xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-cyan-500 drop-shadow-lg mb-2">20</div>
             <div className="text-sm font-bold text-white uppercase tracking-wider">Ремонты (итого)</div>
           </div>
@@ -126,20 +126,76 @@ export const FunnelResultsSlide: React.FC = () => {
   );
 };
 
-// --- Slide 2: Agenda ---
+// --- Slide 2: Detailed Call Funnel ---
+export const CallFunnelSlide: React.FC = () => {
+  const metrics = [
+    { label: "Всего звонков", value: "XX", sub: "100%", icon: Phone, color: "text-white" },
+    { label: "Дозвонились в СТО сразу", value: "XX", sub: "XX%", icon: CheckCircle, color: "text-green-400" },
+    { label: "Переводов на ГЛ", value: "XX", sub: "XX%", icon: Headphones, color: "text-blue-400" },
+    { label: "Процент потерь", value: "XX%", valueClass: "text-red-500", icon: AlertCircle, color: "text-red-500" },
+  ];
+
+  return (
+    <div className="h-full flex flex-col justify-center px-8 md:px-12 lg:px-24">
+      <motion.div initial="hidden" animate="visible" variants={containerVariants} className="mb-10">
+        <span className="text-uremont-accent font-mono text-sm tracking-wider">01 / ИТОГИ ФЕВРАЛЯ</span>
+        <h2 className="text-3xl md:text-5xl font-bold mt-2 text-white">
+          Подробная <span className="text-uremont-blue">воронка по звонкам</span>
+        </h2>
+      </motion.div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl">
+        {metrics.map((m, idx) => (
+          <motion.div
+            key={idx}
+            variants={itemVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="bg-[#0f172a] border border-white/5 p-8 rounded-3xl shadow-xl relative overflow-hidden group hover:border-white/10 transition-colors"
+          >
+            <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+              <m.icon size={48} />
+            </div>
+            <div className={`text-sm uppercase tracking-widest font-bold mb-4 ${m.color} opacity-80`}>{m.label}</div>
+            <div className="flex items-baseline gap-3">
+              <div className={`text-4xl lg:text-5xl font-black ${m.valueClass || 'text-white'}`}>{m.value}</div>
+              {m.sub && <div className="text-gray-500 font-mono text-lg">{m.sub}</div>}
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
+      <motion.div
+        variants={itemVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="mt-12 p-6 bg-white/5 border border-white/10 rounded-2xl max-w-3xl"
+      >
+        <p className="text-gray-400 italic text-sm">
+          * Данные по звонкам анализируются на основе системы телефонии. Основной фокус на минимизацию потерь при переводах и улучшение AR (Answer Rate) на стороне СТО.
+        </p>
+      </motion.div>
+    </div>
+  );
+};
+
+// --- Slide 3: Agenda ---
 interface AgendaSlideProps {
   onNavigate?: (index: number) => void;
 }
 
 export const AgendaSlide: React.FC<AgendaSlideProps> = ({ onNavigate }) => {
   const points = [
-    { id: 1, title: "Результаты UREMONT AI 2.0", desc: "Ключевые метрики, звонки и продукт", targetSlide: 1 },
-    { id: 2, title: "Решение: Звонок -> Ремонт", desc: "Новый путь обработки и регистрация", targetSlide: 2 },
-    { id: 3, title: "Процесс клиента", desc: "Личный кабинет и PDF-направление", targetSlide: 3 },
-    { id: 4, title: "Программа лояльности", desc: "Статусы, скидки и преимущества клиентов", targetSlide: 4 },
-    { id: 5, title: "Маркетинг план", desc: "Спецпроект, выбранные каналы трафика и бюджетирование", targetSlide: 5 },
-    { id: 6, title: "Таймлайн и бюджет", desc: "Детализация запуска и финансовые показатели", targetSlide: 11 },
-    { id: 7, title: "Свободное обсуждение", desc: "Q&A сессия по результатам презентации", targetSlide: 14 },
+    { id: 1, title: "Результаты UREMONT AI 2.0", desc: "Ключевые метрики и расчет воронки", targetSlide: 1 },
+    { id: 2, title: "Воронка звонков", desc: "Подробная статистика по входящей связи", targetSlide: 2 },
+    { id: 3, title: "Решение: Звонок -> Ремонт", desc: "Новый путь обработки и регистрация", targetSlide: 3 },
+    { id: 4, title: "Процесс клиента", desc: "Личный кабинет и PDF-направление", targetSlide: 4 },
+    { id: 5, title: "Программа лояльности", desc: "Статусы, скидки и преимущества клиентов", targetSlide: 5 },
+    { id: 6, title: "Маркетинг план", desc: "Спецпроект, выбранные каналы трафика и бюджетирование", targetSlide: 6 },
+    { id: 7, title: "Таймлайн и бюджет", desc: "Детализация запуска и финансовые показатели", targetSlide: 12 },
+    { id: 8, title: "Свободное обсуждение", desc: "Q&A сессия по результатам презентации", targetSlide: 15 },
   ];
 
   return (

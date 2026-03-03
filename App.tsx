@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Logo } from './components/Logo';
 import { Navigation } from './components/Navigation';
-import { FunnelResultsSlide, AgendaSlide, SolutionSlide, CustomerProcessSlide2, LoyaltyProgramSlide, MarketingStatsSlide, MarketingProblemSlide, MarketingPromoSlide, MarketingAvBySlide, MarketingPostcampSlide, MarketingChannelsSlide, MarketingTimingSlide, MarketingBudgetSlide, MarketingForecastSlide, DiscussionSlide } from './components/Slides';
+import { FunnelResultsSlide, CallFunnelSlide, AgendaSlide, SolutionSlide, CustomerProcessSlide2, LoyaltyProgramSlide, MarketingStatsSlide, MarketingProblemSlide, MarketingPromoSlide, MarketingAvBySlide, MarketingPostcampSlide, MarketingChannelsSlide, MarketingTimingSlide, MarketingBudgetSlide, MarketingForecastSlide, DiscussionSlide } from './components/Slides';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const TOTAL_SLIDES = 15;
+const TOTAL_SLIDES = 16;
 
 const App: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -92,19 +92,20 @@ const App: React.FC = () => {
     switch (currentSlide) {
       case 0: return <AgendaSlide onNavigate={changeSlide} />;
       case 1: return <FunnelResultsSlide />;
-      case 2: return <SolutionSlide />;
-      case 3: return <CustomerProcessSlide2 />;
-      case 4: return <LoyaltyProgramSlide />;
-      case 5: return <MarketingStatsSlide />;
-      case 6: return <MarketingProblemSlide />;
-      case 7: return <MarketingPromoSlide />;
-      case 8: return <MarketingAvBySlide />;
-      case 9: return <MarketingPostcampSlide />;
-      case 10: return <MarketingChannelsSlide />;
-      case 11: return <MarketingTimingSlide />;
-      case 12: return <MarketingBudgetSlide />;
-      case 13: return <MarketingForecastSlide />;
-      case 14: return <DiscussionSlide />;
+      case 2: return <CallFunnelSlide />;
+      case 3: return <SolutionSlide />;
+      case 4: return <CustomerProcessSlide2 />;
+      case 5: return <LoyaltyProgramSlide />;
+      case 6: return <MarketingStatsSlide />;
+      case 7: return <MarketingProblemSlide />;
+      case 8: return <MarketingPromoSlide />;
+      case 9: return <MarketingAvBySlide />;
+      case 10: return <MarketingPostcampSlide />;
+      case 11: return <MarketingChannelsSlide />;
+      case 12: return <MarketingTimingSlide />;
+      case 13: return <MarketingBudgetSlide />;
+      case 14: return <MarketingForecastSlide />;
+      case 15: return <DiscussionSlide />;
       default: return <AgendaSlide onNavigate={changeSlide} />;
     }
   };
