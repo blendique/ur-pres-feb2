@@ -8,11 +8,10 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #0f172a;
-    /* Slate 950 */
+    background-color: #020617;
     color: white;
     overflow: hidden;
-    /* Prevent native scroll */
+    zoom: 1.25;
 }
 
 /* Custom Scrollbar hide */
