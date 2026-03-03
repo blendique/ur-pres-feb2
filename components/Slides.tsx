@@ -256,12 +256,12 @@ interface AgendaSlideProps {
 
 export const AgendaSlide: React.FC<AgendaSlideProps> = ({ onNavigate }) => {
   const points = [
-    { id: 1, title: "Результаты UREMONT AI 2.0", desc: "Ключевые метрики и показатели с релиза нового продукта", targetSlide: 1 },
-    { id: 2, title: "Звонки -> Ремонты", desc: "Отслеживание ремонтов из звонков и обновленный клиентский путь", targetSlide: 4 },
+    { id: 1, title: "Результаты UREMONT AI 2.0", desc: "Ключевые метрики и показатели с момента релиза нового продукта", targetSlide: 1 },
+    { id: 2, title: "Звонки -> Ремонты", desc: "Способ отслеживания ремонтов из звонков и обновление клиентского пути", targetSlide: 4 },
     { id: 3, title: "Программа лояльности", desc: "Статусы, скидки и преимущества клиентов", targetSlide: 6 },
     { id: 4, title: "Маркетинг-план", desc: "Спецпроект, выбранные каналы трафика и бюджетирование", targetSlide: 7 },
-    { id: 5, title: "Таймлайн и бюджет", desc: "Детализация запуска и финансовые показатели", targetSlide: 13 },
-    { id: 6, title: "Свободное обсуждение", desc: "Q&A сессия по результатам презентации", targetSlide: 16 },
+    { id: 5, title: "Таймлайн и бюджет", desc: "Детализация запуска и финансовые показатели", targetSlide: 12 },
+    { id: 6, title: "Свободное обсуждение", desc: "Q&A сессия по результатам презентации", targetSlide: 14 },
   ];
 
   return (
@@ -597,7 +597,7 @@ export const CustomerProcessSlide2: React.FC = () => {
       >
         <span className="text-uremont-accent font-mono text-sm tracking-wider">03 / ПРОЦЕСС СО СТОРОНЫ КЛИЕНТА</span>
         <h2 className="text-3xl md:text-5xl font-bold mt-2">
-          Направление на ремонт и <span className="text-uremont-blue">Личный Кабинет</span>
+          Направление на ремонт и <span className="text-uremont-blue">личный кабинет</span>
         </h2>
       </motion.div>
 
@@ -648,14 +648,14 @@ export const CustomerProcessSlide2: React.FC = () => {
             <h3 className="text-2xl font-bold text-white">История ремонтов в ЛК</h3>
           </div>
           <p className="text-gray-400 leading-relaxed mb-6">
-            Каждое направление сохраняется в личном кабинете клиента, обеспечивая прозрачность и мотивацию возвращаться.
+            Вся история обслуживания (направления и заказ-наряды от автосервисов) хранится в личном кабинете клиента, обеспечивая прозрачность, удобство и мотивирует возвращаться
           </p>
           <div className="mb-4">
             <div className="bg-black/30 p-4 rounded-xl border border-white/5 flex items-center gap-3">
               <Star className="text-yellow-500 shrink-0" size={20} />
               <div>
                 <div className="text-xs text-gray-500 mb-0.5">Рост лояльности</div>
-                <div className="text-sm font-bold text-white">Ремонты учитываются для повышения статуса.</div>
+                <div className="text-sm font-bold text-white">Ремонты учитываются для повышения статуса</div>
               </div>
             </div>
           </div>
@@ -810,7 +810,7 @@ export const MarketingStatsSlide: React.FC = () => {
           <div className="absolute inset-x-0 -bottom-24 h-48 bg-purple-500/10 blur-[50px] rounded-full group-hover:bg-purple-500/30 transition-all duration-500"></div>
           <Users className="text-purple-400 mb-6 opacity-80" size={48} />
           <div className="text-5xl md:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-br from-white to-purple-200 mb-4 tracking-tighter drop-shadow-xl">
-            24.5<span className="text-3xl lg:text-4xl text-purple-200">M</span>
+            24.5<span className="text-purple-200 uppercase">M</span>
           </div>
           <div className="text-lg text-gray-300 font-bold uppercase tracking-widest leading-tight">Охват</div>
           <div className="text-xs text-purple-400 mt-2 font-mono opacity-80">по данным Медиалогии <br /> (24 516 106)</div>
@@ -851,11 +851,11 @@ export const MarketingProblemSlide: React.FC = () => {
           <ul className="space-y-4">
             <li className="flex items-start gap-3 text-lg text-gray-300">
               <div className="bg-red-500/20 text-red-500 p-1 rounded-full shrink-0 mt-0.5"><X size={16} strokeWidth={3} /></div>
-              <span>Низкая узнаваемость у аудитории платформы за исключением старой базы «Халявщиков».</span>
+              <span>Низкая узнаваемость у аудитории платформы за исключением старой базы «Халявщиков»</span>
             </li>
             <li className="flex items-center gap-3 text-lg text-gray-300">
               <div className="bg-red-500/20 text-red-500 p-1 rounded-full shrink-0"><X size={16} strokeWidth={3} /></div>
-              <span>Низкое количество входного трафика.</span>
+              <span>Маленькое количество входного трафика</span>
             </li>
           </ul>
         </motion.div>
@@ -863,10 +863,10 @@ export const MarketingProblemSlide: React.FC = () => {
           <div className="w-14 h-14 bg-uremont-blue/20 text-uremont-blue rounded-2xl flex items-center justify-center mb-6"><Crosshair size={28} /></div>
           <h3 className="text-2xl font-bold text-white mb-4">Цель</h3>
           <ul className="space-y-3">
-            <li className="flex items-center gap-3 text-lg text-gray-300"><CheckCircle className="text-uremont-blue shrink-0" size={20} /> Количество новых регистраций</li>
-            <li className="flex items-center gap-3 text-lg text-gray-300"><CheckCircle className="text-uremont-blue shrink-0" size={20} /> Рост запросов в ИИ-ассистент</li>
-            <li className="flex items-center gap-3 text-lg text-gray-300"><CheckCircle className="text-uremont-blue shrink-0" size={20} /> Конверсия записей в автосервис</li>
-            <li className="flex items-center gap-3 text-lg text-gray-300"><CheckCircle className="text-uremont-blue shrink-0" size={20} /> Увеличение количества завершенных ремонтов и полученных заказ-нарядов</li>
+            <li className="flex items-center gap-3 text-lg text-gray-300"><CheckCircle className="text-uremont-blue shrink-0" size={20} /> Рост новых пользователей</li>
+            <li className="flex items-center gap-3 text-lg text-gray-300"><CheckCircle className="text-uremont-blue shrink-0" size={20} /> Рост запросов в AI-ассистент</li>
+            <li className="flex items-center gap-3 text-lg text-gray-300"><CheckCircle className="text-uremont-blue shrink-0" size={20} /> Рост записей в автосервис</li>
+            <li className="flex items-center gap-3 text-lg text-gray-300"><CheckCircle className="text-uremont-blue shrink-0" size={20} /> Рост завершенных ремонтов и заказ-нарядов</li>
           </ul>
         </motion.div>
       </div>
@@ -883,18 +883,18 @@ export const MarketingPromoSlide: React.FC = () => {
         <h2 className="text-4xl md:text-5xl font-bold mt-2">
           Спецпроект: <span className="text-yellow-400">UREMONT Заправляет</span>
         </h2>
-        <p className="text-xl text-gray-400 mt-2">2000 литров топлива за добавление автомобиля в гараж</p>
+        <p className="text-xl text-gray-400 mt-2">Тонна топлива за добавление автомобиля в гараж</p>
       </motion.div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl">
         <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-white/5 p-8 rounded-3xl border border-white/10 flex flex-col justify-center">
           <div className="w-16 h-16 bg-yellow-500/20 text-yellow-500 rounded-2xl flex items-center justify-center mb-6"><Zap size={32} /></div>
           <h3 className="text-2xl font-bold text-white mb-4">Суть проекта</h3>
           <p className="text-gray-300 text-lg leading-relaxed mb-6">
-            Розыгрыш 2000 литров бензина за добавление автомобиля в цифровой «Гараж» клиента.
+            Выиграй тонну топлива за добавление своего автомобиля в цифровой гараж UREMONT
           </p>
           <div className="bg-black/30 p-4 rounded-xl border border-white/5">
             <h4 className="text-sm text-gray-500 uppercase tracking-wider mb-2">Стратегия</h4>
-            <p className="text-base text-gray-300">Выходим в мир через спецпроект, ведем людей в гараж для увеличения базы и дальнейшего допушинга через коммуникации.</p>
+            <p className="text-base text-gray-300">Форсируем людей знакомиться с продуктом, добавлять автомобиль в гараж; результат: увеличение базы с целью дальнейшего допушинга через коммуникации.</p>
           </div>
         </motion.div>
 
@@ -991,7 +991,7 @@ export const MarketingPromoSlide: React.FC = () => {
 
           <div className="text-center z-10 px-8 relative pointer-events-none">
             <div className="text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-yellow-300 to-yellow-600 drop-shadow-lg mb-2">
-              2000 л
+              1000 л
             </div>
             <div className="text-2xl font-bold text-white tracking-widest uppercase">Топлива</div>
           </div>
@@ -1001,50 +1001,6 @@ export const MarketingPromoSlide: React.FC = () => {
   );
 };
 
-// --- Marketing Slide 3: Promo av.by ---
-export const MarketingAvBySlide: React.FC = () => {
-  return (
-    <div className="h-full flex flex-col justify-center px-12 md:px-24">
-      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="mb-8">
-        <span className="text-uremont-accent font-mono text-sm tracking-wider">05 / МАРКЕТИНГ ПЛАН</span>
-        <h2 className="text-3xl md:text-5xl font-bold mt-2">
-          Промо-материалы <span className="text-blue-400">av.by</span>
-        </h2>
-      </motion.div>
-      <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="w-full max-w-5xl rounded-2xl overflow-hidden border border-gray-700 bg-white text-black shadow-2xl">
-        {/* Mock av.by Header */}
-        <div className="bg-[#1b2b4d] text-white px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-6">
-            <strong className="text-2xl font-black italic tracking-tighter">av<span className="text-blue-400">.by</span></strong>
-            <div className="hidden md:flex gap-4 text-sm font-semibold opacity-90">
-              <span className="hover:text-blue-300 cursor-pointer">Сервисы</span>
-              <span className="hover:text-blue-300 cursor-pointer">Журнал</span>
-              <span className="hover:text-blue-300 cursor-pointer">Знания</span>
-              <span className="hover:text-blue-300 cursor-pointer">Услуги</span>
-              <span className="text-yellow-400 flex items-center gap-1 cursor-pointer"><AlertCircle size={14} /> Проверка VIN</span>
-            </div>
-          </div>
-          <div className="flex items-center gap-4 text-sm font-semibold">
-            <span className="opacity-90 hover:opacity-100 cursor-pointer">Войти</span>
-            <button className="bg-yellow-400 text-black px-4 py-2 rounded font-bold hover:bg-yellow-500 transition-colors shadow-md">Подать объявление</button>
-          </div>
-        </div>
-        {/* Banner Section */}
-        <div className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 p-8 md:p-12 relative overflow-hidden">
-          <div className="absolute right-0 top-0 bottom-0 w-1/2 bg-[url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=800')] bg-cover bg-center opacity-40 mix-blend-overlay"></div>
-          <div className="relative z-10 max-w-2xl text-white">
-            <h1 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">Есть машина? <br /><span className="text-yellow-400">Выиграйте топливо для неё!</span></h1>
-            <p className="text-lg md:text-xl font-light mb-8 text-gray-300">Добавляйте своё авто в «Гараж» на av.by и участвуйте в розыгрыше 1000 литров*.</p>
-            <button className="bg-yellow-400 text-black px-8 py-3 rounded-lg font-bold text-lg hover:bg-yellow-500 hover:scale-105 transition-all shadow-lg shadow-yellow-400/20">
-              УЧАСТВОВАТЬ
-            </button>
-            <p className="mt-8 text-xs text-gray-400 max-w-md">Для участия регистрируйтесь с 1 по 28 февраля 2026 года. *Рекламный макет.</p>
-          </div>
-        </div>
-      </motion.div>
-    </div>
-  );
-};
 
 // --- Marketing Slide 4: Postcampaign ---
 export const MarketingPostcampSlide: React.FC = () => {
@@ -1066,12 +1022,12 @@ export const MarketingPostcampSlide: React.FC = () => {
             <p className="text-gray-300 leading-relaxed mb-4">Наш подход исключает массовые и нецелевые рассылки. Данные каждого добавленного автомобиля проходят скоринг, после чего формируется персонализированное сервисное предложение:</p>
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-black/30 p-4 rounded-xl border border-white/5">
-                <div className="text-sm font-bold text-white mb-1">Старые авто (Напр. BMW {'>'} 5 лет)</div>
-                <div className="text-xs text-gray-400">Оффер: Скидка на диагностику ходовой.</div>
+                <div className="text-sm font-bold text-white mb-1">Старые авто (например BMW {'>'} 5 лет)</div>
+                <div className="text-xs text-gray-400">Оффер: скидка на диагностику ходовой.</div>
               </div>
               <div className="bg-black/30 p-4 rounded-xl border border-white/5">
-                <div className="text-sm font-bold text-white mb-1">Новые авто (На гарантии / до 3 лет)</div>
-                <div className="text-xs text-gray-400">Оффер: Выгодная замена масла или регулярный ТО.</div>
+                <div className="text-sm font-bold text-white mb-1">Новые авто (например Skoda {'<'} 3 лет)</div>
+                <div className="text-xs text-gray-400">Оффер: выгодная замена масла или регулярный ТО.</div>
               </div>
             </div>
           </div>
@@ -1083,7 +1039,7 @@ export const MarketingPostcampSlide: React.FC = () => {
           <div>
             <h3 className="text-2xl font-bold text-white mb-2">2. Умные рассылки</h3>
             <p className="text-gray-300 leading-relaxed">
-              Настраиваем Push-уведомления, SMS и Email-рассылки на собранную базу для конвертации регистрации в реальный визит на СТО.
+              Настраиваем Push-уведомления, SMS и Email-рассылки на собранную базу для конвертации регистрации в реальный визит на СТО
             </p>
           </div>
         </motion.div>
@@ -1099,7 +1055,7 @@ export const MarketingChannelsSlide: React.FC = () => {
       <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="mb-8">
         <span className="text-uremont-accent font-mono text-sm tracking-wider">05 / МАРКЕТИНГ ПЛАН</span>
         <h2 className="text-3xl md:text-5xl font-bold mt-2">
-          Экосистема <span className="text-uremont-blue">каналов</span>
+          Каналы <span className="text-uremont-blue">продвижения</span>
         </h2>
       </motion.div>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl">
@@ -1235,52 +1191,6 @@ export const MarketingForecastSlide: React.FC = () => {
   );
 };
 
-// --- Marketing Slide 10: Timing ---
-export const MarketingTimingSlide: React.FC = () => {
-  return (
-    <div className="h-full flex flex-col justify-center px-12 md:px-24">
-      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="mb-8">
-        <span className="text-uremont-accent font-mono text-sm tracking-wider">05 / МАРКЕТИНГ ПЛАН</span>
-        <h2 className="text-3xl md:text-5xl font-bold mt-2">
-          Время <span className="text-green-400">Запуска</span>
-        </h2>
-      </motion.div>
-      <div className="max-w-6xl w-full relative">
-        <div className="absolute top-1/2 left-0 right-0 h-1 bg-white/10 -translate-y-1/2 hidden md:block"></div>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 relative z-10">
-          <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-[#0f172a] p-6 rounded-2xl border border-green-500/30 text-center relative shadow-lg">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-green-500 border-4 border-[#0f172a] hidden md:block"></div>
-            <div className="text-xl font-bold text-white mb-1">Неделя 1-2</div>
-            <div className="text-xs font-mono text-gray-500 mb-3">10 мар - 23 мар</div>
-            <h4 className="text-green-400 font-bold mb-4 uppercase tracking-wider text-sm">Подготовка & Тесты</h4>
-            <p className="text-sm text-gray-400">Настройка трекинга AppsFlyer, интеграция Я.Карт, тестовые рассылки.</p>
-          </motion.div>
-          <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-[#0f172a] p-6 rounded-2xl border border-blue-500/30 text-center relative shadow-lg">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-blue-500 border-4 border-[#0f172a] hidden md:block"></div>
-            <div className="text-xl font-bold text-white mb-1">Неделя 3-4</div>
-            <div className="text-xs font-mono text-gray-500 mb-3">24 мар - 6 апр</div>
-            <h4 className="text-blue-400 font-bold mb-4 uppercase tracking-wider text-sm">Спецпроект av.by</h4>
-            <p className="text-sm text-gray-400">Запуск промо "UREMONT Заправляет". Сбор первых регистраций.</p>
-          </motion.div>
-          <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-[#0f172a] p-6 rounded-2xl border border-yellow-500/30 text-center relative shadow-lg">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-yellow-500 border-4 border-[#0f172a] hidden md:block"></div>
-            <div className="text-xl font-bold text-white mb-1">Неделя 5-8</div>
-            <div className="text-xs font-mono text-gray-500 mb-3">7 апр - 4 мая</div>
-            <h4 className="text-yellow-400 font-bold mb-4 uppercase tracking-wider text-sm">Медиа Скалирование</h4>
-            <p className="text-sm text-gray-400">DOOH, Радио, Яндекс пины, массовый посев. Разгон Retention машины.</p>
-          </motion.div>
-          <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-[#0f172a] p-6 rounded-2xl border border-purple-500/30 text-center relative shadow-lg">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-purple-500 border-4 border-[#0f172a] hidden md:block"></div>
-            <div className="text-xl font-bold text-white mb-1">Неделя 9+</div>
-            <div className="text-xs font-mono text-gray-500 mb-3">от 5 мая</div>
-            <h4 className="text-purple-400 font-bold mb-4 uppercase tracking-wider text-sm">Оптимизация</h4>
-            <p className="text-sm text-gray-400">Оценка CAC/LTV, отключение неэффективных каналов, допушинг базы.</p>
-          </motion.div>
-        </div>
-      </div>
-    </div>
-  );
-};
 
 // --- Marketing Slide 11: Budget ---
 export const MarketingBudgetSlide: React.FC = () => {
@@ -1289,7 +1199,7 @@ export const MarketingBudgetSlide: React.FC = () => {
       <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="mb-6 lg:mb-10 shrink-0">
         <span className="text-uremont-accent font-mono text-sm tracking-wider">05 / МАРКЕТИНГ ПЛАН</span>
         <h2 className="text-3xl md:text-5xl font-bold mt-2">
-          Таймлайн и <span className="text-uremont-blue">Бюджет</span>
+          Таймлайн и <span className="text-uremont-blue">бюджет</span>
         </h2>
       </motion.div>
 
@@ -1421,6 +1331,53 @@ export const MarketingBudgetSlide: React.FC = () => {
           </div>
         </motion.div>
       </div>
+
+      {/* Simplified Timeline (Gantt Chart) */}
+      <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="mt-8 lg:mt-12 w-full bg-white/5 border border-white/10 rounded-3xl p-6 lg:p-8 shadow-2xl overflow-hidden relative max-w-7xl mx-auto">
+        <div className="flex items-center gap-3 mb-6 border-b border-white/10 pb-4">
+          <Calendar className="text-uremont-blue" size={24} />
+          <h3 className="text-2xl font-bold text-white tracking-tight">Таймлайн запуска</h3>
+        </div>
+        <div className="relative pt-10 pb-4">
+          {/* Timeline Bar Background */}
+          <div className="absolute top-[4.5rem] left-0 right-0 h-1.5 bg-white/5 rounded-full hidden md:block"></div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-4 relative">
+            {/* Step 1 */}
+            <div className="flex flex-col items-center">
+              <div className="w-10 h-10 rounded-full bg-green-500/20 border-2 border-green-500 flex items-center justify-center text-green-500 font-bold mb-4 z-10 bg-[#0f172a]">01</div>
+              <div className="text-center">
+                <div className="text-white font-bold text-sm">Подготовка & Тесты</div>
+                <div className="text-gray-500 text-[10px] font-mono mt-1">10 мар - 23 мар</div>
+              </div>
+            </div>
+            {/* Step 2 */}
+            <div className="flex flex-col items-center">
+              <div className="w-10 h-10 rounded-full bg-blue-500/20 border-2 border-blue-500 flex items-center justify-center text-blue-500 font-bold mb-4 z-10 bg-[#0f172a]">02</div>
+              <div className="text-center">
+                <div className="text-white font-bold text-sm">Старт Спецпроекта</div>
+                <div className="text-gray-500 text-[10px] font-mono mt-1">24 мар - 6 апр</div>
+              </div>
+            </div>
+            {/* Step 3 */}
+            <div className="flex flex-col items-center">
+              <div className="w-10 h-10 rounded-full bg-yellow-500/20 border-2 border-yellow-500 flex items-center justify-center text-yellow-500 font-bold mb-4 z-10 bg-[#0f172a]">03</div>
+              <div className="text-center">
+                <div className="text-white font-bold text-sm">Медиа Скалирование</div>
+                <div className="text-gray-500 text-[10px] font-mono mt-1">7 апр - 4 мая</div>
+              </div>
+            </div>
+            {/* Step 4 */}
+            <div className="flex flex-col items-center">
+              <div className="w-10 h-10 rounded-full bg-purple-500/20 border-2 border-purple-500 flex items-center justify-center text-purple-500 font-bold mb-4 z-10 bg-[#0f172a]">04</div>
+              <div className="text-center">
+                <div className="text-white font-bold text-sm">Оптимизация</div>
+                <div className="text-gray-500 text-[10px] font-mono mt-1">от 5 мая</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
     </div>
   );
 };

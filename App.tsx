@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Logo } from './components/Logo';
 import { Navigation } from './components/Navigation';
-import { FunnelResultsSlide, CallFunnelSlide, RequestFunnelSlide, AgendaSlide, SolutionSlide, CustomerProcessSlide2, LoyaltyProgramSlide, MarketingStatsSlide, MarketingProblemSlide, MarketingPromoSlide, MarketingAvBySlide, MarketingPostcampSlide, MarketingChannelsSlide, MarketingTimingSlide, MarketingBudgetSlide, MarketingForecastSlide, DiscussionSlide } from './components/Slides';
+import { FunnelResultsSlide, CallFunnelSlide, RequestFunnelSlide, AgendaSlide, SolutionSlide, CustomerProcessSlide2, LoyaltyProgramSlide, MarketingStatsSlide, MarketingProblemSlide, MarketingPromoSlide, MarketingPostcampSlide, MarketingChannelsSlide, MarketingBudgetSlide, MarketingForecastSlide, DiscussionSlide } from './components/Slides';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const TOTAL_SLIDES = 17;
+const TOTAL_SLIDES = 15;
 
 const App: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -100,13 +100,11 @@ const App: React.FC = () => {
       case 7: return <MarketingStatsSlide />;
       case 8: return <MarketingProblemSlide />;
       case 9: return <MarketingPromoSlide />;
-      case 10: return <MarketingAvBySlide />;
-      case 11: return <MarketingPostcampSlide />;
-      case 12: return <MarketingChannelsSlide />;
-      case 13: return <MarketingTimingSlide />;
-      case 14: return <MarketingBudgetSlide />;
-      case 15: return <MarketingForecastSlide />;
-      case 16: return <DiscussionSlide />;
+      case 10: return <MarketingPostcampSlide />;
+      case 11: return <MarketingChannelsSlide />;
+      case 12: return <MarketingBudgetSlide />;
+      case 13: return <MarketingForecastSlide />;
+      case 14: return <DiscussionSlide />;
       default: return <AgendaSlide onNavigate={changeSlide} />;
     }
   };

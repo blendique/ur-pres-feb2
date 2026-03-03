@@ -15,14 +15,12 @@ export const Navigation: React.FC<NavigationProps> = ({ currentSlide, totalSlide
               aria-label={`Go to slide ${index + 1}`}
             >
               <motion.div
-                className={`w-3 h-3 border-2 transform rotate-45 transition-all duration-300 ${
-                  isActive 
-                    ? 'bg-uremont-accent border-uremont-accent scale-125' 
-                    : 'bg-transparent border-gray-500 hover:border-white'
-                }`}
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${isActive
+                    ? 'bg-uremont-blue scale-125'
+                    : 'bg-gray-600/40 hover:bg-gray-400'
+                  }`}
                 animate={{
-                    scale: isActive ? 1.4 : 1,
-                    rotate: 45
+                  scale: isActive ? 1.5 : 1
                 }}
               />
             </button>
