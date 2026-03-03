@@ -133,12 +133,13 @@ interface AgendaSlideProps {
 
 export const AgendaSlide: React.FC<AgendaSlideProps> = ({ onNavigate }) => {
   const points = [
-    { id: 1, title: "Результаты Февраля", desc: "Ключевые метрики, звонки и продукт", targetSlide: 1 },
+    { id: 1, title: "Оцифрованные результаты UREMONT AI 2.0", desc: "Ключевые метрики, звонки и продукт", targetSlide: 1 },
     { id: 2, title: "Решение: Звонок -> Ремонт", desc: "Новый путь обработки и регистрация", targetSlide: 2 },
     { id: 3, title: "Процесс клиента", desc: "Личный кабинет и PDF-направление", targetSlide: 3 },
-    { id: 4, title: "Программа лояльности", desc: "Статусы, скидки и бенефиты", targetSlide: 4 },
-    { id: 5, title: "Маркетинг план", desc: "Спецпроект на 2000л, экосистема каналов, бюджет", targetSlide: 5 },
-    { id: 6, title: "Свободное обсуждение", desc: "Q&A сессия по результатам презентации", targetSlide: 14 },
+    { id: 4, title: "Программа лояльности", desc: "Статусы, скидки и преимущества клиентов", targetSlide: 4 },
+    { id: 5, title: "Маркетинг план", desc: "Спецпроекты и экосистема каналов", targetSlide: 5 },
+    { id: 6, title: "Таймлайн и бюджет", desc: "Детализация запуска и финансовые показатели", targetSlide: 11 },
+    { id: 7, title: "Свободное обсуждение", desc: "Q&A сессия по результатам презентации", targetSlide: 14 },
   ];
 
   return (
@@ -422,6 +423,21 @@ export const SolutionSlide: React.FC = () => {
                     <span className="text-base text-gray-300">Уникальный QR и PDF-квиток.</span>
                   </div>
                 </div>
+              </motion.div>
+            ) : activeStep === 2 ? (
+              <motion.div
+                key="step-2"
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.2 }}
+                className="w-full h-full flex items-center justify-center p-2"
+              >
+                <img
+                  src="https://placehold.co/519x806/0f172a/ffffff?text=QR+PDF"
+                  alt="PDF Preview"
+                  className="max-h-[100%] max-w-[100%] object-contain rounded-2xl border border-white/10 shadow-lg"
+                />
               </motion.div>
             ) : (
               <motion.div
@@ -1148,55 +1164,142 @@ export const MarketingTimingSlide: React.FC = () => {
 // --- Marketing Slide 11: Budget ---
 export const MarketingBudgetSlide: React.FC = () => {
   return (
-    <div className="h-full flex flex-col justify-center px-12 md:px-24">
-      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="mb-8">
+    <div className="h-full flex flex-col justify-center px-8 md:px-12 lg:px-24">
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="mb-6 lg:mb-10 shrink-0">
         <span className="text-uremont-accent font-mono text-sm tracking-wider">05 / МАРКЕТИНГ ПЛАН</span>
         <h2 className="text-3xl md:text-5xl font-bold mt-2">
-          Примерный <span className="text-uremont-blue">Бюджет</span>
+          Таймлайн и <span className="text-uremont-blue">Бюджет</span>
         </h2>
       </motion.div>
-      <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-white/5 border border-white/10 p-8 rounded-3xl max-w-4xl relative overflow-hidden">
-        <div className="absolute right-0 top-0 bottom-0 w-64 bg-gradient-to-l from-uremont-blue/10 to-transparent pointer-events-none"></div>
-        <div className="flex items-center gap-4 mb-8">
-          <Wallet className="text-uremont-blue" size={32} />
-          <h3 className="text-2xl font-bold text-white">Медиаплан на старт (1 месяц)</h3>
-        </div>
 
-        <div className="space-y-4 font-mono">
-          <div className="flex items-end justify-between border-b border-white/10 pb-2">
-            <div>
-              <div className="text-white font-bold text-lg leading-none">Спецпроект av.by (2000L Топлива)</div>
-              <div className="text-gray-400 text-xs mt-1 font-sans">Призовой фонд + Размещение</div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl w-full mx-auto">
+        {/* Март */}
+        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-[#0f172a] border border-blue-500/30 p-6 lg:p-8 rounded-3xl relative shadow-lg flex flex-col">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center border border-blue-500/50 text-blue-400 font-bold">03</div>
+            <h3 className="text-3xl font-bold text-white tracking-tight">Март</h3>
+          </div>
+
+          <div className="space-y-4 font-mono text-sm flex-grow mb-8">
+            <div className="flex justify-between border-b border-white/10 pb-2">
+              <span className="text-gray-400">Пиар</span>
+              <span className="text-white font-medium">278 000 ₽</span>
             </div>
-            <div className="text-yellow-400 font-bold text-xl whitespace-nowrap overflow-hidden">--- ---</div>
-          </div>
-          <div className="flex items-end justify-between border-b border-white/10 pb-2">
-            <div>
-              <div className="text-white font-bold text-lg leading-none">Яндекс.Карты / Навигатор</div>
-              <div className="text-gray-400 text-xs mt-1 font-sans">Пины, биллборды, баннеры в маршруте</div>
+            <div className="flex justify-between border-b border-white/10 pb-2">
+              <span className="text-gray-400">1 Волна радио</span>
+              <span className="text-white font-medium">350 000 ₽</span>
             </div>
-            <div className="text-white font-bold text-xl whitespace-nowrap overflow-hidden">--- ---</div>
-          </div>
-          <div className="flex items-end justify-between border-b border-white/10 pb-2">
-            <div>
-              <div className="text-white font-bold text-lg leading-none">Радиостанции</div>
-              <div className="text-gray-400 text-xs mt-1 font-sans">Ролики + Интеграции</div>
+            <div className="flex justify-between border-b border-white/10 pb-2">
+              <span className="text-gray-400">Перформанс</span>
+              <span className="text-white font-medium">450 000 ₽</span>
             </div>
-            <div className="text-white font-bold text-xl whitespace-nowrap overflow-hidden">--- ---</div>
           </div>
-          <div className="flex items-end justify-between border-b border-white/10 pb-2">
-            <div>
-              <div className="text-white font-bold text-lg leading-none">Digital Performance & Social</div>
-              <div className="text-gray-400 text-xs mt-1 font-sans">Установки App, Telegram посевы</div>
+
+          <div className="bg-white/5 rounded-2xl p-5 border border-white/10 mt-auto">
+            <div className="flex justify-between text-gray-500 text-xs mb-2">
+              <span>Сумма без НДС:</span>
+              <span>1 078 000 ₽</span>
             </div>
-            <div className="text-white font-bold text-xl whitespace-nowrap overflow-hidden">--- ---</div>
+            <div className="flex justify-between text-blue-400 font-bold text-lg">
+              <span>Итого (с НДС)</span>
+              <span>1 293 600 ₽</span>
+            </div>
           </div>
-          <div className="flex items-end justify-between pt-4 mt-8">
-            <div className="text-white text-2xl font-black font-sans uppercase">Итого</div>
-            <div className="text-uremont-accent font-bold text-4xl">TBD</div>
+        </motion.div>
+
+        {/* Апрель */}
+        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-[#0f172a] border border-green-500/30 p-6 lg:p-8 rounded-3xl relative shadow-xl flex flex-col lg:scale-[1.03] z-10 box-shadow-green">
+          <div className="absolute inset-x-0 -bottom-16 h-40 bg-green-500/10 blur-[50px] rounded-full pointer-events-none"></div>
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center border border-green-500/50 text-green-400 font-bold">04</div>
+            <h3 className="text-3xl font-bold text-white tracking-tight">Апрель</h3>
           </div>
-        </div>
-      </motion.div>
+
+          <div className="space-y-4 font-mono text-sm flex-grow mb-8">
+            <div className="flex justify-between border-b border-white/10 pb-2">
+              <span className="text-gray-400">Пиар</span>
+              <span className="text-white font-medium">278 000 ₽</span>
+            </div>
+            <div className="flex justify-between border-b border-white/10 pb-2">
+              <span className="text-gray-400">Перформанс</span>
+              <span className="text-white font-medium">550 000 ₽</span>
+            </div>
+            <div className="flex justify-between border-b border-white/10 pb-2">
+              <span className="text-gray-400">2 Волна радио</span>
+              <span className="text-white font-medium">450 000 ₽</span>
+            </div>
+            <div className="flex justify-between border-b border-white/10 pb-2">
+              <span className="text-gray-400">2 UGC + 1 OLV</span>
+              <span className="text-white font-medium">650 000 ₽</span>
+            </div>
+            <div className="flex justify-between border-b border-white/10 pb-2">
+              <span className="text-gray-400">OLV кинотеатры</span>
+              <span className="text-white font-medium">1 000 000 ₽</span>
+            </div>
+            <div className="flex justify-between border-b border-white/10 pb-2">
+              <span className="text-gray-400">Яндекс Карты</span>
+              <span className="text-white font-medium">750 000 ₽</span>
+            </div>
+            <div className="flex justify-between border-b border-white/10 pb-2">
+              <span className="text-gray-400">Телеграм посевы</span>
+              <span className="text-white font-medium">500 000 ₽</span>
+            </div>
+          </div>
+
+          <div className="bg-white/5 rounded-2xl p-5 border border-green-500/30 mt-auto relative z-10 backdrop-blur-sm">
+            <div className="flex justify-between text-gray-400 text-xs mb-2">
+              <span>Сумма без НДС:</span>
+              <span>4 178 000 ₽</span>
+            </div>
+            <div className="flex justify-between text-green-400 font-bold text-xl drop-shadow-md">
+              <span>Итого (с НДС)</span>
+              <span>5 097 160 ₽</span>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Май */}
+        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-[#0f172a] border border-yellow-500/30 p-6 lg:p-8 rounded-3xl relative shadow-lg flex flex-col">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 rounded-full bg-yellow-500/20 flex items-center justify-center border border-yellow-500/50 text-yellow-500 font-bold">05</div>
+            <h3 className="text-3xl font-bold text-white tracking-tight">Май</h3>
+          </div>
+
+          <div className="space-y-4 font-mono text-sm flex-grow mb-8">
+            <div className="flex justify-between border-b border-white/10 pb-2">
+              <span className="text-gray-400">Пиар</span>
+              <span className="text-white font-medium">278 000 ₽</span>
+            </div>
+            <div className="flex justify-between border-b border-white/10 pb-2">
+              <span className="text-gray-400">OLV кинотеатры</span>
+              <span className="text-white font-medium">1 000 000 ₽</span>
+            </div>
+            <div className="flex justify-between border-b border-white/10 pb-2">
+              <span className="text-gray-400">Перформанс</span>
+              <span className="text-white font-medium">550 000 ₽</span>
+            </div>
+            <div className="flex justify-between border-b border-white/10 pb-2">
+              <span className="text-gray-400">Яндекс Карты</span>
+              <span className="text-white font-medium">750 000 ₽</span>
+            </div>
+            <div className="flex justify-between border-b border-white/10 pb-2">
+              <span className="text-gray-400">2000L топлива</span>
+              <span className="text-white font-medium">150 000 ₽</span>
+            </div>
+          </div>
+
+          <div className="bg-white/5 rounded-2xl p-5 border border-white/10 mt-auto">
+            <div className="flex justify-between text-gray-500 text-xs mb-2">
+              <span>Сумма без НДС:</span>
+              <span>2 728 000 ₽</span>
+            </div>
+            <div className="flex justify-between text-yellow-400 font-bold text-lg">
+              <span>Итого (с НДС)</span>
+              <span>3 328 160 ₽</span>
+            </div>
+          </div>
+        </motion.div>
+      </div>
     </div>
   );
 };
