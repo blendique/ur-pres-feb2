@@ -672,13 +672,13 @@ export const CustomerProcessSlide2: React.FC = () => {
 export const LoyaltyProgramSlide: React.FC = () => {
   const statuses = [
     {
-      name: "Гость не зарегистрирован",
-      discount: "0",
+      name: "Гость",
+      discount: "1%",
       color: "text-gray-400",
       bg: "bg-gray-400/10",
       border: "border-gray-400/20",
       req: "Нет аккаунта",
-      prefs: ["— Получает: ничего"],
+      prefs: [{ text: "Бонусы отсутствуют" }],
       icon: UserCheck
     },
     {
@@ -687,12 +687,11 @@ export const LoyaltyProgramSlide: React.FC = () => {
       color: "text-gray-300",
       bg: "bg-gray-300/10",
       border: "border-gray-300/20",
-      req: "0 ремонтов или ОСАГО / КАСКО",
+      req: "Регистрация на платформе",
       prefs: [
-        "Скидка до 5% на работы",
-        "Скидка на КАСКО 10%",
-        "Бесплатный отчёт Автотеки в год",
-        "Приоритетная поддержка"
+        { text: "Скидка до 5% на работы" },
+        { text: "Скидка на КАСКО 10%" },
+        { text: "Приоритетная поддержка" }
       ],
       icon: FileCheck
     },
@@ -702,12 +701,12 @@ export const LoyaltyProgramSlide: React.FC = () => {
       color: "text-yellow-400",
       bg: "bg-yellow-400/10",
       border: "border-yellow-400/20",
-      req: "1–3 ремонта или ОСАГО",
+      req: "Ремонт или ОСАГО / 365 дней",
       prefs: [
-        "Скидка до 7% на работы",
-        "Скидка на КАСКО 15%",
-        "Бесплатный отчёт Автотеки на авто",
-        "Приоритетная поддержка"
+        { text: "Скидка до 7% на работы" },
+        { text: "Скидка на КАСКО 15%" },
+        { text: "Бесплатный отчёт Автотеки" },
+        { text: "Приоритетная поддержка" }
       ],
       icon: Star
     },
@@ -717,16 +716,16 @@ export const LoyaltyProgramSlide: React.FC = () => {
       color: "text-purple-400",
       bg: "bg-purple-400/10",
       border: "border-purple-400/20",
-      req: "4+ ремонтов за 12 месяцев",
+      req: "4 ремонта или КАСКО / 365 дней",
       prefs: [
-        "Скидка до 10% на работы",
-        "Скидка на КАСКО 20%",
-        "Скидка на хранение шин",
-        "Отчёт Автотеки на авто",
-        "Бесплатный эвакуатор 1 раз в год",
-        "1 юридическая консультация в год",
-        "2 бесплатные мойки у партнеров",
-        "Приоритетная поддержка"
+        { text: "Скидка до 10% на работы" },
+        { text: "Скидка 20% на КАСКО" },
+        { text: "Скидка на хранение шин", isDraft: true },
+        { text: "Бесплатный отчёт Автотеки", isDraft: true },
+        { text: "Бесплатный эвакуатор (1 в год)", isDraft: true },
+        { text: "Бесплатная юр. консультация (1 в год)", isDraft: true },
+        { text: "Бесплатные мойки у партнеров (2 в год)", isDraft: true },
+        { text: "Приоритетная поддержка", isDraft: true }
       ],
       icon: Target
     }
@@ -747,7 +746,7 @@ export const LoyaltyProgramSlide: React.FC = () => {
         </h2>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 w-full max-w-7xl mx-auto items-stretch mt-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 w-full max-w-[1440px] mx-auto items-stretch mt-4">
         {statuses.map((status, index) => {
           const Icon = status.icon;
           return (
@@ -774,10 +773,10 @@ export const LoyaltyProgramSlide: React.FC = () => {
               <div className={`text-5xl font-bold ${status.color} mb-8`}>{index === 0 ? '-' : status.discount}</div>
 
               <div className="flex flex-col gap-3 mt-auto">
-                {status.prefs.map((pref, i) => (
-                  <div key={i} className="flex items-start gap-2 text-sm text-gray-300 leading-tight">
-                    <CheckCircle className={`w-[18px] h-[18px] shrink-0 mt-0.5 ${index === 0 ? 'text-gray-600' : status.color}`} />
-                    <span>{pref}</span>
+                {status.prefs.map((pref: any, i: number) => (
+                  <div key={i} className={`flex items-start gap-2 text-[13px] leading-tight whitespace-nowrap ${pref.isDraft ? 'text-red-400/90 italic' : 'text-gray-300'}`}>
+                    <CheckCircle className={`w-[16px] h-[16px] shrink-0 mt-0.5 ${index === 0 ? 'text-gray-600' : (pref.isDraft ? 'text-red-400/50' : status.color)}`} />
+                    <span>{pref.text}</span>
                   </div>
                 ))}
               </div>
