@@ -67,7 +67,7 @@ export const FunnelResultsSlide: React.FC = () => {
           <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white/5 to-transparent"></div>
           <div className="text-sm text-gray-400 mb-1">СТО на карте</div>
           <div className="text-3xl lg:text-4xl font-bold text-white">143 <span className="text-gray-500 text-xl font-normal">шт</span></div>
-          <div className="text-xs text-green-400 mt-2 font-medium">+ новых 8 штук</div>
+          <div className="text-xs text-green-400 mt-2 font-medium">+ подключено 8 новых</div>
         </motion.div>
       </div>
 
@@ -76,47 +76,47 @@ export const FunnelResultsSlide: React.FC = () => {
         <h3 className="text-lg font-bold text-cyan-400 uppercase tracking-widest mb-6 border-b border-cyan-500/20 pb-4">Расчёт воронки</h3>
 
         <div className="flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-8">
-          <div className="text-center w-full lg:w-1/4">
+          <div className="text-center w-full lg:w-[20%] shrink-0">
             <div className="text-4xl lg:text-5xl font-black text-white mb-2">1 773</div>
             <div className="text-sm font-medium text-gray-300">Запросы ИИ (всего)</div>
             <div className="text-xs text-gray-400 mt-2 flex flex-col gap-1 border border-white/5 bg-black/20 p-2 rounded-lg">
-              <div className="flex justify-between items-center gap-4"><span>Платные:</span> <span className="text-white font-bold">910 шт.</span></div>
-              <div className="flex justify-between items-center gap-4"><span>Органика <span className="text-[10px] opacity-60">(49%)</span>:</span> <span className="text-white font-bold">863 шт.</span></div>
+              <div className="flex justify-between items-center gap-4"><span>Платные:</span> <span className="text-white font-bold">910</span></div>
+              <div className="flex justify-between items-center gap-4"><span>Органика:</span> <span className="text-white font-bold">863</span></div>
             </div>
           </div>
 
-          <div className="flex flex-col items-center justify-center relative w-full lg:w-1/6">
+          <div className="flex flex-col items-center justify-center relative w-full lg:w-[10%] shrink-0 lg:translate-y-4">
             <ArrowRight className="text-cyan-500/50 hidden lg:block" size={32} />
             <ArrowDown className="text-cyan-500/50 block lg:hidden my-2" size={24} />
-            <div className="lg:absolute lg:-top-6 bg-cyan-500/20 text-cyan-400 text-xs font-bold px-3 py-1 rounded-full border border-cyan-500/30 whitespace-nowrap">
+            <div className="lg:absolute lg:-top-7 bg-cyan-500/20 text-cyan-400 text-xs font-bold px-3 py-1 rounded-full border border-cyan-500/30 whitespace-nowrap">
               CR 10%
             </div>
           </div>
 
-          <div className="text-center bg-white/5 p-4 rounded-2xl border border-white/5 w-full lg:w-1/3 shadow-inner">
+          <div className="text-center bg-white/5 p-4 rounded-2xl border border-white/5 w-full lg:w-[40%] shrink-0 shadow-inner">
             <div className="text-4xl lg:text-5xl font-black text-white mb-2">173</div>
-            <div className="text-sm font-medium text-gray-300 mb-3">Лиды (звонок + заявка)</div>
+            <div className="text-sm font-medium text-gray-300 mb-3">Лиды (звонки 69% + 31% заявки)</div>
             <div className="flex xl:flex-row flex-col justify-center gap-2 xl:gap-4 text-xs">
-              <div className="bg-black/30 px-3 py-2 rounded-lg text-left flex-1 border border-white/5">
-                <div className="text-gray-400">Звонки: <span className="text-white font-bold">120 шт</span> <span className="text-[10px] opacity-60">(69%)</span></div>
-                <div className="text-gray-500 mt-1">CR в ремонт: <span className="font-bold text-gray-400">0%</span></div>
+              <div className="bg-black/30 px-3 py-2 rounded-lg text-left flex-1 border border-white/5 whitespace-nowrap">
+                <div className="text-gray-400">Звонки: <span className="text-white font-bold">120 шт</span></div>
+                <div className="text-gray-500 mt-1">CR в ремонт: <span className="font-bold text-gray-400">N/A</span></div>
               </div>
-              <div className="bg-black/30 px-3 py-2 rounded-lg text-left flex-1 border border-white/5">
+              <div className="bg-black/30 px-3 py-2 rounded-lg text-left flex-1 border border-white/5 whitespace-nowrap">
                 <div className="text-gray-400">Заявки: <span className="text-white font-bold">53 шт</span></div>
                 <div className="text-green-400 mt-1">CR в ремонт: <span className="font-bold">38%</span></div>
               </div>
             </div>
           </div>
 
-          <div className="flex flex-col items-center justify-center relative w-full lg:w-1/6">
+          <div className="flex flex-col items-center justify-center relative w-full lg:w-[10%] shrink-0 lg:translate-y-4">
             <ArrowRight className="text-cyan-500/50 hidden lg:block" size={32} />
             <ArrowDown className="text-cyan-500/50 block lg:hidden my-2" size={24} />
-            <div className="lg:absolute lg:-top-6 bg-cyan-500/20 text-cyan-400 text-xs font-bold px-3 py-1 rounded-full border border-cyan-500/30 whitespace-nowrap">
+            <div className="lg:absolute lg:-top-7 bg-cyan-500/20 text-cyan-400 text-xs font-bold px-3 py-1 rounded-full border border-cyan-500/30 whitespace-nowrap">
               CR 12%
             </div>
           </div>
 
-          <div className="text-center w-full lg:w-1/4">
+          <div className="text-center w-full lg:w-[20%] shrink-0">
             <div className="text-5xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-cyan-500 drop-shadow-lg mb-2">20</div>
             <div className="text-sm font-bold text-white uppercase tracking-wider">Ремонты (итого)</div>
           </div>
@@ -133,11 +133,11 @@ interface AgendaSlideProps {
 
 export const AgendaSlide: React.FC<AgendaSlideProps> = ({ onNavigate }) => {
   const points = [
-    { id: 1, title: "Оцифрованные результаты UREMONT AI 2.0", desc: "Ключевые метрики, звонки и продукт", targetSlide: 1 },
+    { id: 1, title: "Результаты UREMONT AI 2.0", desc: "Ключевые метрики, звонки и продукт", targetSlide: 1 },
     { id: 2, title: "Решение: Звонок -> Ремонт", desc: "Новый путь обработки и регистрация", targetSlide: 2 },
     { id: 3, title: "Процесс клиента", desc: "Личный кабинет и PDF-направление", targetSlide: 3 },
     { id: 4, title: "Программа лояльности", desc: "Статусы, скидки и преимущества клиентов", targetSlide: 4 },
-    { id: 5, title: "Маркетинг план", desc: "Спецпроекты и экосистема каналов", targetSlide: 5 },
+    { id: 5, title: "Маркетинг план", desc: "Спецпроект, выбранные каналы трафика и бюджетирование", targetSlide: 5 },
     { id: 6, title: "Таймлайн и бюджет", desc: "Детализация запуска и финансовые показатели", targetSlide: 11 },
     { id: 7, title: "Свободное обсуждение", desc: "Q&A сессия по результатам презентации", targetSlide: 14 },
   ];
