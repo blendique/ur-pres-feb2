@@ -172,8 +172,11 @@ export const CallFunnelSlide: React.FC = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="mt-12 p-6 bg-white/5 border border-white/10 rounded-2xl max-w-3xl"
+        className="mt-12 p-5 bg-blue-500/5 border border-blue-500/20 rounded-2xl max-w-3xl"
       >
+        <div className="text-uremont-blue font-bold mb-2 flex items-center gap-2">
+          <Activity size={16} /> Эффективность Answer Rate
+        </div>
         <p className="text-gray-400 text-sm">
           Answer Rate по СТО составил 83% — оставшийся объем звонков был переведен на горячую линию для предотвращения упущенных обращений.
         </p>
@@ -770,7 +773,7 @@ export const LoyaltyProgramSlide: React.FC = () => {
                 </div>
               </div>
 
-              <div className={`text-5xl font-bold ${status.color} mb-8`}>{index === 0 ? '-' : status.discount}</div>
+              <div className={`text-5xl font-bold ${status.color} mb-8`}>{index === 0 ? '0%' : status.discount}</div>
 
               <div className="flex flex-col gap-3 mt-auto">
                 {status.prefs.map((pref: any, i: number) => (
@@ -964,16 +967,16 @@ export const MarketingPromoSlide: React.FC = () => {
               animation: animate-bubble infinite ease-in;
             }
             
-            .bubble:nth-child(1) { left: 10%; width: 20px; height: 20px; animation-duration: 4s; animation-delay: 0.5s; }
-            .bubble:nth-child(2) { left: 25%; width: 12px; height: 12px; animation-duration: 3s; animation-delay: 1.2s; }
-            .bubble:nth-child(3) { left: 45%; width: 25px; height: 25px; animation-duration: 5s; animation-delay: 0.2s; }
-            .bubble:nth-child(4) { left: 60%; width: 15px; height: 15px; animation-duration: 4.5s; animation-delay: 2.1s; }
-            .bubble:nth-child(5) { left: 75%; width: 18px; height: 18px; animation-duration: 3.5s; animation-delay: 0.8s; }
-            .bubble:nth-child(6) { left: 85%; width: 10px; height: 10px; animation-duration: 2.5s; animation-delay: 1.7s; }
-            .bubble:nth-child(7) { left: 5%; width: 22px; height: 22px; animation-duration: 4.2s; animation-delay: 3.0s; }
-            .bubble:nth-child(8) { left: 95%; width: 14px; height: 14px; animation-duration: 3.8s; animation-delay: 2.5s; }
-            .bubble:nth-child(9) { left: 35%; width: 16px; height: 16px; animation-duration: 3.2s; animation-delay: 0.9s; }
-            .bubble:nth-child(10) { left: 55%; width: 30px; height: 30px; animation-duration: 6s; animation-delay: 1.5s; }
+            .bubble:nth-child(1) { left: 10%; width: 20px; height: 20px; animation-duration: 4s; animation-delay: -1.5s; }
+            .bubble:nth-child(2) { left: 25%; width: 12px; height: 12px; animation-duration: 3s; animation-delay: -0.8s; }
+            .bubble:nth-child(3) { left: 45%; width: 25px; height: 25px; animation-duration: 5s; animation-delay: -2.2s; }
+            .bubble:nth-child(4) { left: 60%; width: 15px; height: 15px; animation-duration: 4.5s; animation-delay: -3.1s; }
+            .bubble:nth-child(5) { left: 75%; width: 18px; height: 18px; animation-duration: 3.5s; animation-delay: -0.5s; }
+            .bubble:nth-child(6) { left: 85%; width: 10px; height: 10px; animation-duration: 2.5s; animation-delay: -1.2s; }
+            .bubble:nth-child(7) { left: 5%; width: 22px; height: 22px; animation-duration: 4.2s; animation-delay: -3.0s; }
+            .bubble:nth-child(8) { left: 95%; width: 14px; height: 14px; animation-duration: 3.8s; animation-delay: -2.5s; }
+            .bubble:nth-child(9) { left: 35%; width: 16px; height: 16px; animation-duration: 3.2s; animation-delay: -0.9s; }
+            .bubble:nth-child(10) { left: 55%; width: 30px; height: 30px; animation-duration: 6s; animation-delay: -4.5s; }
           `}} />
 
           {/* Background Grid Pattern */}
