@@ -1077,21 +1077,21 @@ export const MarketingForecastSlide: React.FC = () => {
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
                 <td className="p-1.5 px-3 text-gray-300 border-r border-white/10">Маркетинг: бюджет, ₽ (охваты, PR, SEO)</td>
-                <td className="p-1.5 text-center font-mono text-blue-400 border-r border-white/10">278 000 ₽</td>
-                <td className="p-1.5 text-center font-mono text-red-400 border-r border-white/10">753 600 ₽</td>
-                <td className="p-1.5 text-center font-mono text-red-400 border-r border-white/10">6 280 000 ₽</td>
-                <td className="p-1.5 text-center font-mono text-red-400">2 778 160 ₽</td>
+                <td className="p-1.5 text-center font-mono text-gray-400 border-r border-white/10">278 000₽</td>
+                <td className="p-1.5 text-center font-mono text-gray-400 border-r border-white/10">753 600₽</td>
+                <td className="p-1.5 text-center font-mono text-gray-400 border-r border-white/10">6 280 000₽</td>
+                <td className="p-1.5 text-center font-mono text-gray-400">2 778 160₽</td>
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
                 <td className="p-1.5 px-3 text-gray-400 border-r border-white/10">Охват Медийный</td>
-                <td className="p-1.5 text-center font-mono text-gray-500 border-r border-white/10">-</td>
+                <td className="p-1.5 text-center font-mono text-gray-400 border-r border-white/10">-</td>
                 <td className="p-1.5 text-center font-mono text-gray-400 border-r border-white/10">1 200 000</td>
                 <td className="p-1.5 text-center font-mono text-gray-400 border-r border-white/10">4 374 248</td>
                 <td className="p-1.5 text-center font-mono text-gray-400">3 674 248</td>
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
                 <td className="p-1.5 px-3 text-gray-400 border-r border-white/10">Клики</td>
-                <td className="p-1.5 text-center font-mono text-gray-500 border-r border-white/10">-</td>
+                <td className="p-1.5 text-center font-mono text-gray-400 border-r border-white/10">-</td>
                 <td className="p-1.5 text-center font-mono text-gray-400 border-r border-white/10">4 800</td>
                 <td className="p-1.5 text-center font-mono text-gray-400 border-r border-white/10">17 497</td>
                 <td className="p-1.5 text-center font-mono text-gray-400">14 697</td>
@@ -1099,79 +1099,79 @@ export const MarketingForecastSlide: React.FC = () => {
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
                 <td className="p-1.5 px-3 text-gray-400 border-r border-white/10">Запросы ИИ охватные</td>
                 <td className="p-1.5 text-center font-mono text-gray-500 border-r border-white/10">-</td>
-                <td className="p-1.5 text-center font-mono text-red-400 border-r border-white/10">240</td>
-                <td className="p-1.5 text-center font-mono text-red-400 border-r border-white/10">875</td>
-                <td className="p-1.5 text-center font-mono text-red-400">1 176</td>
+                <td className="p-1.5 text-center font-mono text-gray-400 border-r border-white/10">240</td>
+                <td className="p-1.5 text-center font-mono text-gray-400 border-r border-white/10">875</td>
+                <td className="p-1.5 text-center font-mono text-gray-400">1 176</td>
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
                 <td className="p-1.5 px-3 text-gray-400 border-r border-white/10">Стоимость охватного запроса в ИИ</td>
                 <td className="p-1.5 text-center font-mono text-gray-500 border-r border-white/10">-</td>
-                <td className="p-1.5 text-center font-mono text-red-400 border-r border-white/10">3 140 ₽</td>
-                <td className="p-1.5 text-center font-mono text-red-400 border-r border-white/10">7 178 ₽</td>
-                <td className="p-1.5 text-center font-mono text-red-400">2 363 ₽</td>
+                <td className="p-1.5 text-center font-mono text-gray-400 border-r border-white/10">3 140₽</td>
+                <td className="p-1.5 text-center font-mono text-gray-400 border-r border-white/10">7 178₽</td>
+                <td className="p-1.5 text-center font-mono text-gray-400">2 363₽</td>
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
                 <td className="p-1.5 px-3 font-medium text-gray-200 border-r border-white/10">Маркетинг: бюджет, ₽ (digital)</td>
-                <td className="p-1.5 text-center font-mono font-bold text-blue-400 border-r border-white/10">402 696 ₽</td>
-                <td className="p-1.5 text-center font-mono text-red-400 border-r border-white/10">600 000 ₽</td>
-                <td className="p-1.5 text-center font-mono text-red-400 border-r border-white/10">700 000 ₽</td>
-                <td className="p-1.5 text-center font-mono text-red-400">700 000 ₽</td>
+                <td className="p-1.5 text-center font-mono text-gray-400 border-r border-white/10">402 696₽</td>
+                <td className="p-1.5 text-center font-mono text-gray-400 border-r border-white/10">600 000₽</td>
+                <td className="p-1.5 text-center font-mono text-gray-400 border-r border-white/10">700 000₽</td>
+                <td className="p-1.5 text-center font-mono text-gray-400">700 000₽</td>
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
                 <td className="p-1.5 px-3 text-gray-400 border-r border-white/10">Стоимость запроса ИИ (₽/запрос)</td>
-                <td className="p-1.5 text-center font-mono font-bold text-blue-400 border-r border-white/10">443 ₽</td>
-                <td className="p-1.5 text-center font-mono text-blue-400 border-r border-white/10">443 ₽</td>
-                <td className="p-1.5 text-center font-mono text-blue-400 border-r border-white/10">443 ₽</td>
-                <td className="p-1.5 text-center font-mono text-blue-400">420 ₽</td>
+                <td className="p-1.5 text-center font-mono text-gray-400 border-r border-white/10">443₽</td>
+                <td className="p-1.5 text-center font-mono text-gray-400 border-r border-white/10">443₽</td>
+                <td className="p-1.5 text-center font-mono text-gray-400 border-r border-white/10">443₽</td>
+                <td className="p-1.5 text-center font-mono text-gray-400">420₽</td>
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
                 <td className="p-1.5 px-3 text-gray-400 border-r border-white/10">Органика к платным запросам, %</td>
-                <td className="p-1.5 text-center font-mono font-bold text-blue-400 border-r border-white/10">49%</td>
-                <td className="p-1.5 text-center font-mono text-blue-400 border-r border-white/10">65%</td>
-                <td className="p-1.5 text-center font-mono text-blue-400 border-r border-white/10">77%</td>
-                <td className="p-1.5 text-center font-mono text-blue-400">70%</td>
+                <td className="p-1.5 text-center font-mono text-gray-400 border-r border-white/10">49%</td>
+                <td className="p-1.5 text-center font-mono text-gray-400 border-r border-white/10">65%</td>
+                <td className="p-1.5 text-center font-mono text-gray-400 border-r border-white/10">77%</td>
+                <td className="p-1.5 text-center font-mono text-gray-400">70%</td>
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors bg-uremont-blue/10">
                 <td className="p-1.5 px-3 text-white font-medium border-r border-uremont-blue/20">CR ИИ → лид (звонок+заявка)</td>
                 <td className="p-1.5 text-center font-mono text-uremont-blue font-bold border-r border-uremont-blue/20">10%</td>
-                <td className="p-1.5 text-center font-mono text-uremont-blue border-r border-uremont-blue/20">10%</td>
-                <td className="p-1.5 text-center font-mono text-uremont-blue border-r border-uremont-blue/20">11%</td>
-                <td className="p-1.5 text-center font-mono text-uremont-blue">12%</td>
+                <td className="p-1.5 text-center font-mono text-uremont-blue font-bold border-r border-uremont-blue/20">10%</td>
+                <td className="p-1.5 text-center font-mono text-uremont-blue font-bold border-r border-uremont-blue/20">11%</td>
+                <td className="p-1.5 text-center font-mono text-uremont-blue font-bold">12%</td>
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
                 <td className="p-1.5 px-3 text-gray-400 border-r border-white/10">Доля звонков в лидах</td>
-                <td className="p-1.5 text-center font-mono font-bold border-r border-white/10 text-yellow-500">69%</td>
-                <td className="p-1.5 text-center font-mono border-r border-white/10 text-blue-400">70%</td>
-                <td className="p-1.5 text-center font-mono border-r border-white/10 text-blue-400">70%</td>
-                <td className="p-1.5 text-center font-mono text-blue-400">70%</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">69%</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">70%</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">70%</td>
+                <td className="p-1.5 text-center font-mono text-gray-400">70%</td>
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
                 <td className="p-1.5 px-3 text-gray-400 border-r border-white/10">CR звонок → ремонт</td>
-                <td className="p-1.5 text-center font-mono font-bold border-r border-white/10 text-yellow-500">0%</td>
-                <td className="p-1.5 text-center font-mono border-r border-white/10 text-blue-400">0%</td>
-                <td className="p-1.5 text-center font-mono border-r border-white/10 text-blue-400">10%</td>
-                <td className="p-1.5 text-center font-mono text-blue-400">15%</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">0%</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">0%</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">10%</td>
+                <td className="p-1.5 text-center font-mono text-gray-400">15%</td>
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
                 <td className="p-1.5 px-3 text-gray-400 border-r border-white/10">CR заявка → ремонт</td>
-                <td className="p-1.5 text-center font-mono font-bold border-r border-white/10 text-yellow-500">38%</td>
-                <td className="p-1.5 text-center font-mono border-r border-white/10 text-blue-400">30%</td>
-                <td className="p-1.5 text-center font-mono border-r border-white/10 text-blue-400">30%</td>
-                <td className="p-1.5 text-center font-mono text-blue-400">30%</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">38%</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">30%</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">30%</td>
+                <td className="p-1.5 text-center font-mono text-gray-400">30%</td>
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
                 <td className="p-1.5 px-3 text-gray-400 border-r border-white/10">Повторы от лояльности к первичным</td>
-                <td className="p-1.5 text-center font-mono font-bold border-r border-white/10 text-blue-400">0%</td>
-                <td className="p-1.5 text-center font-mono border-r border-white/10 text-blue-400">0%</td>
-                <td className="p-1.5 text-center font-mono border-r border-white/10 text-blue-400">0%</td>
-                <td className="p-1.5 text-center font-mono text-blue-400">2%</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">0%</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">0%</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">0%</td>
+                <td className="p-1.5 text-center font-mono text-gray-400">2%</td>
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
                 <td className="p-1.5 px-3 text-gray-400 border-r border-white/10">СТО на карте, шт</td>
-                <td className="p-1.5 text-center font-mono font-bold border-r border-white/10 text-yellow-500">143</td>
-                <td className="p-1.5 text-center font-mono border-r border-white/10 text-blue-400">150</td>
-                <td className="p-1.5 text-center font-mono border-r border-white/10 text-blue-400">160</td>
-                <td className="p-1.5 text-center font-mono text-blue-400">170</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">143</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">150</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">160</td>
+                <td className="p-1.5 text-center font-mono text-gray-400">170</td>
               </tr>
 
               {/* === SECTION 2 === */}
@@ -1180,45 +1180,45 @@ export const MarketingForecastSlide: React.FC = () => {
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
                 <td className="p-1.5 px-3 border-r border-white/10 text-gray-300">Запросы ИИ (платные), шт</td>
-                <td className="p-1.5 text-center font-mono font-bold border-r border-white/10">910</td>
-                <td className="p-1.5 text-center font-mono font-bold border-r border-white/10">1 354</td>
-                <td className="p-1.5 text-center font-mono font-bold border-r border-white/10">1 580</td>
-                <td className="p-1.5 text-center font-mono font-bold">1 667</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">910</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">1 354</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">1 580</td>
+                <td className="p-1.5 text-center font-mono text-gray-400">1 667</td>
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
                 <td className="p-1.5 px-3 border-r border-white/10 text-gray-300">Запросы ИИ (всего), шт</td>
-                <td className="p-1.5 text-center font-mono font-bold border-r border-white/10">1 773</td>
-                <td className="p-1.5 text-center font-mono font-bold border-r border-white/10">3 870</td>
-                <td className="p-1.5 text-center font-mono font-bold border-r border-white/10">6 870</td>
-                <td className="p-1.5 text-center font-mono font-bold">5 556</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">1 773</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">3 870</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">6 870</td>
+                <td className="p-1.5 text-center font-mono text-gray-400">5 556</td>
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
                 <td className="p-1.5 px-3 border-r border-white/10 text-gray-300">Лиды (звонок+заявка), шт</td>
-                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-300">173</td>
-                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-300">387</td>
-                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-300">756</td>
-                <td className="p-1.5 text-center font-mono text-gray-300">667</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">173</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">387</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">756</td>
+                <td className="p-1.5 text-center font-mono text-gray-400">667</td>
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
                 <td className="p-1.5 px-3 border-r border-white/10 text-gray-300">Звонки, шт</td>
-                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-300">120</td>
-                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-300">555</td>
-                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-300">1 368</td>
-                <td className="p-1.5 text-center font-mono text-gray-300">1 490</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">120</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">555</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">1 368</td>
+                <td className="p-1.5 text-center font-mono text-gray-400">1 490</td>
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
                 <td className="p-1.5 px-3 border-r border-white/10 text-gray-300">Заявки, шт</td>
-                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-300">53</td>
-                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-300">116</td>
-                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-300">227</td>
-                <td className="p-1.5 text-center font-mono text-gray-300">200</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">53</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">116</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">227</td>
+                <td className="p-1.5 text-center font-mono text-gray-400">200</td>
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
                 <td className="p-1.5 px-3 border-r border-white/10 text-gray-300">Ремонты (первичные), шт</td>
-                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-300">20</td>
-                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-300">35</td>
-                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-300">205</td>
-                <td className="p-1.5 text-center font-mono text-gray-300">283</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">20</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">35</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-400">205</td>
+                <td className="p-1.5 text-center font-mono text-gray-400">283</td>
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors bg-uremont-blue/10">
                 <td className="p-1.5 px-3 font-black text-uremont-blue border-r border-uremont-blue/20">Ремонты (итого), шт</td>
@@ -1238,10 +1238,10 @@ export const MarketingForecastSlide: React.FC = () => {
               </tr>
               <tr className="hover:bg-white/5 transition-colors">
                 <td className="p-1.5 px-3 font-medium text-gray-200 border-r border-white/10">CR: Лиды (звонок+заявка) → ремонт</td>
-                <td className="p-1.5 text-center font-mono font-medium text-gray-200 border-r border-white/10">12%</td>
-                <td className="p-1.5 text-center font-mono font-medium text-gray-200 border-r border-white/10">9%</td>
-                <td className="p-1.5 text-center font-mono font-medium text-gray-200 border-r border-white/10">27,1%</td>
-                <td className="p-1.5 text-center font-mono font-medium text-gray-200">43,4%</td>
+                <td className="p-1.5 text-center font-mono text-gray-400 border-r border-white/10">12%</td>
+                <td className="p-1.5 text-center font-mono text-gray-400 border-r border-white/10">9%</td>
+                <td className="p-1.5 text-center font-mono text-gray-400 border-r border-white/10">27,1%</td>
+                <td className="p-1.5 text-center font-mono text-gray-400">43,4%</td>
               </tr>
             </tbody>
           </table>
@@ -1275,18 +1275,18 @@ export const MarketingBudgetSlide: React.FC = () => {
           <div className="space-y-2.5 font-mono text-xs flex-grow mb-6">
             <div className="flex justify-between border-b border-white/5 pb-1.5">
               <span className="text-gray-400">Пиар (Охваты, SEO)</span>
-              <span className="text-white font-medium">753 600 ₽</span>
+              <span className="text-white font-medium">753 600₽</span>
             </div>
             <div className="flex justify-between border-b border-white/5 pb-1.5">
               <span className="text-gray-400">Перформанс (digital)</span>
-              <span className="text-white font-medium">600 000 ₽</span>
+              <span className="text-white font-medium">600 000₽</span>
             </div>
           </div>
 
           <div className="bg-white/5 rounded-xl p-4 border border-white/10 mt-auto">
             <div className="flex justify-between text-blue-400 font-bold text-lg">
               <span>Итого</span>
-              <span>1 353 600 ₽</span>
+              <span>1 353 600₽</span>
             </div>
           </div>
         </motion.div>
@@ -1301,18 +1301,18 @@ export const MarketingBudgetSlide: React.FC = () => {
           <div className="space-y-2.5 font-mono text-xs flex-grow mb-6">
             <div className="flex justify-between border-b border-white/5 pb-1.5">
               <span className="text-gray-400">Охваты, PR, SEO</span>
-              <span className="text-white font-medium">6 280 000 ₽</span>
+              <span className="text-white font-medium">6 280 000₽</span>
             </div>
             <div className="flex justify-between border-b border-white/5 pb-1.5">
               <span className="text-gray-400">Перформанс (digital)</span>
-              <span className="text-white font-medium">700 000 ₽</span>
+              <span className="text-white font-medium">700 000₽</span>
             </div>
           </div>
 
           <div className="bg-white/5 rounded-xl p-4 border border-green-500/30 mt-auto backdrop-blur-sm">
             <div className="flex justify-between text-green-400 font-bold text-lg">
               <span>Итого</span>
-              <span>6 980 000 ₽</span>
+              <span>6 980 000₽</span>
             </div>
           </div>
         </motion.div>
@@ -1327,22 +1327,22 @@ export const MarketingBudgetSlide: React.FC = () => {
           <div className="space-y-2.5 font-mono text-xs flex-grow mb-6">
             <div className="flex justify-between border-b border-white/5 pb-1.5">
               <span className="text-gray-400">Охваты, PR, SEO</span>
-              <span className="text-white font-medium">2 778 160 ₽</span>
+              <span className="text-white font-medium">2 778 160₽</span>
             </div>
             <div className="flex justify-between border-b border-white/5 pb-1.5">
               <span className="text-gray-400">Перформанс (digital)</span>
-              <span className="text-white font-medium">700 000 ₽</span>
+              <span className="text-white font-medium">700 000₽</span>
             </div>
             <div className="flex justify-between border-b border-white/5 pb-1.5">
-              <span className="text-gray-400">1000L топлива</span>
-              <span className="text-white font-medium">150 000 ₽</span>
+              <span className="text-gray-400">1000 литров топлива</span>
+              <span className="text-white font-medium">75 000₽</span>
             </div>
           </div>
 
           <div className="bg-white/5 rounded-xl p-4 border border-white/10 mt-auto">
             <div className="flex justify-between text-yellow-500 font-bold text-lg">
               <span>Итого</span>
-              <span>3 628 160 ₽</span>
+              <span>3 553 160₽</span>
             </div>
           </div>
         </motion.div>
