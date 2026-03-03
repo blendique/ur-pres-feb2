@@ -1098,8 +1098,8 @@ export const MarketingChannelsSlide: React.FC = () => {
 // --- Marketing Slide 12: Forecast ---
 export const MarketingForecastSlide: React.FC = () => {
   return (
-    <div className="h-full flex flex-col justify-center px-12 md:px-24">
-      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="mb-6">
+    <div className="h-full flex flex-col justify-start pt-24 px-12 md:px-24">
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="mb-4">
         <span className="text-uremont-accent font-mono text-sm tracking-wider">05 / МАРКЕТИНГ ПЛАН</span>
         <h2 className="text-3xl md:text-5xl font-bold mt-2">
           План-прогноз <span className="text-uremont-blue">Воронки</span>
@@ -1195,7 +1195,7 @@ export const MarketingForecastSlide: React.FC = () => {
 // --- Marketing Slide 11: Budget ---
 export const MarketingBudgetSlide: React.FC = () => {
   return (
-    <div className="h-full flex flex-col justify-center px-8 md:px-12 lg:px-24 relative overflow-hidden">
+    <div className="h-full flex flex-col justify-start pt-24 px-8 md:px-12 lg:px-24 relative overflow-hidden">
       {/* Background Vertical Labels - Enhanced and Correctly Positioned */}
       <div className="absolute left-2 inset-y-0 w-16 flex flex-col pointer-events-none z-0">
         <div className="flex-1 flex items-center justify-center">
@@ -1210,7 +1210,7 @@ export const MarketingBudgetSlide: React.FC = () => {
         </div>
       </div>
 
-      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="mb-6 lg:mb-8 md:ml-12 relative z-10">
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="mb-4 lg:mb-6 md:ml-12 relative z-10">
         <span className="text-uremont-accent font-mono text-sm tracking-wider">05 / МАРКЕТИНГ ПЛАН</span>
         <h2 className="text-3xl md:text-5xl font-bold mt-2">
           Таймлайн и <span className="text-uremont-blue">бюджет</span>
