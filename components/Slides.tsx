@@ -1203,35 +1203,35 @@ export const MarketingBudgetSlide: React.FC = () => {
         </h2>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl w-full mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 max-w-7xl w-full mx-auto mb-10">
         {/* Март */}
-        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-[#0f172a] border border-blue-500/30 p-6 lg:p-8 rounded-3xl relative shadow-lg flex flex-col">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center border border-blue-500/50 text-blue-400 font-bold">03</div>
-            <h3 className="text-3xl font-bold text-white tracking-tight">Март</h3>
+        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-[#0f172a] border border-blue-500/30 p-5 lg:p-6 rounded-3xl relative shadow-lg flex flex-col">
+          <div className="flex items-center gap-2 mb-4">
+            <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center border border-blue-500/50 text-blue-400 font-bold text-sm">03</div>
+            <h3 className="text-2xl font-bold text-white tracking-tight">Март</h3>
           </div>
 
-          <div className="space-y-4 font-mono text-sm flex-grow mb-8">
-            <div className="flex justify-between border-b border-white/10 pb-2">
+          <div className="space-y-2.5 font-mono text-xs flex-grow mb-6">
+            <div className="flex justify-between border-b border-white/5 pb-1.5">
               <span className="text-gray-400">Пиар</span>
               <span className="text-white font-medium">278 000 ₽</span>
             </div>
-            <div className="flex justify-between border-b border-white/10 pb-2">
+            <div className="flex justify-between border-b border-white/5 pb-1.5">
               <span className="text-gray-400">1 Волна радио</span>
               <span className="text-white font-medium">350 000 ₽</span>
             </div>
-            <div className="flex justify-between border-b border-white/10 pb-2">
+            <div className="flex justify-between border-b border-white/5 pb-1.5">
               <span className="text-gray-400">Перформанс</span>
               <span className="text-white font-medium">450 000 ₽</span>
             </div>
           </div>
 
-          <div className="bg-white/5 rounded-2xl p-5 border border-white/10 mt-auto">
-            <div className="flex justify-between text-gray-500 text-xs mb-2">
+          <div className="bg-white/5 rounded-xl p-4 border border-white/10 mt-auto">
+            <div className="flex justify-between text-gray-500 text-[10px] mb-1">
               <span>Сумма без НДС:</span>
               <span>1 078 000 ₽</span>
             </div>
-            <div className="flex justify-between text-blue-400 font-bold text-lg">
+            <div className="flex justify-between text-blue-400 font-bold text-base">
               <span>Итого (с НДС)</span>
               <span>1 293 600 ₽</span>
             </div>
@@ -1239,50 +1239,35 @@ export const MarketingBudgetSlide: React.FC = () => {
         </motion.div>
 
         {/* Апрель */}
-        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-[#0f172a] border border-green-500/30 p-6 lg:p-8 rounded-3xl relative shadow-xl flex flex-col lg:scale-[1.03] z-10 box-shadow-green">
-          <div className="absolute inset-x-0 -bottom-16 h-40 bg-green-500/10 blur-[50px] rounded-full pointer-events-none"></div>
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center border border-green-500/50 text-green-400 font-bold">04</div>
-            <h3 className="text-3xl font-bold text-white tracking-tight">Апрель</h3>
+        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-[#0f172a] border border-green-500/30 p-5 lg:p-6 rounded-3xl relative shadow-xl flex flex-col z-10 box-shadow-green">
+          <div className="flex items-center gap-2 mb-4">
+            <div className="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center border border-green-500/50 text-green-400 font-bold text-sm">04</div>
+            <h3 className="text-2xl font-bold text-white tracking-tight">Апрель</h3>
           </div>
 
-          <div className="space-y-4 font-mono text-sm flex-grow mb-8">
-            <div className="flex justify-between border-b border-white/10 pb-2">
-              <span className="text-gray-400">Пиар</span>
-              <span className="text-white font-medium">278 000 ₽</span>
-            </div>
-            <div className="flex justify-between border-b border-white/10 pb-2">
-              <span className="text-gray-400">Перформанс</span>
-              <span className="text-white font-medium">550 000 ₽</span>
-            </div>
-            <div className="flex justify-between border-b border-white/10 pb-2">
-              <span className="text-gray-400">2 Волна радио</span>
-              <span className="text-white font-medium">450 000 ₽</span>
-            </div>
-            <div className="flex justify-between border-b border-white/10 pb-2">
-              <span className="text-gray-400">2 UGC + 1 OLV</span>
-              <span className="text-white font-medium">650 000 ₽</span>
-            </div>
-            <div className="flex justify-between border-b border-white/10 pb-2">
-              <span className="text-gray-400">OLV кинотеатры</span>
-              <span className="text-white font-medium">1 000 000 ₽</span>
-            </div>
-            <div className="flex justify-between border-b border-white/10 pb-2">
-              <span className="text-gray-400">Яндекс Карты</span>
-              <span className="text-white font-medium">750 000 ₽</span>
-            </div>
-            <div className="flex justify-between border-b border-white/10 pb-2">
-              <span className="text-gray-400">Телеграм посевы</span>
-              <span className="text-white font-medium">500 000 ₽</span>
-            </div>
+          <div className="space-y-2 font-mono text-xs flex-grow mb-6">
+            {[
+              { label: "Пиар", val: "278 000 ₽" },
+              { label: "Перформанс", val: "550 000 ₽" },
+              { label: "2 Волна радио", val: "450 000 ₽" },
+              { label: "2 UGC + 1 OLV", val: "650 000 ₽" },
+              { label: "OLV кинотеатры", val: "1 000 000 ₽" },
+              { label: "Яндекс Карты", val: "750 000 ₽" },
+              { label: "Телеграм посевы", val: "500 000 ₽" },
+            ].map((item, i) => (
+              <div key={i} className="flex justify-between border-b border-white/5 pb-1">
+                <span className="text-gray-400">{item.label}</span>
+                <span className="text-white font-medium">{item.val}</span>
+              </div>
+            ))}
           </div>
 
-          <div className="bg-white/5 rounded-2xl p-5 border border-green-500/30 mt-auto relative z-10 backdrop-blur-sm">
-            <div className="flex justify-between text-gray-400 text-xs mb-2">
+          <div className="bg-white/5 rounded-xl p-4 border border-green-500/30 mt-auto relative z-10 backdrop-blur-sm">
+            <div className="flex justify-between text-gray-500 text-[10px] mb-1">
               <span>Сумма без НДС:</span>
               <span>4 178 000 ₽</span>
             </div>
-            <div className="flex justify-between text-green-400 font-bold text-xl drop-shadow-md">
+            <div className="flex justify-between text-green-400 font-bold text-lg">
               <span>Итого (с НДС)</span>
               <span>5 097 160 ₽</span>
             </div>
@@ -1290,41 +1275,41 @@ export const MarketingBudgetSlide: React.FC = () => {
         </motion.div>
 
         {/* Май */}
-        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-[#0f172a] border border-yellow-500/30 p-6 lg:p-8 rounded-3xl relative shadow-lg flex flex-col">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-full bg-yellow-500/20 flex items-center justify-center border border-yellow-500/50 text-yellow-500 font-bold">05</div>
-            <h3 className="text-3xl font-bold text-white tracking-tight">Май</h3>
+        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-[#0f172a] border border-yellow-500/30 p-5 lg:p-6 rounded-3xl relative shadow-lg flex flex-col">
+          <div className="flex items-center gap-2 mb-4">
+            <div className="w-8 h-8 rounded-full bg-yellow-500/20 flex items-center justify-center border border-yellow-500/50 text-yellow-500 font-bold text-sm">05</div>
+            <h3 className="text-2xl font-bold text-white tracking-tight">Май</h3>
           </div>
 
-          <div className="space-y-4 font-mono text-sm flex-grow mb-8">
-            <div className="flex justify-between border-b border-white/10 pb-2">
+          <div className="space-y-2.5 font-mono text-xs flex-grow mb-6">
+            <div className="flex justify-between border-b border-white/5 pb-1.5">
               <span className="text-gray-400">Пиар</span>
               <span className="text-white font-medium">278 000 ₽</span>
             </div>
-            <div className="flex justify-between border-b border-white/10 pb-2">
+            <div className="flex justify-between border-b border-white/5 pb-1.5">
               <span className="text-gray-400">OLV кинотеатры</span>
               <span className="text-white font-medium">1 000 000 ₽</span>
             </div>
-            <div className="flex justify-between border-b border-white/10 pb-2">
+            <div className="flex justify-between border-b border-white/5 pb-1.5">
               <span className="text-gray-400">Перформанс</span>
               <span className="text-white font-medium">550 000 ₽</span>
             </div>
-            <div className="flex justify-between border-b border-white/10 pb-2">
+            <div className="flex justify-between border-b border-white/5 pb-1.5">
               <span className="text-gray-400">Яндекс Карты</span>
               <span className="text-white font-medium">750 000 ₽</span>
             </div>
-            <div className="flex justify-between border-b border-white/10 pb-2">
-              <span className="text-gray-400">2000L топлива</span>
+            <div className="flex justify-between border-b border-white/5 pb-1.5">
+              <span className="text-gray-400">1000L топлива</span>
               <span className="text-white font-medium">150 000 ₽</span>
             </div>
           </div>
 
-          <div className="bg-white/5 rounded-2xl p-5 border border-white/10 mt-auto">
-            <div className="flex justify-between text-gray-500 text-xs mb-2">
+          <div className="bg-white/5 rounded-xl p-4 border border-white/10 mt-auto">
+            <div className="flex justify-between text-gray-500 text-[10px] mb-1">
               <span>Сумма без НДС:</span>
               <span>2 728 000 ₽</span>
             </div>
-            <div className="flex justify-between text-yellow-400 font-bold text-lg">
+            <div className="flex justify-between text-yellow-400 font-bold text-base">
               <span>Итого (с НДС)</span>
               <span>3 328 160 ₽</span>
             </div>
@@ -1332,48 +1317,66 @@ export const MarketingBudgetSlide: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* Simplified Timeline (Gantt Chart) */}
-      <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="mt-8 lg:mt-12 w-full bg-white/5 border border-white/10 rounded-3xl p-6 lg:p-8 shadow-2xl overflow-hidden relative max-w-7xl mx-auto">
-        <div className="flex items-center gap-3 mb-6 border-b border-white/10 pb-4">
-          <Calendar className="text-uremont-blue" size={24} />
-          <h3 className="text-2xl font-bold text-white tracking-tight">Таймлайн запуска</h3>
+      {/* Full Gantt Chart Section */}
+      <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="w-full max-w-7xl mx-auto flex flex-col">
+        <div className="flex items-center gap-3 mb-4">
+          <Calendar className="text-uremont-blue" size={20} />
+          <h3 className="text-xl font-bold text-white">Гантт-таймлайн запуска</h3>
         </div>
-        <div className="relative pt-10 pb-4">
-          {/* Timeline Bar Background */}
-          <div className="absolute top-[4.5rem] left-0 right-0 h-1.5 bg-white/5 rounded-full hidden md:block"></div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-4 relative">
-            {/* Step 1 */}
-            <div className="flex flex-col items-center">
-              <div className="w-10 h-10 rounded-full bg-green-500/20 border-2 border-green-500 flex items-center justify-center text-green-500 font-bold mb-4 z-10 bg-[#0f172a]">01</div>
-              <div className="text-center">
-                <div className="text-white font-bold text-sm">Подготовка & Тесты</div>
-                <div className="text-gray-500 text-[10px] font-mono mt-1">10 мар - 23 мар</div>
+        <div className="relative w-full bg-black/20 rounded-2xl border border-white/5 p-6 lg:p-8 overflow-hidden">
+          {/* Timeline Grid Markers */}
+          <div className="absolute inset-0 grid grid-cols-4 pointer-events-none opacity-20">
+            <div className="border-r border-white/10 h-full"></div>
+            <div className="border-r border-white/10 h-full"></div>
+            <div className="border-r border-white/10 h-full"></div>
+            <div className="h-full"></div>
+          </div>
+
+          {/* Header Months */}
+          <div className="grid grid-cols-4 gap-0 mb-8 border-b border-white/5 pb-2 relative z-10">
+            <div className="text-[10px] text-gray-500 uppercase font-mono tracking-widest text-center">Март</div>
+            <div className="text-[10px] text-gray-500 uppercase font-mono tracking-widest text-center">Апрель</div>
+            <div className="text-[10px] text-gray-500 uppercase font-mono tracking-widest text-center">Май</div>
+            <div className="text-[10px] text-gray-500 uppercase font-mono tracking-widest text-center">Пост-кампейн</div>
+          </div>
+
+          {/* Gantt Rows */}
+          <div className="space-y-4 relative z-10">
+            {/* Row 1: Preparation */}
+            <div className="relative h-10 flex items-center">
+              <div className="absolute left-[8%] w-[15%] h-7 bg-green-500/20 border border-green-500/40 rounded-lg flex items-center justify-center group shadow-lg shadow-green-500/5">
+                <div className="absolute inset-0 bg-green-500/10 group-hover:bg-green-500/20 transition-colors"></div>
+                <span className="text-[9px] font-bold text-green-400 uppercase text-center px-1">Подготовка</span>
               </div>
+              <div className="ml-[25%] text-[11px] text-gray-400 opacity-60">Настройка трекинга AppsFlyer, интеграция Я.Карт, тесты</div>
             </div>
-            {/* Step 2 */}
-            <div className="flex flex-col items-center">
-              <div className="w-10 h-10 rounded-full bg-blue-500/20 border-2 border-blue-500 flex items-center justify-center text-blue-500 font-bold mb-4 z-10 bg-[#0f172a]">02</div>
-              <div className="text-center">
-                <div className="text-white font-bold text-sm">Старт Спецпроекта</div>
-                <div className="text-gray-500 text-[10px] font-mono mt-1">24 мар - 6 апр</div>
+
+            {/* Row 2: Promo Launch */}
+            <div className="relative h-10 flex items-center">
+              <div className="absolute left-[22%] w-[15%] h-7 bg-blue-500/20 border border-blue-500/40 rounded-lg flex items-center justify-center group shadow-lg shadow-blue-500/5">
+                <div className="absolute inset-0 bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors"></div>
+                <span className="text-[9px] font-bold text-blue-400 uppercase text-center px-1">Спецпроект</span>
               </div>
+              <div className="ml-[39%] text-[11px] text-gray-400 opacity-60">Запуск промо «UREMONT Заправляет». Сбор регистраций</div>
             </div>
-            {/* Step 3 */}
-            <div className="flex flex-col items-center">
-              <div className="w-10 h-10 rounded-full bg-yellow-500/20 border-2 border-yellow-500 flex items-center justify-center text-yellow-500 font-bold mb-4 z-10 bg-[#0f172a]">03</div>
-              <div className="text-center">
-                <div className="text-white font-bold text-sm">Медиа Скалирование</div>
-                <div className="text-gray-500 text-[10px] font-mono mt-1">7 апр - 4 мая</div>
+
+            {/* Row 3: Scaling */}
+            <div className="relative h-10 flex items-center">
+              <div className="absolute left-[34%] w-[38%] h-7 bg-yellow-500/20 border border-yellow-500/40 rounded-lg flex items-center justify-center group shadow-lg shadow-yellow-500/5">
+                <div className="absolute inset-0 bg-yellow-500/10 group-hover:bg-yellow-500/20 transition-colors"></div>
+                <span className="text-[9px] font-bold text-yellow-500 uppercase text-center px-1">Масштабирование (Радио, DOOH, Карты)</span>
               </div>
+              <div className="ml-[74%] text-[11px] text-gray-400 opacity-60">Разгон Retention-машины и охват</div>
             </div>
-            {/* Step 4 */}
-            <div className="flex flex-col items-center">
-              <div className="w-10 h-10 rounded-full bg-purple-500/20 border-2 border-purple-500 flex items-center justify-center text-purple-500 font-bold mb-4 z-10 bg-[#0f172a]">04</div>
-              <div className="text-center">
-                <div className="text-white font-bold text-sm">Оптимизация</div>
-                <div className="text-gray-500 text-[10px] font-mono mt-1">от 5 мая</div>
+
+            {/* Row 4: Optimization */}
+            <div className="relative h-10 flex items-center">
+              <div className="absolute left-[75%] w-[20%] h-7 bg-purple-500/20 border border-purple-500/40 rounded-lg flex items-center justify-center group shadow-lg shadow-purple-500/5">
+                <div className="absolute inset-0 bg-purple-500/10 group-hover:bg-purple-500/20 transition-colors"></div>
+                <span className="text-[9px] font-bold text-purple-400 uppercase text-center px-1">Оптимизация</span>
               </div>
+              <div className="ml-[10%] text-[11px] text-gray-500 uppercase font-bold tracking-tighter opacity-10">Data-driven performance</div>
             </div>
           </div>
         </div>
