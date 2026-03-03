@@ -1063,92 +1063,188 @@ export const MarketingForecastSlide: React.FC = () => {
 
       <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="w-full max-w-6xl overflow-hidden rounded-2xl bg-[#0f172a] border border-white/10 shadow-2xl">
         <div className="overflow-x-auto">
-          <table className="w-full text-left text-sm whitespace-nowrap">
+          <table className="w-full text-left text-[11px] lg:text-xs xl:text-sm whitespace-nowrap">
             <thead>
-              <tr className="bg-white/5 border-b border-white/10 text-gray-400">
-                <th className="p-3 font-medium border-r border-white/10">Параметр</th>
-                <th className="p-3 font-medium text-center w-32 border-r border-white/10">Март План</th>
-                <th className="p-3 font-medium text-center w-32 border-r border-white/10">Апрель План</th>
-                <th className="p-3 font-medium text-center w-32">Май План</th>
+              <tr className="bg-white/5 border-b border-white/10 text-gray-400 font-medium tracking-wide">
+                <th className="p-2 border-r border-white/10">Параметр</th>
+                <th className="p-2 text-center w-28 border-r border-white/10">Февраль Факт</th>
+                <th className="p-2 text-center w-28 border-r border-white/10">Март План</th>
+                <th className="p-2 text-center w-28 border-r border-white/10">Апрель План</th>
+                <th className="p-2 text-center w-28">Май План</th>
               </tr>
             </thead>
             <tbody>
               {/* === SECTION 1 === */}
               <tr className="bg-blue-900/40 border-y border-blue-500/30">
-                <td colSpan={4} className="p-2 px-4 font-bold text-blue-200 uppercase tracking-wider text-xs">Вводные параметры</td>
+                <td colSpan={5} className="p-1.5 px-3 font-bold text-blue-200 uppercase tracking-wider text-[10px] xl:text-xs">Вводные параметры</td>
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
-                <td className="p-2.5 px-4 font-medium text-gray-200 border-r border-white/10">Маркетинг: бюджет (digital), ₽</td>
-                <td className="p-2.5 text-center font-mono text-red-400 border-r border-white/10">600 000 ₽</td>
-                <td className="p-2.5 text-center font-mono text-red-400 border-r border-white/10">700 000 ₽</td>
-                <td className="p-2.5 text-center font-mono text-red-400">700 000 ₽</td>
+                <td className="p-1.5 px-3 text-gray-300 border-r border-white/10">Маркетинг: бюджет, ₽ (охваты, PR, SEO)</td>
+                <td className="p-1.5 text-center font-mono text-blue-400 border-r border-white/10">278 000 ₽</td>
+                <td className="p-1.5 text-center font-mono text-red-400 border-r border-white/10">753 600 ₽</td>
+                <td className="p-1.5 text-center font-mono text-red-400 border-r border-white/10">6 280 000 ₽</td>
+                <td className="p-1.5 text-center font-mono text-red-400">2 778 160 ₽</td>
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
-                <td className="p-2.5 px-4 text-gray-400 border-r border-white/10">Медийный охват</td>
-                <td className="p-2.5 text-center font-mono text-gray-400 border-r border-white/10">1 200 000</td>
-                <td className="p-2.5 text-center font-mono text-gray-400 border-r border-white/10">4 374 248</td>
-                <td className="p-2.5 text-center font-mono text-gray-400">3 674 248</td>
+                <td className="p-1.5 px-3 text-gray-400 border-r border-white/10">Охват Медийный</td>
+                <td className="p-1.5 text-center font-mono text-gray-500 border-r border-white/10">-</td>
+                <td className="p-1.5 text-center font-mono text-gray-400 border-r border-white/10">1 200 000</td>
+                <td className="p-1.5 text-center font-mono text-gray-400 border-r border-white/10">4 374 248</td>
+                <td className="p-1.5 text-center font-mono text-gray-400">3 674 248</td>
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
-                <td className="p-2.5 px-4 text-gray-400 border-r border-white/10">Клики</td>
-                <td className="p-2.5 text-center font-mono text-gray-400 border-r border-white/10">4 800</td>
-                <td className="p-2.5 text-center font-mono text-gray-400 border-r border-white/10">17 497</td>
-                <td className="p-2.5 text-center font-mono text-gray-400">14 697</td>
+                <td className="p-1.5 px-3 text-gray-400 border-r border-white/10">Клики</td>
+                <td className="p-1.5 text-center font-mono text-gray-500 border-r border-white/10">-</td>
+                <td className="p-1.5 text-center font-mono text-gray-400 border-r border-white/10">4 800</td>
+                <td className="p-1.5 text-center font-mono text-gray-400 border-r border-white/10">17 497</td>
+                <td className="p-1.5 text-center font-mono text-gray-400">14 697</td>
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
-                <td className="p-2.5 px-4 text-gray-400 border-r border-white/10">Стоимость запроса ИИ (₽/запрос)</td>
-                <td className="p-2.5 text-center font-mono text-blue-400 border-r border-white/10">443 ₽</td>
-                <td className="p-2.5 text-center font-mono text-blue-400 border-r border-white/10">443 ₽</td>
-                <td className="p-2.5 text-center font-mono text-blue-400">420 ₽</td>
+                <td className="p-1.5 px-3 text-gray-400 border-r border-white/10">Запросы ИИ охватные</td>
+                <td className="p-1.5 text-center font-mono text-gray-500 border-r border-white/10">-</td>
+                <td className="p-1.5 text-center font-mono text-red-400 border-r border-white/10">240</td>
+                <td className="p-1.5 text-center font-mono text-red-400 border-r border-white/10">875</td>
+                <td className="p-1.5 text-center font-mono text-red-400">1 176</td>
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
-                <td className="p-2.5 px-4 text-gray-400 border-r border-white/10">Органика к платным запросам</td>
-                <td className="p-2.5 text-center font-mono text-blue-400 border-r border-white/10">65%</td>
-                <td className="p-2.5 text-center font-mono text-blue-400 border-r border-white/10">77%</td>
-                <td className="p-2.5 text-center font-mono text-blue-400">70%</td>
+                <td className="p-1.5 px-3 text-gray-400 border-r border-white/10">Стоимость охватного запроса в ИИ</td>
+                <td className="p-1.5 text-center font-mono text-gray-500 border-r border-white/10">-</td>
+                <td className="p-1.5 text-center font-mono text-red-400 border-r border-white/10">3 140 ₽</td>
+                <td className="p-1.5 text-center font-mono text-red-400 border-r border-white/10">7 178 ₽</td>
+                <td className="p-1.5 text-center font-mono text-red-400">2 363 ₽</td>
+              </tr>
+              <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                <td className="p-1.5 px-3 font-medium text-gray-200 border-r border-white/10">Маркетинг: бюджет, ₽ (digital)</td>
+                <td className="p-1.5 text-center font-mono font-bold text-blue-400 border-r border-white/10">402 696 ₽</td>
+                <td className="p-1.5 text-center font-mono text-red-400 border-r border-white/10">600 000 ₽</td>
+                <td className="p-1.5 text-center font-mono text-red-400 border-r border-white/10">700 000 ₽</td>
+                <td className="p-1.5 text-center font-mono text-red-400">700 000 ₽</td>
+              </tr>
+              <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                <td className="p-1.5 px-3 text-gray-400 border-r border-white/10">Стоимость запроса ИИ (₽/запрос)</td>
+                <td className="p-1.5 text-center font-mono font-bold text-blue-400 border-r border-white/10">443 ₽</td>
+                <td className="p-1.5 text-center font-mono text-blue-400 border-r border-white/10">443 ₽</td>
+                <td className="p-1.5 text-center font-mono text-blue-400 border-r border-white/10">443 ₽</td>
+                <td className="p-1.5 text-center font-mono text-blue-400">420 ₽</td>
+              </tr>
+              <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                <td className="p-1.5 px-3 text-gray-400 border-r border-white/10">Органика к платным запросам, %</td>
+                <td className="p-1.5 text-center font-mono font-bold text-blue-400 border-r border-white/10">49%</td>
+                <td className="p-1.5 text-center font-mono text-blue-400 border-r border-white/10">65%</td>
+                <td className="p-1.5 text-center font-mono text-blue-400 border-r border-white/10">77%</td>
+                <td className="p-1.5 text-center font-mono text-blue-400">70%</td>
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors bg-uremont-blue/10">
-                <td className="p-2.5 px-4 text-white font-medium border-r border-uremont-blue/20">CR ИИ → лид (звонок+заявка)</td>
-                <td className="p-2.5 text-center font-mono text-uremont-blue border-r border-uremont-blue/20">10%</td>
-                <td className="p-2.5 text-center font-mono text-uremont-blue border-r border-uremont-blue/20">11%</td>
-                <td className="p-2.5 text-center font-mono text-uremont-blue">12%</td>
+                <td className="p-1.5 px-3 text-white font-medium border-r border-uremont-blue/20">CR ИИ → лид (звонок+заявка)</td>
+                <td className="p-1.5 text-center font-mono text-uremont-blue font-bold border-r border-uremont-blue/20">10%</td>
+                <td className="p-1.5 text-center font-mono text-uremont-blue border-r border-uremont-blue/20">10%</td>
+                <td className="p-1.5 text-center font-mono text-uremont-blue border-r border-uremont-blue/20">11%</td>
+                <td className="p-1.5 text-center font-mono text-uremont-blue">12%</td>
+              </tr>
+              <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                <td className="p-1.5 px-3 text-gray-400 border-r border-white/10">Доля звонков в лидах</td>
+                <td className="p-1.5 text-center font-mono font-bold border-r border-white/10 text-yellow-500">69%</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-blue-400">70%</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-blue-400">70%</td>
+                <td className="p-1.5 text-center font-mono text-blue-400">70%</td>
+              </tr>
+              <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                <td className="p-1.5 px-3 text-gray-400 border-r border-white/10">CR звонок → ремонт</td>
+                <td className="p-1.5 text-center font-mono font-bold border-r border-white/10 text-yellow-500">0%</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-blue-400">0,0%</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-blue-400">10,0%</td>
+                <td className="p-1.5 text-center font-mono text-blue-400">15,0%</td>
+              </tr>
+              <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                <td className="p-1.5 px-3 text-gray-400 border-r border-white/10">CR заявка → ремонт</td>
+                <td className="p-1.5 text-center font-mono font-bold border-r border-white/10 text-yellow-500">38%</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-blue-400">30%</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-blue-400">30,0%</td>
+                <td className="p-1.5 text-center font-mono text-blue-400">30,0%</td>
+              </tr>
+              <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                <td className="p-1.5 px-3 text-gray-400 border-r border-white/10">Повторы от лояльности к первичным</td>
+                <td className="p-1.5 text-center font-mono font-bold border-r border-white/10 text-blue-400">0,0%</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-blue-400">0,0%</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-blue-400">0,0%</td>
+                <td className="p-1.5 text-center font-mono text-blue-400">2,0%</td>
+              </tr>
+              <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                <td className="p-1.5 px-3 text-gray-400 border-r border-white/10">СТО на карте, шт</td>
+                <td className="p-1.5 text-center font-mono font-bold border-r border-white/10 text-yellow-500">143</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-blue-400">150</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-blue-400">160</td>
+                <td className="p-1.5 text-center font-mono text-blue-400">170</td>
               </tr>
 
               {/* === SECTION 2 === */}
               <tr className="bg-blue-900/40 border-y border-blue-500/30">
-                <td colSpan={4} className="p-2 px-4 font-bold text-blue-200 uppercase tracking-wider text-xs">Расчёт воронки</td>
+                <td colSpan={5} className="p-1.5 px-3 font-bold text-blue-200 uppercase tracking-wider text-[10px] xl:text-xs">Расчёт воронки</td>
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
-                <td className="p-2.5 px-4 font-bold border-r border-white/10">Запросы ИИ (всего), шт</td>
-                <td className="p-2.5 text-center font-mono font-bold border-r border-white/10">3 870</td>
-                <td className="p-2.5 text-center font-mono font-bold border-r border-white/10">6 870</td>
-                <td className="p-2.5 text-center font-mono font-bold">5 556</td>
+                <td className="p-1.5 px-3 border-r border-white/10 text-gray-300">Запросы ИИ (платные), шт</td>
+                <td className="p-1.5 text-center font-mono font-bold border-r border-white/10">910</td>
+                <td className="p-1.5 text-center font-mono font-bold border-r border-white/10">1 354</td>
+                <td className="p-1.5 text-center font-mono font-bold border-r border-white/10">1 580</td>
+                <td className="p-1.5 text-center font-mono font-bold">1 667</td>
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
-                <td className="p-2.5 px-4 border-r border-white/10 text-gray-300">Лиды (звонок+заявка), шт</td>
-                <td className="p-2.5 text-center font-mono border-r border-white/10 text-gray-300">387</td>
-                <td className="p-2.5 text-center font-mono border-r border-white/10 text-gray-300">756</td>
-                <td className="p-2.5 text-center font-mono text-gray-300">667</td>
+                <td className="p-1.5 px-3 border-r border-white/10 text-gray-300">Запросы ИИ (всего), шт</td>
+                <td className="p-1.5 text-center font-mono font-bold border-r border-white/10">1 773</td>
+                <td className="p-1.5 text-center font-mono font-bold border-r border-white/10">3 870</td>
+                <td className="p-1.5 text-center font-mono font-bold border-r border-white/10">6 870</td>
+                <td className="p-1.5 text-center font-mono font-bold">5 556</td>
+              </tr>
+              <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                <td className="p-1.5 px-3 border-r border-white/10 text-gray-300">Лиды (звонок+заявка), шт</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-300">173</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-300">387</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-300">756</td>
+                <td className="p-1.5 text-center font-mono text-gray-300">667</td>
+              </tr>
+              <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                <td className="p-1.5 px-3 border-r border-white/10 text-gray-300">Звонки, шт</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-300">120</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-300">555</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-300">1 368</td>
+                <td className="p-1.5 text-center font-mono text-gray-300">1 490</td>
+              </tr>
+              <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                <td className="p-1.5 px-3 border-r border-white/10 text-gray-300">Заявки, шт</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-300">53</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-300">116</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-300">227</td>
+                <td className="p-1.5 text-center font-mono text-gray-300">200</td>
+              </tr>
+              <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                <td className="p-1.5 px-3 border-r border-white/10 text-gray-300">Ремонты (первичные), шт</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-300">20</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-300">35</td>
+                <td className="p-1.5 text-center font-mono border-r border-white/10 text-gray-300">205</td>
+                <td className="p-1.5 text-center font-mono text-gray-300">283</td>
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors bg-uremont-blue/10">
-                <td className="p-3 px-4 font-black text-uremont-blue text-base border-r border-uremont-blue/20">Ремонты (итого), шт</td>
-                <td className="p-3 text-center font-mono font-black text-uremont-blue text-lg border-r border-uremont-blue/20">35</td>
-                <td className="p-3 text-center font-mono font-black text-uremont-blue text-lg border-r border-uremont-blue/20">205</td>
-                <td className="p-3 text-center font-mono font-black text-uremont-blue text-lg">289</td>
+                <td className="p-1.5 px-3 font-black text-uremont-blue border-r border-uremont-blue/20">Ремонты (итого), шт</td>
+                <td className="p-1.5 text-center font-mono font-black text-uremont-blue border-r border-uremont-blue/20">20</td>
+                <td className="p-1.5 text-center font-mono font-black text-uremont-blue border-r border-uremont-blue/20">35</td>
+                <td className="p-1.5 text-center font-mono font-black text-uremont-blue border-r border-uremont-blue/20">205</td>
+                <td className="p-1.5 text-center font-mono font-black text-uremont-blue">289</td>
               </tr>
 
               {/* Final CR */}
               <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
-                <td className="p-2.5 px-4 text-gray-400 border-r border-white/10">CR ИИ → ремонт</td>
-                <td className="p-2.5 text-center font-mono text-gray-400 border-r border-white/10">1%</td>
-                <td className="p-2.5 text-center font-mono text-gray-400 border-r border-white/10">3%</td>
-                <td className="p-2.5 text-center font-mono text-gray-400">5%</td>
+                <td className="p-1.5 px-3 text-gray-400 border-r border-white/10">CR ИИ → ремонт</td>
+                <td className="p-1.5 text-center font-mono text-gray-400 border-r border-white/10">1%</td>
+                <td className="p-1.5 text-center font-mono text-gray-400 border-r border-white/10">1%</td>
+                <td className="p-1.5 text-center font-mono text-gray-400 border-r border-white/10">3%</td>
+                <td className="p-1.5 text-center font-mono text-gray-400">5%</td>
               </tr>
               <tr className="hover:bg-white/5 transition-colors">
-                <td className="p-2.5 px-4 font-medium text-gray-200 border-r border-white/10">CR: Лиды (звонок+заявка) → ремонт</td>
-                <td className="p-2.5 text-center font-mono font-medium text-gray-200 border-r border-white/10">9,0%</td>
-                <td className="p-2.5 text-center font-mono font-medium text-gray-200 border-r border-white/10">27,1%</td>
-                <td className="p-2.5 text-center font-mono font-medium text-gray-200">43,4%</td>
+                <td className="p-1.5 px-3 font-medium text-gray-200 border-r border-white/10">CR: Лиды (звонок+заявка) → ремонт</td>
+                <td className="p-1.5 text-center font-mono font-medium text-gray-200 border-r border-white/10">12%</td>
+                <td className="p-1.5 text-center font-mono font-medium text-gray-200 border-r border-white/10">9,0%</td>
+                <td className="p-1.5 text-center font-mono font-medium text-gray-200 border-r border-white/10">27,1%</td>
+                <td className="p-1.5 text-center font-mono font-medium text-gray-200">43,4%</td>
               </tr>
             </tbody>
           </table>
