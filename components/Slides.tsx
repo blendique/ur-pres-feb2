@@ -44,8 +44,8 @@ const BrowserWindow: React.FC<{ children: React.ReactNode; title?: string }> = (
 // --- Slide 1: Funnel Results ---
 export const FunnelResultsSlide: React.FC = () => {
   return (
-    <div className="h-full flex flex-col justify-start pt-64 px-8 md:px-12 lg:px-24">
-      <motion.div initial="hidden" animate="visible" variants={containerVariants} className="mb-6">
+    <div className="h-full flex flex-col justify-center px-8 md:px-12 lg:px-24">
+      <motion.div initial="hidden" animate="visible" variants={containerVariants} className="mb-8">
         <span className="text-uremont-accent font-mono text-sm tracking-wider">01 / ИТОГИ ФЕВРАЛЯ</span>
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mt-2 text-white">
           Оцифровка воронки и <span className="text-uremont-blue">результаты</span>
@@ -136,7 +136,7 @@ export const CallFunnelSlide: React.FC = () => {
   ];
 
   return (
-    <div className="h-full flex flex-col justify-start pt-64 px-8 md:px-12 lg:px-24">
+    <div className="h-full flex flex-col justify-center px-8 md:px-12 lg:px-24">
       <motion.div initial="hidden" animate="visible" variants={containerVariants} className="mb-10">
         <span className="text-uremont-accent font-mono text-sm tracking-wider">01 / ИТОГИ ФЕВРАЛЯ</span>
         <h2 className="text-3xl md:text-5xl font-bold mt-2 text-white">
@@ -194,7 +194,7 @@ export const RequestFunnelSlide: React.FC = () => {
   ];
 
   return (
-    <div className="h-full flex flex-col justify-start pt-64 px-8 md:px-12 lg:px-24">
+    <div className="h-full flex flex-col justify-center px-8 md:px-12 lg:px-24">
       <motion.div initial="hidden" animate="visible" variants={containerVariants} className="mb-10">
         <span className="text-uremont-accent font-mono text-sm tracking-wider">01 / ИТОГИ ФЕВРАЛЯ</span>
         <h2 className="text-3xl md:text-5xl font-bold mt-2 text-white">
@@ -265,7 +265,7 @@ export const AgendaSlide: React.FC<AgendaSlideProps> = ({ onNavigate }) => {
   ];
 
   return (
-    <div className="h-full flex flex-col justify-start pt-32 px-12 md:px-24">
+    <div className="h-full flex flex-col justify-center px-12 md:px-24">
       <motion.div
         className="mb-8"
         initial={{ opacity: 0, x: -20 }}
@@ -312,7 +312,7 @@ export const AgendaSlide: React.FC<AgendaSlideProps> = ({ onNavigate }) => {
 // --- Slide 3: Results (Feb 2026) ---
 export const ResultsSlide: React.FC = () => {
   return (
-    <div className="h-full flex flex-col justify-start pt-64 px-12 md:px-24">
+    <div className="h-full flex flex-col justify-center px-12 md:px-24">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -463,7 +463,7 @@ export const SolutionSlide: React.FC = () => {
   ];
 
   return (
-    <div className="h-full flex flex-col justify-start pt-64 px-12 md:px-24">
+    <div className="h-full flex flex-col justify-center px-12 md:px-24">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -587,7 +587,7 @@ export const SolutionSlide: React.FC = () => {
 // --- Slide 6: Customer Process Part 2 ---
 export const CustomerProcessSlide2: React.FC = () => {
   return (
-    <div className="h-full flex flex-col justify-start pt-64 px-12 md:px-24">
+    <div className="h-full flex flex-col justify-center px-12 md:px-24">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -731,7 +731,7 @@ export const LoyaltyProgramSlide: React.FC = () => {
   ];
 
   return (
-    <div className="h-full flex flex-col justify-start pt-64 px-12 md:px-24">
+    <div className="h-full flex flex-col justify-center px-12 md:px-24">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -792,7 +792,7 @@ export const LoyaltyProgramSlide: React.FC = () => {
 // --- Marketing Slide 1: Problem and Goal ---
 export const MarketingProblemSlide: React.FC = () => {
   return (
-    <div className="h-full flex flex-col justify-start pt-64 px-12 md:px-24">
+    <div className="h-full flex flex-col justify-center px-12 md:px-24">
       <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="mb-8">
         <span className="text-uremont-accent font-mono text-sm tracking-wider">05 / МАРКЕТИНГ ПЛАН</span>
         <h2 className="text-4xl md:text-6xl font-bold mt-2">
@@ -806,7 +806,7 @@ export const MarketingProblemSlide: React.FC = () => {
           <ul className="space-y-4">
             <li className="flex items-start gap-3 text-lg text-gray-300">
               <div className="bg-red-500/20 text-red-500 p-1 rounded-full shrink-0 mt-0.5"><X size={16} strokeWidth={3} /></div>
-              <span>Низкая узнаваемость у аудитории платформы за исключением старой базы «Халявщиков»</span>
+              <span>Низкая узнаваемость у аудитории платформы за исключением старой базы</span>
             </li>
             <li className="flex items-center gap-3 text-lg text-gray-300">
               <div className="bg-red-500/20 text-red-500 p-1 rounded-full shrink-0"><X size={16} strokeWidth={3} /></div>
@@ -832,7 +832,7 @@ export const MarketingProblemSlide: React.FC = () => {
 // --- Marketing Slide 2: Promo 2000L ---
 export const MarketingPromoSlide: React.FC = () => {
   return (
-    <div className="h-full flex flex-col justify-start pt-64 px-12 md:px-24">
+    <div className="h-full flex flex-col justify-center px-12 md:px-24">
       <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="mb-8">
         <span className="text-uremont-accent font-mono text-sm tracking-wider">05 / МАРКЕТИНГ ПЛАН</span>
         <h2 className="text-4xl md:text-5xl font-bold mt-2">
@@ -960,7 +960,7 @@ export const MarketingPromoSlide: React.FC = () => {
 // --- Marketing Slide 4: Postcampaign ---
 export const MarketingPostcampSlide: React.FC = () => {
   return (
-    <div className="h-full flex flex-col justify-start pt-64 px-12 md:px-24">
+    <div className="h-full flex flex-col justify-center px-12 md:px-24">
       <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="mb-8">
         <span className="text-uremont-accent font-mono text-sm tracking-wider">05 / МАРКЕТИНГ ПЛАН</span>
         <h2 className="text-4xl md:text-5xl font-bold mt-2">
@@ -1006,7 +1006,7 @@ export const MarketingPostcampSlide: React.FC = () => {
 // --- Marketing Slide 5: Channels Ecosystem ---
 export const MarketingChannelsSlide: React.FC = () => {
   return (
-    <div className="h-full flex flex-col justify-start pt-64 px-12 md:px-24">
+    <div className="h-full flex flex-col justify-center px-12 md:px-24">
       <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="mb-8">
         <span className="text-uremont-accent font-mono text-sm tracking-wider">05 / МАРКЕТИНГ ПЛАН</span>
         <h2 className="text-3xl md:text-5xl font-bold mt-2">
@@ -1053,7 +1053,7 @@ export const MarketingChannelsSlide: React.FC = () => {
 // --- Marketing Slide 12: Forecast ---
 export const MarketingForecastSlide: React.FC = () => {
   return (
-    <div className="h-full flex flex-col justify-start pt-64 px-12 md:px-24">
+    <div className="h-full flex flex-col justify-center px-12 md:px-24">
       <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="mb-4">
         <span className="text-uremont-accent font-mono text-sm tracking-wider">05 / МАРКЕТИНГ ПЛАН</span>
         <h2 className="text-3xl md:text-5xl font-bold mt-2">
@@ -1150,7 +1150,7 @@ export const MarketingForecastSlide: React.FC = () => {
 // --- Marketing Slide 11: Budget ---
 export const MarketingBudgetSlide: React.FC = () => {
   return (
-    <div className="h-full flex flex-col justify-start pt-28 px-8 md:px-12 lg:px-24 relative overflow-hidden">
+    <div className="h-full flex flex-col justify-center px-8 md:px-12 lg:px-24 relative overflow-hidden">
 
       <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="mb-4 lg:mb-6 md:ml-12 relative z-10">
         <span className="text-uremont-accent font-mono text-sm tracking-wider">05 / МАРКЕТИНГ ПЛАН</span>
@@ -1329,8 +1329,8 @@ export const MarketingBudgetSlide: React.FC = () => {
 // --- Slide 17: Discussion ---
 export const DiscussionSlide: React.FC = () => {
   return (
-    <div className="h-full flex flex-col justify-start pt-32 px-12 md:px-24">
-      <div className="flex flex-col items-center justify-start text-center">
+    <div className="h-full flex flex-col justify-center px-12 md:px-24">
+      <div className="flex flex-col items-center justify-center text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

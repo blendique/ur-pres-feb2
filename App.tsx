@@ -150,7 +150,7 @@ const App: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
-          className="fixed bottom-8 right-12 z-40 hidden md:block"
+          className="absolute bottom-8 right-12 z-40 hidden md:block"
         >
           <div className="flex items-center gap-4">
             <div className="text-right">
