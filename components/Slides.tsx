@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, BarChart3, ShieldCheck, Zap, Users, MessageSquare, Search, ThumbsUp, Wallet, Database, BrainCircuit, MousePointerClick, TrendingUp, Bot, Repeat, Car, PlayCircle, ChevronLeft, ChevronRight, FileBarChart, Phone, Star, CheckCircle, Headphones, LayoutGrid, MapPin, Wrench, MessageCircle, Percent, AlertCircle, FileCheck, PhoneCall, Timer, UserCheck, Building2, Map, Crosshair, ArrowDown, Activity, Clock, Coffee, MonitorCheck, MapPinned, LayoutDashboard, GripVertical, HelpCircle, FileText, Terminal, CreditCard, Calendar } from 'lucide-react';
+import { ArrowRight, BarChart3, ShieldCheck, Zap, Users, MessageSquare, Search, ThumbsUp, Wallet, Database, BrainCircuit, MousePointerClick, TrendingUp, Bot, Repeat, Car, PlayCircle, ChevronLeft, ChevronRight, FileBarChart, Phone, Star, CheckCircle, Headphones, LayoutGrid, MapPin, Wrench, MessageCircle, Percent, AlertCircle, FileCheck, PhoneCall, Timer, UserCheck, Building2, Map, Crosshair, ArrowDown, Activity, Clock, Coffee, MonitorCheck, MapPinned, LayoutDashboard, GripVertical, HelpCircle, FileText, Terminal, CreditCard, Calendar, QrCode, Filter, Send, MonitorPlay, Mic, RadioTower, Target, Navigation, Megaphone, X } from 'lucide-react';
 
 const containerVariants = {
   hidden: { opacity: 0 },
-  visible: { 
+  visible: {
     opacity: 1,
-    transition: { 
+    transition: {
       staggerChildren: 0.1,
       delayChildren: 0.1
     }
@@ -34,48 +34,94 @@ const BrowserWindow: React.FC<{ children: React.ReactNode; title?: string }> = (
     </div>
     {/* Browser Content */}
     <div className="flex-1 bg-[#020617] overflow-hidden relative p-2 flex flex-col">
-       <div className="w-full h-full bg-white rounded-lg border border-gray-800 overflow-hidden relative text-black">
-          {children}
-       </div>
+      <div className="w-full h-full bg-white rounded-lg border border-gray-800 overflow-hidden relative text-black">
+        {children}
+      </div>
     </div>
   </div>
 );
 
-// --- Slide 1: Welcome ---
-export const WelcomeSlide: React.FC = () => {
+// --- Slide 1: Funnel Results ---
+export const FunnelResultsSlide: React.FC = () => {
   return (
-    <div className="h-full flex flex-col justify-center px-12 md:px-24">
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={containerVariants}
-        className="max-w-4xl"
-      >
-        <motion.div variants={itemVariants} className="flex items-center gap-4 mb-4">
-           <span className="px-3 py-1 rounded-full border border-uremont-blue text-uremont-blue text-xs md:text-sm uppercase tracking-widest">
-             Релиз 01'2026
-           </span>
-        </motion.div>
-        
-        <motion.h1 
-          variants={itemVariants} 
-          className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6 text-white leading-tight"
-        >
-          UREMONT <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-uremont-blue to-cyan-400">
-            AI 2.0
-          </span>
-        </motion.h1>
-        
-        <motion.p variants={itemVariants} className="text-lg md:text-2xl text-gray-400 font-light max-w-4xl">
-          Улучшение пользовательского опыта.
-          <br />
-          Новый взгляд на УТП.
-        </motion.p>
+    <div className="h-full flex flex-col justify-center px-8 md:px-12 lg:px-24">
+      <motion.div initial="hidden" animate="visible" variants={containerVariants} className="mb-8">
+        <span className="text-uremont-accent font-mono text-sm tracking-wider">01 / ИТОГИ ФЕВРАЛЯ</span>
+        <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mt-2 text-white">
+          Оцифровка воронки и <span className="text-cyan-400">результаты</span>
+        </h2>
       </motion.div>
-      
-      {/* Decorative Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-uremont-blue/10 rounded-full blur-[100px] -z-10 pointer-events-none" />
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mb-6">
+        <motion.div variants={itemVariants} className="bg-white/5 p-6 rounded-2xl border border-white/10 flex flex-col justify-center relative overflow-hidden">
+          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white/5 to-transparent"></div>
+          <div className="text-sm text-gray-400 mb-1">Бюджет (digital)</div>
+          <div className="text-3xl lg:text-4xl font-bold text-white">402 696 <span className="text-uremont-accent text-xl">₽</span></div>
+        </motion.div>
+        <motion.div variants={itemVariants} className="bg-white/5 p-6 rounded-2xl border border-white/10 flex flex-col justify-center relative overflow-hidden">
+          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white/5 to-transparent"></div>
+          <div className="text-sm text-gray-400 mb-1">Стоимость ИИ-запроса</div>
+          <div className="text-3xl lg:text-4xl font-bold text-white">443 <span className="text-uremont-accent text-xl">₽</span></div>
+        </motion.div>
+        <motion.div variants={itemVariants} className="bg-white/5 p-6 rounded-2xl border border-white/10 flex flex-col justify-center relative overflow-hidden">
+          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white/5 to-transparent"></div>
+          <div className="text-sm text-gray-400 mb-1">СТО на карте</div>
+          <div className="text-3xl lg:text-4xl font-bold text-white">143 <span className="text-gray-500 text-xl font-normal">шт</span></div>
+          <div className="text-xs text-green-400 mt-2 font-medium">+ новых 8 штук</div>
+        </motion.div>
+      </div>
+
+      <motion.div variants={itemVariants} className="bg-[#0f172a] border border-cyan-500/20 rounded-3xl p-6 lg:p-8 max-w-7xl shadow-2xl relative overflow-hidden">
+        <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-l from-cyan-500/10 to-transparent pointer-events-none"></div>
+        <h3 className="text-lg font-bold text-cyan-400 uppercase tracking-widest mb-6 border-b border-cyan-500/20 pb-4">Расчёт воронки</h3>
+
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-8">
+          <div className="text-center w-full lg:w-1/4">
+            <div className="text-4xl lg:text-5xl font-black text-white mb-2">1 773</div>
+            <div className="text-sm font-medium text-gray-300">Запросы ИИ (всего)</div>
+            <div className="text-xs text-gray-400 mt-2 flex flex-col gap-1 border border-white/5 bg-black/20 p-2 rounded-lg">
+              <div className="flex justify-between items-center gap-4"><span>Платные:</span> <span className="text-white font-bold">910 шт.</span></div>
+              <div className="flex justify-between items-center gap-4"><span>Органика <span className="text-[10px] opacity-60">(49%)</span>:</span> <span className="text-white font-bold">863 шт.</span></div>
+            </div>
+          </div>
+
+          <div className="flex flex-col items-center justify-center relative w-full lg:w-1/6">
+            <ArrowRight className="text-cyan-500/50 hidden lg:block" size={32} />
+            <ArrowDown className="text-cyan-500/50 block lg:hidden my-2" size={24} />
+            <div className="lg:absolute lg:-top-6 bg-cyan-500/20 text-cyan-400 text-xs font-bold px-3 py-1 rounded-full border border-cyan-500/30 whitespace-nowrap">
+              CR 10%
+            </div>
+          </div>
+
+          <div className="text-center bg-white/5 p-4 rounded-2xl border border-white/5 w-full lg:w-1/3 shadow-inner">
+            <div className="text-4xl lg:text-5xl font-black text-white mb-2">173</div>
+            <div className="text-sm font-medium text-gray-300 mb-3">Лиды (звонок + заявка)</div>
+            <div className="flex xl:flex-row flex-col justify-center gap-2 xl:gap-4 text-xs">
+              <div className="bg-black/30 px-3 py-2 rounded-lg text-left flex-1 border border-white/5">
+                <div className="text-gray-400">Звонки: <span className="text-white font-bold">120 шт</span> <span className="text-[10px] opacity-60">(69%)</span></div>
+                <div className="text-gray-500 mt-1">CR в ремонт: <span className="font-bold text-gray-400">0%</span></div>
+              </div>
+              <div className="bg-black/30 px-3 py-2 rounded-lg text-left flex-1 border border-white/5">
+                <div className="text-gray-400">Заявки: <span className="text-white font-bold">53 шт</span></div>
+                <div className="text-green-400 mt-1">CR в ремонт: <span className="font-bold">38%</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col items-center justify-center relative w-full lg:w-1/6">
+            <ArrowRight className="text-cyan-500/50 hidden lg:block" size={32} />
+            <ArrowDown className="text-cyan-500/50 block lg:hidden my-2" size={24} />
+            <div className="lg:absolute lg:-top-6 bg-cyan-500/20 text-cyan-400 text-xs font-bold px-3 py-1 rounded-full border border-cyan-500/30 whitespace-nowrap">
+              CR 12%
+            </div>
+          </div>
+
+          <div className="text-center w-full lg:w-1/4">
+            <div className="text-5xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-cyan-500 drop-shadow-lg mb-2">20</div>
+            <div className="text-sm font-bold text-white uppercase tracking-wider">Ремонты (итого)</div>
+          </div>
+        </div>
+      </motion.div>
     </div>
   );
 };
@@ -87,18 +133,17 @@ interface AgendaSlideProps {
 
 export const AgendaSlide: React.FC<AgendaSlideProps> = ({ onNavigate }) => {
   const points = [
-    { id: 1, title: "Основа изменений", desc: "Проблемы старой версии, требующие решения", targetSlide: 2 },
-    { id: 2, title: "CustDev и цифры", desc: "Данные, на которых основаны решения: аудитория и боли, факторы доверия", targetSlide: 3 },
-    { id: 3, title: "Новые решения", desc: "Переработанное УТП, новая база данных, обновление AI-алгоритмов", targetSlide: 6 },
-    { id: 4, title: "Обновленная операционная модель", desc: "Технологичность, скорость и контроль качества звонков через AI", targetSlide: 10 },
-    { id: 5, title: "Новая система отбора СТО", desc: "Измененные стандарты для партнеров и план масштабирования", targetSlide: 11 },
-    { id: 6, title: "План доработок", desc: "Список запланированных работ на Q1 2026", targetSlide: 12 },
-    { id: 7, title: "Свободное обсуждение", desc: "Q&A сессия по результатам презентации", targetSlide: 13 },
+    { id: 1, title: "Результаты Февраля", desc: "Ключевые метрики, звонки и продукт", targetSlide: 1 },
+    { id: 2, title: "Решение: Звонок -> Ремонт", desc: "Новый путь обработки и регистрация", targetSlide: 2 },
+    { id: 3, title: "Процесс клиента", desc: "Личный кабинет и PDF-направление", targetSlide: 3 },
+    { id: 4, title: "Программа лояльности", desc: "Статусы, скидки и бенефиты", targetSlide: 4 },
+    { id: 5, title: "Маркетинг план", desc: "Спецпроект на 2000л, экосистема каналов, бюджет", targetSlide: 5 },
+    { id: 6, title: "Свободное обсуждение", desc: "Q&A сессия по результатам презентации", targetSlide: 14 },
   ];
 
   return (
     <div className="h-full flex flex-col justify-center px-12 md:px-24">
-      <motion.div 
+      <motion.div
         className="mb-8"
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -108,7 +153,7 @@ export const AgendaSlide: React.FC<AgendaSlideProps> = ({ onNavigate }) => {
         <div className="h-1 w-20 bg-uremont-blue rounded-full"></div>
       </motion.div>
 
-      <motion.div 
+      <motion.div
         className="grid grid-cols-1 gap-4 lg:gap-5 max-w-6xl"
         variants={containerVariants}
         initial="hidden"
@@ -116,8 +161,8 @@ export const AgendaSlide: React.FC<AgendaSlideProps> = ({ onNavigate }) => {
         viewport={{ once: true }}
       >
         {points.map((point) => (
-          <motion.div 
-            key={point.id} 
+          <motion.div
+            key={point.id}
             variants={itemVariants}
             onClick={() => onNavigate && onNavigate(point.targetSlide)}
             className="group flex items-center gap-4 lg:gap-6 p-4 rounded-xl border border-white/5 bg-white/5 hover:bg-white/10 hover:border-uremont-blue/50 transition-all duration-300 cursor-pointer active:scale-[0.99]"
@@ -141,106 +186,8 @@ export const AgendaSlide: React.FC<AgendaSlideProps> = ({ onNavigate }) => {
   );
 };
 
-// --- Slide 3: Problems (Interactive) ---
-export const ProblemSlide: React.FC = () => {
-  const [activeProblem, setActiveProblem] = useState<number>(1);
-
-  return (
-    <div className="h-full flex flex-col justify-center px-8 md:px-24">
-      <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.2fr] gap-8 lg:gap-12 items-center">
-        <motion.div
-           initial="hidden"
-           whileInView="visible"
-           viewport={{ once: true }}
-           variants={containerVariants}
-        >
-          <motion.div variants={itemVariants} className="mb-4 lg:mb-6">
-             <span className="text-uremont-accent font-mono text-sm tracking-wider">01 / ПРОБЛЕМАТИКА</span>
-             <h2 className="text-3xl lg:text-5xl font-bold mt-2 leading-tight">
-               Точки роста <br />
-               <span className="text-uremont-blue">предыдущей версии</span>
-             </h2>
-          </motion.div>
-
-          <motion.div variants={itemVariants} className="space-y-3">
-             {/* Problem 1 */}
-             <div 
-               className={`flex items-start gap-3 p-3 rounded-lg border-l-4 transition-all cursor-pointer ${activeProblem === 1 ? 'bg-white/10 border-red-500' : 'bg-white/5 border-transparent hover:bg-white/10'}`}
-               onMouseEnter={() => setActiveProblem(1)}
-             >
-                <div className="min-w-[20px] pt-1"><MousePointerClick className={`${activeProblem === 1 ? 'text-red-500' : 'text-gray-500'} w-5 h-5 transition-colors`} /></div>
-                <div>
-                    <h4 className="font-bold text-white mb-0.5 text-base lg:text-lg">Нет действия в один клик</h4>
-                    <p className="text-xs lg:text-sm text-gray-400 leading-relaxed">
-                        Нельзя сразу рассчитать стоимость или записаться.
-                    </p>
-                </div>
-             </div>
-             {/* Problem 2 */}
-             <div 
-               className={`flex items-start gap-3 p-3 rounded-lg border-l-4 transition-all cursor-pointer ${activeProblem === 2 ? 'bg-white/10 border-orange-500' : 'bg-white/5 border-transparent hover:bg-white/10'}`}
-               onMouseEnter={() => setActiveProblem(2)}
-             >
-                <div className="min-w-[20px] pt-1"><Zap className={`${activeProblem === 2 ? 'text-orange-500' : 'text-gray-500'} w-5 h-5 transition-colors`} /></div>
-                <div>
-                    <h4 className="font-bold text-white mb-0.5 text-base lg:text-lg">Размытое УТП</h4>
-                    <p className="text-xs lg:text-sm text-gray-400 leading-relaxed">
-                        Ключевое предложение не цепляло глаз и не закрывало боль клиента.
-                    </p>
-                </div>
-             </div>
-             {/* Problem 3 */}
-             <div 
-               className={`flex items-start gap-3 p-3 rounded-lg border-l-4 transition-all cursor-pointer ${activeProblem === 3 ? 'bg-white/10 border-yellow-500' : 'bg-white/5 border-transparent hover:bg-white/10'}`}
-               onMouseEnter={() => setActiveProblem(3)}
-             >
-                <div className="min-w-[20px] pt-1"><Search className={`${activeProblem === 3 ? 'text-yellow-500' : 'text-gray-500'} w-5 h-5 transition-colors`} /></div>
-                <div>
-                    <h4 className="font-bold text-white mb-0.5 text-base lg:text-lg">Сложный поиск услуг</h4>
-                    <p className="text-xs lg:text-sm text-gray-400 leading-relaxed">
-                        Из 78 услуг в списке пользователи часто не находили нужную.
-                    </p>
-                </div>
-             </div>
-             {/* Problem 4 */}
-             <div 
-               className={`flex items-start gap-3 p-3 rounded-lg border-l-4 transition-all cursor-pointer ${activeProblem === 4 ? 'bg-white/10 border-blue-500' : 'bg-white/5 border-transparent hover:bg-white/10'}`}
-               onMouseEnter={() => setActiveProblem(4)}
-             >
-                <div className="min-w-[20px] pt-1"><Database className={`${activeProblem === 4 ? 'text-blue-500' : 'text-gray-500'} w-5 h-5 transition-colors`} /></div>
-                <div>
-                    <h4 className="font-bold text-white mb-0.5 text-base lg:text-lg">Ограниченная база авто</h4>
-                    <p className="text-xs lg:text-sm text-gray-400 leading-relaxed">
-                        Отсутствовали редкие или новые модели.
-                    </p>
-                </div>
-             </div>
-          </motion.div>
-        </motion.div>
-
-        <motion.div
-           initial={{ opacity: 0, scale: 0.9 }}
-           whileInView={{ opacity: 1, scale: 1 }}
-           transition={{ duration: 0.5 }}
-           className="w-full aspect-[16/10] relative hidden lg:block"
-        >
-           <BrowserWindow title="uremont.com (v1.0)">
-              <div className="w-full h-full bg-black flex items-center justify-center overflow-hidden">
-                <img 
-                  src="https://pim4y1v96ezxxeus.public.blob.vercel-storage.com/9.jpg" 
-                  alt="Старый интерфейс лендинга"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-           </BrowserWindow>
-        </motion.div>
-      </div>
-    </div>
-  );
-};
-
-// --- Slide 4: Data (CustDev) - Updated Context & Pains ---
-export const DataSlide: React.FC = () => {
+// --- Slide 3: Results (Feb 2026) ---
+export const ResultsSlide: React.FC = () => {
   return (
     <div className="h-full flex flex-col justify-center px-12 md:px-24">
       <motion.div
@@ -250,86 +197,109 @@ export const DataSlide: React.FC = () => {
         variants={containerVariants}
         className="mb-8"
       >
-        <span className="text-uremont-accent font-mono text-sm tracking-wider">02 / АУДИТОРИЯ И БОЛИ. ОПРОШЕНО 411 РЕСПОНДЕНТОВ</span>
+        <span className="text-uremont-accent font-mono text-sm tracking-wider">01 / РЕЗУЛЬТАТЫ ФЕВРАЛЯ 2026</span>
         <h2 className="text-3xl md:text-5xl font-bold mt-2">
-          В основе решений — <span className="text-uremont-blue">настоящие проблемы</span>
+          Ключевые метрики <span className="text-uremont-blue">продукта и продаж</span>
         </h2>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 max-w-6xl">
-        {/* Stat 1: Audience & Context */}
-        <motion.div 
-           initial={{ opacity: 0, scale: 0.95 }}
-           whileInView={{ opacity: 1, scale: 1 }}
-           transition={{ delay: 0.1 }}
-           className="bg-white/5 p-5 rounded-xl border border-white/10 flex flex-col justify-between"
-        >
-          <div className="flex justify-between items-start">
-             <div>
-                <div className="text-4xl lg:text-5xl font-bold text-uremont-blue mb-1">63%</div>
-                <div className="text-base lg:text-lg font-medium text-white">Низкая лояльность</div>
-             </div>
-             <Users className="text-gray-500 w-6 h-6 lg:w-8 lg:h-8" />
-          </div>
-          <div className="mt-3 text-xs lg:text-sm text-gray-400">
-             Аудитория готова рассмотреть смену сервиса: лишь 37% всегда ездят в одно место. 45% у обслуживается дилеров, 38% в НСТО, 14% у знакомых. 
-          </div>
-        </motion.div>
-
-        {/* Stat 2: Key Pain */}
-        <motion.div 
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 max-w-7xl">
+        {/* Stat 1: Requests & Jan Comparison */}
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.2 }}
+          transition={{ delay: 0.1 }}
           className="bg-white/5 p-5 rounded-xl border border-white/10 flex flex-col justify-between"
         >
           <div className="flex justify-between items-start">
-             <div>
-                <div className="text-4xl lg:text-5xl font-bold text-red-500 mb-1">63%</div>
-                <div className="text-base lg:text-lg font-medium text-white">Страх навязывания</div>
-             </div>
-             <AlertCircle className="text-gray-500 w-6 h-6 lg:w-8 lg:h-8" />
+            <div>
+              <div className="text-4xl md:text-5xl font-bold text-uremont-blue mb-1">53 <span className="text-xl text-gray-400">заявки</span></div>
+              <div className="text-sm lg:text-base font-medium text-white mt-2">СТО. Всего 143 на карте</div>
+            </div>
+            <FileText className="text-gray-500 w-6 h-6 lg:w-8 lg:h-8" />
           </div>
-          <div className="mt-3 text-xs lg:text-sm text-gray-400">
-             Ключевая боль рынка — стресс. 63% боятся лишних работ, 37% — переплатить. Ядро боли: недоверие + непрозрачность.
-          </div>
-        </motion.div>
-
-        {/* Stat 3: Price Problem */}
-        <motion.div 
-           initial={{ opacity: 0, scale: 0.95 }}
-           whileInView={{ opacity: 1, scale: 1 }}
-           transition={{ delay: 0.3 }}
-           className="bg-white/5 p-5 rounded-xl border border-white/10 flex flex-col justify-between"
-        >
-          <div className="flex justify-between items-start">
-             <div>
-                <div className="text-4xl lg:text-5xl font-bold text-uremont-accent mb-1">69%</div>
-                <div className="text-base lg:text-lg font-medium text-white">Важно знать цену заранее</div>
-             </div>
-             <Wallet className="text-gray-500 w-6 h-6 lg:w-8 lg:h-8" />
-          </div>
-          <div className="mt-3 text-xs lg:text-sm text-gray-400">
-             При этом 66,18% из опрошенных респодентов не понимают структуру ценообразования.
+          <div className="mt-4 p-3 bg-uremont-blue/10 border border-uremont-blue/20 rounded-lg">
+            <div className="text-xs text-uremont-blue uppercase tracking-wider mb-1 font-semibold">Сравнение с Январем</div>
+            <div className="text-sm text-white flex items-center gap-2">
+              <TrendingUp size={16} className="text-green-400" />
+              Рост заявок в 2.4 раза (было 22)
+            </div>
           </div>
         </motion.div>
 
-         {/* Stat 4: Complexity */}
-         <motion.div 
-           initial={{ opacity: 0, scale: 0.95 }}
-           whileInView={{ opacity: 1, scale: 1 }}
-           transition={{ delay: 0.4 }}
-           className="bg-white/5 p-5 rounded-xl border border-white/10 flex flex-col justify-between"
+        {/* Stat 2: Dedicated Call Metrics block */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.2 }}
+          className="bg-gradient-to-br from-purple-500/10 to-transparent p-5 rounded-xl border border-purple-500/30 flex flex-col justify-between lg:col-span-2"
+        >
+          <div className="flex justify-between items-start mb-4">
+            <div>
+              <div className="text-2xl font-bold text-white">Разбор метрик звонков</div>
+              <div className="text-sm text-gray-400">Ключевые показатели телефонии за период</div>
+            </div>
+            <PhoneCall className="text-purple-400 w-6 h-6 lg:w-8 lg:h-8" />
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-auto">
+            <div className="bg-black/20 p-3 rounded-lg border border-white/5">
+              <div className="text-xs text-gray-500 mb-1">Всего звонков</div>
+              <div className="text-2xl font-bold text-white">120</div>
+            </div>
+            <div className="bg-black/20 p-3 rounded-lg border border-white/5 relative overflow-hidden group">
+              <div className="absolute inset-0 bg-yellow-500/10 translate-y-full group-hover:translate-y-0 transition-transform"></div>
+              <div className="text-xs text-gray-500 mb-1 relative z-10">AR (Answer Rate)</div>
+              <div className="text-2xl font-bold text-yellow-400 relative z-10">60% <span className="text-sm text-gray-500 font-normal">(32)</span></div>
+            </div>
+            <div className="bg-black/20 p-3 rounded-lg border border-white/5 relative overflow-hidden group">
+              <div className="absolute inset-0 bg-green-500/10 translate-y-full group-hover:translate-y-0 transition-transform"></div>
+              <div className="text-xs text-gray-500 mb-1 relative z-10">CR (Conversion Rate)</div>
+              <div className="text-2xl font-bold text-green-400 relative z-10">38% <span className="text-sm text-gray-500 font-normal">(20)</span></div>
+            </div>
+            <div className="bg-black/20 p-3 rounded-lg border border-white/5 relative overflow-hidden group">
+              <div className="absolute inset-0 bg-uremont-blue/10 translate-y-full group-hover:translate-y-0 transition-transform"></div>
+              <div className="text-xs text-gray-500 mb-1 relative z-10 whitespace-nowrap">Успешные звонки</div>
+              <div className="text-2xl font-bold text-uremont-blue relative z-10">98%</div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Stat 3: Product CR */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.3 }}
+          className="bg-white/5 p-5 rounded-xl border border-white/10 flex flex-col justify-between"
         >
           <div className="flex justify-between items-start">
-             <div>
-                <div className="text-4xl lg:text-5xl font-bold text-purple-500 mb-1">57%</div>
-                <div className="text-base lg:text-lg font-medium text-white">Боятся некачественных работ</div>
-             </div>
-             <HelpCircle className="text-gray-500 w-6 h-6 lg:w-8 lg:h-8" />
+            <div>
+              <div className="text-4xl md:text-5xl font-bold text-uremont-accent mb-1">9.4%</div>
+              <div className="text-base lg:text-lg font-medium text-white">CR ИИ → Действие</div>
+            </div>
+            <BrainCircuit className="text-gray-500 w-6 h-6 lg:w-8 lg:h-8" />
           </div>
-          <div className="mt-3 text-xs lg:text-sm text-gray-400">
-             А еще им сложно выбрать СТО: 43% опрошенных не могут сравнить сервисы между собой.
+          <div className="mt-3 text-xs lg:text-sm text-gray-400 font-mono">
+            CR Лендинг → Карта: 4.8%. <br />Корректное ИИ-распознавание: 92.4%.
+          </div>
+        </motion.div>
+
+        {/* Stat 4: Feedback */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.4 }}
+          className="bg-white/5 p-5 rounded-xl border border-white/10 flex flex-col justify-between lg:col-span-2"
+        >
+          <div className="flex justify-between items-start">
+            <div>
+              <div className="text-4xl lg:text-5xl font-bold text-green-500 mb-1">5.0</div>
+              <div className="text-base lg:text-lg font-medium text-white">Средняя оценка по отзывам клиентов</div>
+            </div>
+            <Star className="text-gray-500 w-6 h-6 lg:w-8 lg:h-8" />
+          </div>
+          <div className="mt-3 text-sm text-gray-400">
+            Собрано 7 отзывов. Высокий уровень удовлетворенности текущим продуктом. Решение проблемы 70/30 (перекос в звонки, которые не коллектятся) в процессе.
           </div>
         </motion.div>
       </div>
@@ -337,1076 +307,933 @@ export const DataSlide: React.FC = () => {
   );
 };
 
-// --- Slide 5: DataSlide2 (CustDev Part 2) - Solutions & Triggers ---
-export const DataSlide2: React.FC = () => {
-  return (
-    <div className="h-full flex flex-col justify-center px-12 md:px-24">
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={containerVariants}
-        className="mb-8"
-      >
-        <span className="text-uremont-accent font-mono text-sm tracking-wider">02 / ФАКТОРЫ ДОВЕРИЯ И РЕШЕНИЯ. ОПРОШЕНО 411 РЕСПОНДЕНТОВ</span>
-        <h2 className="text-3xl md:text-5xl font-bold mt-2">
-          Что говорят <span className="text-uremont-blue">потенциальные</span> клиенты?
-        </h2>
-      </motion.div>
+// --- Slide 4: Solution (Call -> Repair) ---
+export const SolutionSlide: React.FC = () => {
+  const [activeStep, setActiveStep] = useState(0);
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 max-w-6xl">
-        {/* Stat 1: Trust Triggers */}
-        <motion.div 
-           initial={{ opacity: 0, scale: 0.95 }}
-           whileInView={{ opacity: 1, scale: 1 }}
-           transition={{ delay: 0.1 }}
-           className="bg-white/5 p-5 rounded-xl border border-white/10 flex flex-col justify-between hover:bg-white/10 transition-colors"
-        >
-          <div className="flex justify-between items-start">
-             <div>
-                <div className="text-4xl lg:text-5xl font-bold text-yellow-500 mb-1">51%</div>
-                <div className="text-base lg:text-lg font-medium text-white">Рейтинг решает</div>
-             </div>
-             <Star className="text-gray-500 w-6 h-6 lg:w-8 lg:h-8" />
-          </div>
-          <div className="mt-3 text-xs lg:text-sm text-gray-400">
-             Главный триггер доверия — высокий рейтинг для 51%. Количество проведенных ремонтов автосервисом важно для 17%.
-          </div>
-        </motion.div>
-
-        {/* Stat 2: Effective Messages */}
-        <motion.div 
-           initial={{ opacity: 0, scale: 0.95 }}
-           whileInView={{ opacity: 1, scale: 1 }}
-           transition={{ delay: 0.2 }}
-           className="bg-white/5 p-5 rounded-xl border border-white/10 flex flex-col justify-between hover:bg-white/10 transition-colors"
-        >
-          <div className="flex justify-between items-start">
-             <div>
-                <div className="text-4xl lg:text-5xl font-bold text-uremont-blue mb-1">54%</div>
-                <div className="text-base lg:text-lg font-medium text-white">Честные цены</div>
-             </div>
-             <MessageSquare className="text-gray-500 w-6 h-6 lg:w-8 lg:h-8" />
-          </div>
-          <div className="mt-3 text-xs lg:text-sm text-gray-400">
-             Самый эффективный месседж — на языке выгоды. Однако при сравнении цены и рейтинга, побеждает второй.
-          </div>
-        </motion.div>
-
-        {/* Stat 3: Expectations */}
-        <motion.div 
-           initial={{ opacity: 0, scale: 0.95 }}
-           whileInView={{ opacity: 1, scale: 1 }}
-           transition={{ delay: 0.3 }}
-           className="bg-white/5 p-5 rounded-xl border border-white/10 flex flex-col justify-between hover:bg-white/10 transition-colors"
-        >
-          <div className="flex justify-between items-start">
-             <div>
-                <div className="text-4xl lg:text-5xl font-bold text-green-500 mb-1">64%</div>
-                <div className="text-base lg:text-lg font-medium text-white">Цена до визита</div>
-             </div>
-             <FileText className="text-gray-500 w-6 h-6 lg:w-8 lg:h-8" />
-          </div>
-          <div className="mt-3 text-xs lg:text-sm text-gray-400">
-             Главное ожидание от продукта — показать предварительную цену. Реальные отзывы важны для 48%, наличие всего в одном месте для 43%.
-          </div>
-        </motion.div>
-
-         {/* Stat 4: Platform Role */}
-         <motion.div 
-           initial={{ opacity: 0, scale: 0.95 }}
-           whileInView={{ opacity: 1, scale: 1 }}
-           transition={{ delay: 0.4 }}
-           className="bg-white/5 p-5 rounded-xl border border-white/10 flex flex-col justify-between hover:bg-white/10 transition-colors"
-        >
-          <div className="flex justify-between items-start">
-             <div>
-                <div className="text-4xl lg:text-5xl font-bold text-purple-500 mb-1">95%</div>
-                <div className="text-base lg:text-lg font-medium text-white">Проверка СТО</div>
-             </div>
-             <ShieldCheck className="text-gray-500 w-6 h-6 lg:w-8 lg:h-8" />
-          </div>
-          <div className="mt-3 text-xs lg:text-sm text-gray-400">
-             Роль платформы — верификация. Для 95% опрошенных критически важно, что СТО проверяются агрегатором.
-          </div>
-        </motion.div>
-      </div>
-    </div>
-  );
-};
-
-// --- Slide: Subscription Data ---
-export const SubscriptionSlide: React.FC = () => {
-  return (
-    <div className="h-full flex flex-col justify-center px-12 md:px-24">
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={containerVariants}
-        className="mb-8"
-      >
-        <span className="text-uremont-accent font-mono text-sm tracking-wider">02 / ПОДПИСНАЯ МОДЕЛЬ. ОПРОШЕН 181 РЕСПОНДЕНТ</span>
-        <h2 className="text-3xl md:text-5xl font-bold mt-2">
-          Готовность к <span className="text-uremont-blue">подпискам</span>
-        </h2>
-      </motion.div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 max-w-6xl">
-        {/* Stat 1 */}
-        <motion.div 
-           initial={{ opacity: 0, scale: 0.95 }}
-           whileInView={{ opacity: 1, scale: 1 }}
-           transition={{ delay: 0.1 }}
-           className="bg-white/5 p-5 rounded-xl border border-white/10 flex flex-col justify-between hover:bg-white/10 transition-colors"
-        >
-          <div className="flex justify-between items-start">
-             <div>
-                <div className="text-4xl lg:text-5xl font-bold text-uremont-blue mb-1">63%</div>
-                <div className="text-base lg:text-lg font-medium text-white">Уже платят за подписки</div>
-             </div>
-             <CreditCard className="text-gray-500 w-6 h-6 lg:w-8 lg:h-8" />
-          </div>
-          <div className="mt-3 text-xs lg:text-sm text-gray-400">
-             Формат привычен для аудитории и не вызывает отторжения.
-          </div>
-        </motion.div>
-
-        {/* Stat 2 */}
-        <motion.div 
-           initial={{ opacity: 0, scale: 0.95 }}
-           whileInView={{ opacity: 1, scale: 1 }}
-           transition={{ delay: 0.2 }}
-           className="bg-white/5 p-5 rounded-xl border border-white/10 flex flex-col justify-between hover:bg-white/10 transition-colors"
-        >
-          <div className="flex justify-between items-start">
-             <div>
-                <div className="text-4xl lg:text-5xl font-bold text-green-500 mb-1">54%</div>
-                <div className="text-base lg:text-lg font-medium text-white">Месячная подписка понятнее</div>
-             </div>
-             <Calendar className="text-gray-500 w-6 h-6 lg:w-8 lg:h-8" />
-          </div>
-          <div className="mt-3 text-xs lg:text-sm text-gray-400">
-             Формат «500 ₽ в месяц и −20%» воспринимается заметно лучше, чем покупка пакета услуг заранее.
-          </div>
-        </motion.div>
-
-        {/* Stat 3 */}
-        <motion.div 
-           initial={{ opacity: 0, scale: 0.95 }}
-           whileInView={{ opacity: 1, scale: 1 }}
-           transition={{ delay: 0.3 }}
-           className="bg-white/5 p-5 rounded-xl border border-white/10 flex flex-col justify-between hover:bg-white/10 transition-colors"
-        >
-          <div className="flex justify-between items-start">
-             <div>
-                <div className="text-4xl lg:text-5xl font-bold text-yellow-500 mb-1">38%</div>
-                <div className="text-base lg:text-lg font-medium text-white">Решает гарантированная экономия</div>
-             </div>
-             <Percent className="text-gray-500 w-6 h-6 lg:w-8 lg:h-8" />
-          </div>
-          <div className="mt-3 text-xs lg:text-sm text-gray-400">
-             Ключевой триггер оформления — чётко зафиксированная выгода и прозрачные условия.
-          </div>
-        </motion.div>
-
-         {/* Stat 4 */}
-         <motion.div 
-           initial={{ opacity: 0, scale: 0.95 }}
-           whileInView={{ opacity: 1, scale: 1 }}
-           transition={{ delay: 0.4 }}
-           className="bg-white/5 p-5 rounded-xl border border-white/10 flex flex-col justify-between hover:bg-white/10 transition-colors"
-        >
-          <div className="flex justify-between items-start">
-             <div>
-                <div className="text-4xl lg:text-5xl font-bold text-red-500 mb-1">19%</div>
-                <div className="text-base lg:text-lg font-medium text-white">Бренд пока неизвестен</div>
-             </div>
-             <HelpCircle className="text-gray-500 w-6 h-6 lg:w-8 lg:h-8" />
-          </div>
-          <div className="mt-3 text-xs lg:text-sm text-gray-400">
-             Почти 70% слышат о UREMONT впервые — подписка требует сильного объяснения ценности и доверия.
-          </div>
-        </motion.div>
-      </div>
-    </div>
-  );
-};
-
-// --- Slide 5: Solution 1 (Landing & USP) ---
-export const SolutionSlide1: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  
-  // Mixed content from Public folder
-  const content = [
-    { type: 'video', src: 'https://pim4y1v96ezxxeus.public.blob.vercel-storage.com/U1ntitled.mp4' },
-    { type: 'image', src: 'https://pim4y1v96ezxxeus.public.blob.vercel-storage.com/2.jpg' },
-    { type: 'image', src: 'https://pim4y1v96ezxxeus.public.blob.vercel-storage.com/3.jpg' },
-    { type: 'image', src: 'https://pim4y1v96ezxxeus.public.blob.vercel-storage.com/4.jpg' }
+  const steps = [
+    {
+      icon: PhoneCall,
+      title: "1. Карта и Регистрация",
+      desc: "На карте изначально видны только «процентики». Для отображения и получения скидки нужно ввести номер (бесшовная регистрация в карточке СТО), затем звонок / заявка."
+    },
+    {
+      icon: FileCheck,
+      title: "2. Генерация Направления",
+      desc: "Формируется цифровая сущность с авто, деталями и скидкой."
+    },
+    {
+      icon: QrCode,
+      title: "3. Клиенту — PDF с QR",
+      desc: "Отправляется по SMS или в ЛК, клиент показывает QR при приемке."
+    },
+    {
+      icon: MonitorCheck,
+      title: "4. СТО берет в работу",
+      desc: "У СТО есть возможность ручного доступа к заявке в своем кабинете, но сканирование QR также напрямую ведет в нужный раздел."
+    },
+    {
+      icon: Star,
+      title: "5. История и BigData",
+      desc: "Ремонт остается в истории ремонтов в личном кабинете пользователя, а также отправляется в BigData для аналитики и персонализации."
+    }
   ];
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % content.length);
-    }, 150000); // 15 seconds
-    return () => clearInterval(timer);
-  }, [content.length]);
-
-  const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % content.length);
-  const prevSlide = () => setCurrentIndex((prev) => (prev - 1 + content.length) % content.length);
-
-  const currentItem = content[currentIndex];
-
   return (
-    <div className="h-full flex flex-col justify-center px-6 md:pl-12 md:pr-28">
-      <div className="grid grid-cols-1 md:grid-cols-[0.8fr_1.4fr] gap-6 lg:gap-10 items-center">
+    <div className="h-full flex flex-col justify-center px-12 md:px-24">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={containerVariants}
+        className="mb-8"
+      >
+        <span className="text-uremont-accent font-mono text-sm tracking-wider">02 / РЕШЕНИЕ: ЗВОНОК → РЕМОНТ</span>
+        <h2 className="text-3xl md:text-5xl font-bold mt-2">
+          Новый путь <span className="text-uremont-blue">обработки клиента</span>
+        </h2>
+      </motion.div>
+
+      <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr] gap-8 lg:gap-12 max-w-7xl items-center">
+        {/* Left Column: Path Timeline */}
         <motion.div
-           initial="hidden"
-           whileInView="visible"
-           variants={containerVariants}
-           className="order-2 md:order-1"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.1, duration: 0.7 }}
+          className="relative"
         >
-           <span className="text-uremont-accent font-mono text-sm tracking-wider">РЕШЕНИЕ #1</span>
-           <h2 className="text-3xl font-bold mt-2 mb-4">Акцент на <br /><span className="text-uremont-blue">главном</span></h2>
-           <div className="space-y-3">
-             <div className="bg-white/5 p-3 rounded-lg border-l-2 border-uremont-blue">
-               <h3 className="text-white font-semibold text-sm mb-1">Выделено УТП</h3>
-               <p className="text-gray-400 text-xs">Переработана структура лендинга. <br />Фокус смещен на решение основного запроса пользователя.</p>
-             </div>
-             <div className="bg-white/5 p-3 rounded-lg border-l-2 border-uremont-accent">
-               <h3 className="text-white font-semibold text-sm mb-1">Действие в 1 клик</h3>
-               <p className="text-gray-400 text-xs">Добавлена возможность перейти на карту с активным действием. <br />Всё внимание акцентировано вокруг него.</p>
-             </div>
-             <div className="bg-white/5 p-3 rounded-lg border-l-2 border-purple-500">
-               <h3 className="text-white font-semibold text-sm mb-1">AI-Ready Дизайн</h3>
-               <p className="text-gray-400 text-xs">Минималистичный интерфейс, привычный пользователям современных нейросетей.</p>
-             </div>
-           </div>
+          <div className="space-y-4 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-0 md:before:translate-x-5 before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-white/20 before:to-transparent">
+            {steps.map((step, idx) => {
+              const Icon = step.icon;
+              const isActive = activeStep === idx;
+              return (
+                <div
+                  key={idx}
+                  onMouseEnter={() => setActiveStep(idx)}
+                  className={`relative flex items-center justify-normal group cursor-pointer transition-all duration-300 ${isActive ? 'scale-[1.02]' : 'opacity-70 hover:opacity-100'}`}
+                >
+                  <div className={`flex items-center justify-center w-10 h-10 rounded-full border shrink-0 z-10 shadow-md transition-colors duration-300 ${isActive ? 'bg-uremont-blue border-uremont-blue text-white' : 'border-white/20 bg-[#0f172a] text-gray-400 group-hover:bg-uremont-blue/50 group-hover:text-white'}`}>
+                    <Icon size={18} />
+                  </div>
+                  <div className={`ml-6 w-full bg-white/5 border p-4 rounded-xl shadow transition-colors duration-300 ${isActive ? 'border-uremont-blue/50 bg-white/10' : 'border-white/10 group-hover:border-white/20'}`}>
+                    <h3 className={`font-bold mb-1 transition-colors duration-300 ${isActive ? 'text-uremont-blue' : 'text-white'}`}>{step.title}</h3>
+                    <p className="text-xs text-gray-400">{step.desc}</p>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
         </motion.div>
 
-        <div className="flex flex-col gap-4 order-1 md:order-2 w-full">
-            <motion.div 
-               initial={{ y: 50, opacity: 0 }}
-               whileInView={{ y: 0, opacity: 1 }}
-               transition={{ duration: 0.7 }}
-               className="w-full aspect-[16/10] relative"
+        {/* Right Column: Interactive Content Area (1:1 Aspect Ratio) */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.2 }}
+          className="bg-white/5 rounded-3xl border border-white/10 flex flex-col justify-center items-center aspect-square shadow-2xl relative overflow-hidden p-8"
+        >
+          <AnimatePresence mode="popLayout">
+            {activeStep === 1 ? (
+              <motion.div
+                key="step-1"
+                initial={{ opacity: 0, scale: 0.95, y: 10 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95, y: -10 }}
+                transition={{ duration: 0.2 }}
+                className="w-full h-full flex flex-col justify-center"
+              >
+                <div className="flex justify-between items-start mb-6">
+                  <div>
+                    <div className="text-2xl lg:text-3xl font-bold text-white mb-2"><span className="text-uremont-blue">«Направление на ремонт»</span></div>
+                  </div>
+                  <FileCheck className="text-uremont-blue w-10 h-10" />
+                </div>
+                <div className="space-y-6">
+                  <div className="flex gap-4 items-center">
+                    <Car className="text-gray-500 w-6 h-6 shrink-0" />
+                    <span className="text-base text-gray-300">Клиент, авто, описание проблемы, расшифровка ИИ.</span>
+                  </div>
+                  <div className="flex gap-4 items-center">
+                    <Building2 className="text-gray-500 w-6 h-6 shrink-0" />
+                    <span className="text-base text-gray-300">Выбранное СТО, размер скидки по статусу.</span>
+                  </div>
+                  <div className="flex gap-4 items-center">
+                    <QrCode className="text-gray-500 w-6 h-6 shrink-0" />
+                    <span className="text-base text-gray-300">Уникальный QR и PDF-квиток.</span>
+                  </div>
+                </div>
+              </motion.div>
+            ) : (
+              <motion.div
+                key={`step-placeholder-${activeStep}`}
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.2 }}
+                className="w-full h-full border-2 border-dashed border-white/20 rounded-2xl flex flex-col items-center justify-center bg-black/20"
+              >
+                <div className="text-gray-500 mb-4 opacity-50">
+                  {React.createElement(steps[activeStep].icon, { size: 64 })}
+                </div>
+                <span className="text-gray-400 font-mono text-sm text-center px-4">Место для скриншота<br />600x600px (1:1)</span>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
+
+      </div>
+    </div>
+  );
+};
+
+// --- Slide 6: Customer Process Part 2 ---
+export const CustomerProcessSlide2: React.FC = () => {
+  return (
+    <div className="h-full flex flex-col justify-center px-12 md:px-24">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={containerVariants}
+        className="mb-8"
+      >
+        <span className="text-uremont-accent font-mono text-sm tracking-wider">03 / ПРОЦЕСС СО СТОРОНЫ КЛИЕНТА</span>
+        <h2 className="text-3xl md:text-5xl font-bold mt-2">
+          Направление на ремонт и <span className="text-uremont-blue">Личный Кабинет</span>
+        </h2>
+      </motion.div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-7xl">
+        {/* Step 4: PDF Draft */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          className="bg-white/5 p-6 md:p-8 rounded-3xl border border-white/10 flex flex-col shadow-xl"
+        >
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-14 h-14 bg-red-500/20 text-red-500 rounded-2xl flex items-center justify-center">
+              <FileText size={28} />
+            </div>
+            <h3 className="text-2xl font-bold text-white">Направление на ремонт (PDF)</h3>
+          </div>
+          <p className="text-gray-400 leading-relaxed mb-6">
+            Единый цифровой документ, который клиент может открыть по ссылке из SMS или в ЛК. Предъявляется на приемке в СТО.
+          </p>
+          <ul className="space-y-3 mb-6">
+            <li className="flex items-center gap-3 text-sm text-gray-300">
+              <CheckCircle size={16} className="text-green-500 shrink-0" /> Запрос ИИ, авто и список работ
+            </li>
+            <li className="flex items-center gap-3 text-sm text-gray-300">
+              <CheckCircle size={16} className="text-green-500 shrink-0" /> Выбранное СТО и стоимость
+            </li>
+            <li className="flex items-center gap-3 text-sm text-gray-300">
+              <CheckCircle size={16} className="text-green-500 shrink-0" /> Итоговый размер скидки
+            </li>
+            <li className="flex items-center gap-3 text-sm text-gray-300">
+              <CheckCircle size={16} className="text-green-500 shrink-0" /> QR-код для СТО
+            </li>
+          </ul>
+        </motion.div>
+
+        {/* Step 5: LK History */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          className="bg-white/5 p-6 md:p-8 rounded-3xl border border-white/10 flex flex-col shadow-xl"
+        >
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-14 h-14 bg-blue-500/20 text-blue-500 rounded-2xl flex items-center justify-center">
+              <LayoutGrid size={28} />
+            </div>
+            <h3 className="text-2xl font-bold text-white">История ремонтов в ЛК</h3>
+          </div>
+          <p className="text-gray-400 leading-relaxed mb-6">
+            Каждое направление сохраняется в личном кабинете клиента, обеспечивая прозрачность и мотивацию возвращаться.
+          </p>
+          <div className="mb-4">
+            <div className="bg-black/30 p-4 rounded-xl border border-white/5 flex items-center gap-3">
+              <Star className="text-yellow-500 shrink-0" size={20} />
+              <div>
+                <div className="text-xs text-gray-500 mb-0.5">Рост лояльности</div>
+                <div className="text-sm font-bold text-white">Ремонты учитываются для повышения статуса.</div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+
+
+// --- Slide 8: Loyalty Program ---
+export const LoyaltyProgramSlide: React.FC = () => {
+  const statuses = [
+    {
+      name: "Гость не зарегистрирован",
+      discount: "0",
+      color: "text-gray-400",
+      bg: "bg-gray-400/10",
+      border: "border-gray-400/20",
+      req: "Нет аккаунта",
+      prefs: ["— Получает: ничего"],
+      icon: UserCheck
+    },
+    {
+      name: "Серебряный ключ",
+      discount: "5%",
+      color: "text-gray-300",
+      bg: "bg-gray-300/10",
+      border: "border-gray-300/20",
+      req: "0 ремонтов или ОСАГО / КАСКО",
+      prefs: [
+        "Скидка до 5% на работы",
+        "Скидка на КАСКО 10%",
+        "Бесплатный отчёт Автотеки в год",
+        "Приоритетная поддержка"
+      ],
+      icon: FileCheck
+    },
+    {
+      name: "Золотой ключ",
+      discount: "7%",
+      color: "text-yellow-400",
+      bg: "bg-yellow-400/10",
+      border: "border-yellow-400/20",
+      req: "1–3 ремонта или ОСАГО",
+      prefs: [
+        "Скидка до 7% на работы",
+        "Скидка на КАСКО 15%",
+        "Бесплатный отчёт Автотеки на авто",
+        "Приоритетная поддержка"
+      ],
+      icon: Star
+    },
+    {
+      name: "Платиновый ключ",
+      discount: "10%",
+      color: "text-purple-400",
+      bg: "bg-purple-400/10",
+      border: "border-purple-400/20",
+      req: "4+ ремонтов за 12 месяцев",
+      prefs: [
+        "Скидка до 10% на работы",
+        "Скидка на КАСКО 20%",
+        "Скидка на хранение шин",
+        "Отчёт Автотеки на авто",
+        "Бесплатный эвакуатор 1 раз в год",
+        "1 юридическая консультация в год",
+        "2 бесплатные мойки у партнеров",
+        "Приоритетная поддержка"
+      ],
+      icon: Target
+    }
+  ];
+
+  return (
+    <div className="h-full flex flex-col justify-center px-12 md:px-24">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={containerVariants}
+        className="mb-8 text-center"
+      >
+        <span className="text-uremont-accent font-mono text-sm tracking-wider">04 / ПРОГРАММА ЛОЯЛЬНОСТИ</span>
+        <h2 className="text-3xl md:text-5xl font-bold mt-2">
+          Уровни статуса и <span className="text-uremont-blue">привилегии</span>
+        </h2>
+      </motion.div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 w-full max-w-7xl mx-auto items-stretch mt-4">
+        {statuses.map((status, index) => {
+          const Icon = status.icon;
+          return (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              className={`flex flex-col p-6 rounded-2xl border ${status.border} ${status.bg} hover:-translate-y-2 transition-transform cursor-default relative overflow-hidden h-full`}
             >
-              <BrowserWindow title="uremont.com/ab-test">
-                 <div className="relative w-full h-full group bg-black">
-                    <AnimatePresence mode="wait">
-                        <motion.div
-                            key={currentIndex}
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.5 }}
-                            className="absolute inset-0 w-full h-full"
-                        >
-                            {currentItem.type === 'image' ? (
-                                <img 
-                                  src={currentItem.src} 
-                                  alt={`Slide ${currentIndex + 1}`}
-                                  className="w-full h-full object-cover"
-                                />
-                            ) : (
-                                <video
-                                  src={currentItem.src}
-                                  autoPlay
-                                  muted
-                                  playsInline
-                                  loop // Loop video in case it's shorter than 10s
-                                  className="w-full h-full object-cover"
-                                />
-                            )}
-                        </motion.div>
-                    </AnimatePresence>
-                    
-                    {/* Controls */}
-                    <button onClick={prevSlide} className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/50 text-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-20">
-                        <ChevronLeft size={16} />
-                    </button>
-                    <button onClick={nextSlide} className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/50 text-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-20">
-                        <ChevronRight size={16} />
-                    </button>
-                    
-                    {/* Indicators */}
-                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
-                        {content.map((_, idx) => (
-                           <div 
-                              key={idx} 
-                              onClick={() => setCurrentIndex(idx)}
-                              className={`w-2 h-2 rounded-full cursor-pointer transition-colors ${currentIndex === idx ? 'bg-white' : 'bg-white/50'}`} 
-                           />
-                        ))}
-                    </div>
-                 </div>
-              </BrowserWindow>
+              {index === 3 && (
+                <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-purple-400/0 via-purple-400 to-purple-400/0"></div>
+              )}
+              <div className="flex items-center gap-3 mb-6">
+                <div className={`w-12 h-12 shrink-0 rounded-xl bg-black/30 flex items-center justify-center ${status.color} border border-white/5`}>
+                  <Icon size={24} />
+                </div>
+                <div>
+                  <div className="text-xs text-gray-400 line-clamp-2 md:line-clamp-1 leading-tight mb-1">{status.req}</div>
+                  <div className={`font-bold text-lg md:text-xl leading-none ${index === 3 ? status.color : 'text-white'}`}>{status.name}</div>
+                </div>
+              </div>
+
+              <div className={`text-5xl font-bold ${status.color} mb-8`}>{index === 0 ? '-' : status.discount}</div>
+
+              <div className="flex flex-col gap-3 mt-auto">
+                {status.prefs.map((pref, i) => (
+                  <div key={i} className="flex items-start gap-2 text-sm text-gray-300 leading-tight">
+                    <CheckCircle className={`w-[18px] h-[18px] shrink-0 mt-0.5 ${index === 0 ? 'text-gray-600' : status.color}`} />
+                    <span>{pref}</span>
+                  </div>
+                ))}
+              </div>
             </motion.div>
+          )
+        })}
+      </div>
+    </div>
+  );
+};
+
+// --- Marketing Slide 0: PR Stats ---
+export const MarketingStatsSlide: React.FC = () => {
+  return (
+    <div className="h-full flex flex-col justify-center px-12 md:px-24">
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="mb-12">
+        <span className="text-uremont-accent font-mono text-sm tracking-wider">05 / МАРКЕТИНГ ПЛАН</span>
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mt-2 text-white">
+          Отчетность <span className="text-blue-400">PR-агентства Redline</span>
+        </h2>
+      </motion.div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl w-full">
+        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-[#0f172a] p-8 lg:p-10 rounded-[2rem] border border-blue-500/20 flex flex-col justify-center items-center text-center shadow-2xl relative overflow-hidden group">
+          <div className="absolute inset-x-0 -bottom-24 h-48 bg-blue-500/10 blur-[50px] rounded-full group-hover:bg-blue-500/30 transition-all duration-500"></div>
+          <FileText className="text-blue-400 mb-6 opacity-80" size={48} />
+          <div className="text-6xl md:text-7xl font-black text-white mb-4 tracking-tighter shadow-blue-500/20 drop-shadow-lg">94</div>
+          <div className="text-lg text-gray-400 font-medium uppercase tracking-widest">Публикации</div>
+        </motion.div>
+
+        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-[#0f172a] p-8 lg:p-10 rounded-[2rem] border border-purple-500/20 flex flex-col justify-center items-center text-center shadow-2xl relative overflow-hidden group md:scale-105 z-10">
+          <div className="absolute inset-x-0 -bottom-24 h-48 bg-purple-500/10 blur-[50px] rounded-full group-hover:bg-purple-500/30 transition-all duration-500"></div>
+          <Users className="text-purple-400 mb-6 opacity-80" size={48} />
+          <div className="text-5xl md:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-br from-white to-purple-200 mb-4 tracking-tighter drop-shadow-xl">
+            24.5<span className="text-3xl lg:text-4xl text-purple-200">M</span>
+          </div>
+          <div className="text-lg text-gray-300 font-bold uppercase tracking-widest leading-tight">Охват</div>
+          <div className="text-xs text-purple-400 mt-2 font-mono opacity-80">по данным Медиалогии <br /> (24 516 106)</div>
+        </motion.div>
+
+        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-[#0f172a] p-8 lg:p-10 rounded-[2rem] border border-green-500/20 flex flex-col justify-center items-center text-center shadow-2xl relative overflow-hidden group">
+          <div className="absolute inset-x-0 -bottom-24 h-48 bg-green-500/10 blur-[50px] rounded-full group-hover:bg-green-500/30 transition-all duration-500"></div>
+          <TrendingUp className="text-green-400 mb-6 opacity-80" size={48} />
+          <div className="text-6xl md:text-7xl font-black text-white mb-4 tracking-tighter drop-shadow-lg shadow-green-500/20">511.7</div>
+          <div className="text-lg text-gray-400 font-medium uppercase tracking-widest">МедиаИндекс</div>
+        </motion.div>
+
+        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 0.5 }} className="flex justify-center md:col-start-2 mt-4 md:-translate-y-4">
+          <div className="inline-flex items-center gap-2 bg-white/5 px-6 py-3 rounded-full border border-white/10 shadow-inner">
+            <Calendar size={18} className="text-blue-400" />
+            <span className="text-gray-300 font-mono text-sm tracking-widest">01.02.2026 – 28.02.2026</span>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+// --- Marketing Slide 1: Problem and Goal ---
+export const MarketingProblemSlide: React.FC = () => {
+  return (
+    <div className="h-full flex flex-col justify-center px-12 md:px-24">
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="mb-8">
+        <span className="text-uremont-accent font-mono text-sm tracking-wider">05 / МАРКЕТИНГ ПЛАН</span>
+        <h2 className="text-4xl md:text-6xl font-bold mt-2">
+          Проблема и <span className="text-uremont-blue">цель</span>
+        </h2>
+      </motion.div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl">
+        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-red-500/10 p-8 rounded-3xl border border-red-500/20">
+          <div className="w-14 h-14 bg-red-500/20 text-red-500 rounded-2xl flex items-center justify-center mb-6"><AlertCircle size={28} /></div>
+          <h3 className="text-2xl font-bold text-white mb-4">Проблема</h3>
+          <ul className="space-y-4">
+            <li className="flex items-start gap-3 text-lg text-gray-300">
+              <div className="bg-red-500/20 text-red-500 p-1 rounded-full shrink-0 mt-0.5"><X size={16} strokeWidth={3} /></div>
+              <span>Низкая узнаваемость у аудитории платформы за исключением старой базы «Халявщиков».</span>
+            </li>
+            <li className="flex items-center gap-3 text-lg text-gray-300">
+              <div className="bg-red-500/20 text-red-500 p-1 rounded-full shrink-0"><X size={16} strokeWidth={3} /></div>
+              <span>Низкое количество входного трафика.</span>
+            </li>
+          </ul>
+        </motion.div>
+        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-uremont-blue/10 p-8 rounded-3xl border border-uremont-blue/20">
+          <div className="w-14 h-14 bg-uremont-blue/20 text-uremont-blue rounded-2xl flex items-center justify-center mb-6"><Crosshair size={28} /></div>
+          <h3 className="text-2xl font-bold text-white mb-4">Цель</h3>
+          <ul className="space-y-3">
+            <li className="flex items-center gap-3 text-lg text-gray-300"><CheckCircle className="text-uremont-blue shrink-0" size={20} /> Количество новых регистраций</li>
+            <li className="flex items-center gap-3 text-lg text-gray-300"><CheckCircle className="text-uremont-blue shrink-0" size={20} /> Рост запросов в ИИ-ассистент</li>
+            <li className="flex items-center gap-3 text-lg text-gray-300"><CheckCircle className="text-uremont-blue shrink-0" size={20} /> Конверсия записей в автосервис</li>
+            <li className="flex items-center gap-3 text-lg text-gray-300"><CheckCircle className="text-uremont-blue shrink-0" size={20} /> Увеличение количества завершенных ремонтов и полученных заказ-нарядов</li>
+          </ul>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+// --- Marketing Slide 2: Promo 2000L ---
+export const MarketingPromoSlide: React.FC = () => {
+  return (
+    <div className="h-full flex flex-col justify-center px-12 md:px-24">
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="mb-8">
+        <span className="text-uremont-accent font-mono text-sm tracking-wider">05 / МАРКЕТИНГ ПЛАН</span>
+        <h2 className="text-4xl md:text-5xl font-bold mt-2">
+          Спецпроект: <span className="text-yellow-400">UREMONT Заправляет</span>
+        </h2>
+        <p className="text-xl text-gray-400 mt-2">2000 литров топлива за добавление автомобиля в гараж</p>
+      </motion.div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl">
+        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-white/5 p-8 rounded-3xl border border-white/10 flex flex-col justify-center">
+          <div className="w-16 h-16 bg-yellow-500/20 text-yellow-500 rounded-2xl flex items-center justify-center mb-6"><Zap size={32} /></div>
+          <h3 className="text-2xl font-bold text-white mb-4">Суть проекта</h3>
+          <p className="text-gray-300 text-lg leading-relaxed mb-6">
+            Розыгрыш 2000 литров бензина за добавление автомобиля в цифровой «Гараж» клиента.
+          </p>
+          <div className="bg-black/30 p-4 rounded-xl border border-white/5">
+            <h4 className="text-sm text-gray-500 uppercase tracking-wider mb-2">Стратегия</h4>
+            <p className="text-base text-gray-300">Выходим в мир через спецпроект, ведем людей в гараж для увеличения базы и дальнейшего допушинга через коммуникации.</p>
+          </div>
+        </motion.div>
+
+        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="relative bg-[#0f172a] rounded-3xl border border-yellow-500/30 overflow-hidden flex items-center justify-center min-h-[300px]">
+          <style dangerouslySetInnerHTML={{
+            __html: `
+            @keyframes animate-wave {
+              0% { transform: translateX(0) translateZ(0) scaleY(1) }
+              50% { transform: translateX(-25%) translateZ(0) scaleY(0.9) }
+              100% { transform: translateX(-50%) translateZ(0) scaleY(1) }
+            }
+            @keyframes liquid-fill {
+              0% { height: 60%; }
+              100% { height: 100%; }
+            }
+            @keyframes animate-bubble {
+              0% {
+                transform: translateY(100%) scale(0.5);
+                opacity: 0;
+              }
+              50% {
+                opacity: 0.8;
+              }
+              100% {
+                transform: translateY(-500%) scale(1.2);
+                opacity: 0;
+              }
+            }
+            .liquid-container {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              border-radius: 0 0 1.5rem 1.5rem;
+              z-index: 1;
+              overflow: hidden;
+            }
+            .water-wave {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 200%;
+              height: 40px;
+              min-width: 200%;
+              animation: animate-wave 6s infinite linear;
+              background-image: radial-gradient(circle at 50% -20%, transparent 40%, rgba(234, 179, 8, 0.15) 41%);
+              background-size: 80px 40px;
+              background-repeat: repeat-x;
+            }
+            .water-wave:nth-child(2) {
+              animation: animate-wave 9s infinite linear;
+              opacity: 0.5;
+              left: -50%;
+              top: 5px;
+              background-image: radial-gradient(circle at 50% -20%, transparent 40%, rgba(202, 138, 4, 0.25) 41%);
+            }
             
-            <motion.p 
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
-              className="text-center text-xs lg:text-sm text-gray-400 font-mono"
-            >
-              4 варианта лендингов, основанные на CustDev.
-            </motion.p>
+            /* Bubbles Configuration */
+            .bubble {
+              position: absolute;
+              bottom: 0;
+              background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2) 60%, transparent);
+              border-radius: 50%;
+              box-shadow: inset 0 0 10px rgba(255,255,255,0.5);
+              animation: animate-bubble infinite ease-in;
+            }
+            
+            .bubble:nth-child(1) { left: 10%; width: 20px; height: 20px; animation-duration: 4s; animation-delay: 0.5s; }
+            .bubble:nth-child(2) { left: 25%; width: 12px; height: 12px; animation-duration: 3s; animation-delay: 1.2s; }
+            .bubble:nth-child(3) { left: 45%; width: 25px; height: 25px; animation-duration: 5s; animation-delay: 0.2s; }
+            .bubble:nth-child(4) { left: 60%; width: 15px; height: 15px; animation-duration: 4.5s; animation-delay: 2.1s; }
+            .bubble:nth-child(5) { left: 75%; width: 18px; height: 18px; animation-duration: 3.5s; animation-delay: 0.8s; }
+            .bubble:nth-child(6) { left: 85%; width: 10px; height: 10px; animation-duration: 2.5s; animation-delay: 1.7s; }
+            .bubble:nth-child(7) { left: 5%; width: 22px; height: 22px; animation-duration: 4.2s; animation-delay: 3.0s; }
+            .bubble:nth-child(8) { left: 95%; width: 14px; height: 14px; animation-duration: 3.8s; animation-delay: 2.5s; }
+            .bubble:nth-child(9) { left: 35%; width: 16px; height: 16px; animation-duration: 3.2s; animation-delay: 0.9s; }
+            .bubble:nth-child(10) { left: 55%; width: 30px; height: 30px; animation-duration: 6s; animation-delay: 1.5s; }
+          `}} />
+
+          {/* Background Grid Pattern */}
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PGRlZnM+PHBhdHRlcm4gaWQ9ImEiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDEwaDEwdjEwSDB6IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDMpIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2EpIi8+PC9zdmc+')] opacity-20 z-0"></div>
+
+          {/* Animated Liquid */}
+          <div className="liquid-container bg-gradient-to-t from-yellow-500/40 to-yellow-400/20">
+            {/* Bubbles */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              <div className="bubble"></div><div className="bubble"></div><div className="bubble"></div>
+              <div className="bubble"></div><div className="bubble"></div><div className="bubble"></div>
+              <div className="bubble"></div><div className="bubble"></div><div className="bubble"></div>
+              <div className="bubble"></div>
+            </div>
+          </div>
+
+          <div className="text-center z-10 px-8 relative pointer-events-none">
+            <div className="text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-yellow-300 to-yellow-600 drop-shadow-lg mb-2">
+              2000 л
+            </div>
+            <div className="text-2xl font-bold text-white tracking-widest uppercase">Топлива</div>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+// --- Marketing Slide 3: Promo av.by ---
+export const MarketingAvBySlide: React.FC = () => {
+  return (
+    <div className="h-full flex flex-col justify-center px-12 md:px-24">
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="mb-8">
+        <span className="text-uremont-accent font-mono text-sm tracking-wider">05 / МАРКЕТИНГ ПЛАН</span>
+        <h2 className="text-3xl md:text-5xl font-bold mt-2">
+          Промо-материалы <span className="text-blue-400">av.by</span>
+        </h2>
+      </motion.div>
+      <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="w-full max-w-5xl rounded-2xl overflow-hidden border border-gray-700 bg-white text-black shadow-2xl">
+        {/* Mock av.by Header */}
+        <div className="bg-[#1b2b4d] text-white px-6 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-6">
+            <strong className="text-2xl font-black italic tracking-tighter">av<span className="text-blue-400">.by</span></strong>
+            <div className="hidden md:flex gap-4 text-sm font-semibold opacity-90">
+              <span className="hover:text-blue-300 cursor-pointer">Сервисы</span>
+              <span className="hover:text-blue-300 cursor-pointer">Журнал</span>
+              <span className="hover:text-blue-300 cursor-pointer">Знания</span>
+              <span className="hover:text-blue-300 cursor-pointer">Услуги</span>
+              <span className="text-yellow-400 flex items-center gap-1 cursor-pointer"><AlertCircle size={14} /> Проверка VIN</span>
+            </div>
+          </div>
+          <div className="flex items-center gap-4 text-sm font-semibold">
+            <span className="opacity-90 hover:opacity-100 cursor-pointer">Войти</span>
+            <button className="bg-yellow-400 text-black px-4 py-2 rounded font-bold hover:bg-yellow-500 transition-colors shadow-md">Подать объявление</button>
+          </div>
+        </div>
+        {/* Banner Section */}
+        <div className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 p-8 md:p-12 relative overflow-hidden">
+          <div className="absolute right-0 top-0 bottom-0 w-1/2 bg-[url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=800')] bg-cover bg-center opacity-40 mix-blend-overlay"></div>
+          <div className="relative z-10 max-w-2xl text-white">
+            <h1 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">Есть машина? <br /><span className="text-yellow-400">Выиграйте топливо для неё!</span></h1>
+            <p className="text-lg md:text-xl font-light mb-8 text-gray-300">Добавляйте своё авто в «Гараж» на av.by и участвуйте в розыгрыше 1000 литров*.</p>
+            <button className="bg-yellow-400 text-black px-8 py-3 rounded-lg font-bold text-lg hover:bg-yellow-500 hover:scale-105 transition-all shadow-lg shadow-yellow-400/20">
+              УЧАСТВОВАТЬ
+            </button>
+            <p className="mt-8 text-xs text-gray-400 max-w-md">Для участия регистрируйтесь с 1 по 28 февраля 2026 года. *Рекламный макет.</p>
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  );
+};
+
+// --- Marketing Slide 4: Postcampaign ---
+export const MarketingPostcampSlide: React.FC = () => {
+  return (
+    <div className="h-full flex flex-col justify-center px-12 md:px-24">
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="mb-8">
+        <span className="text-uremont-accent font-mono text-sm tracking-wider">05 / МАРКЕТИНГ ПЛАН</span>
+        <h2 className="text-4xl md:text-5xl font-bold mt-2">
+          Конвертация аудитории в <span className="text-uremont-blue">ремонты</span>
+        </h2>
+      </motion.div>
+      <div className="grid grid-cols-1 gap-6 max-w-5xl">
+        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-white/5 p-6 rounded-2xl border border-white/10 flex items-start gap-6">
+          <div className="w-12 h-12 bg-blue-500/20 text-blue-400 rounded-xl flex items-center justify-center shrink-0">
+            <Filter size={24} />
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-white mb-2">1. Сегментация аудитории</h3>
+            <p className="text-gray-300 leading-relaxed mb-4">Наш подход исключает массовые и нецелевые рассылки. Данные каждого добавленного автомобиля проходят скоринг, после чего формируется персонализированное сервисное предложение:</p>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-black/30 p-4 rounded-xl border border-white/5">
+                <div className="text-sm font-bold text-white mb-1">Старые авто (Напр. BMW {'>'} 5 лет)</div>
+                <div className="text-xs text-gray-400">Оффер: Скидка на диагностику ходовой.</div>
+              </div>
+              <div className="bg-black/30 p-4 rounded-xl border border-white/5">
+                <div className="text-sm font-bold text-white mb-1">Новые авто (На гарантии / до 3 лет)</div>
+                <div className="text-xs text-gray-400">Оффер: Выгодная замена масла или регулярный ТО.</div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-white/5 p-6 rounded-2xl border border-white/10 flex items-start gap-6">
+          <div className="w-12 h-12 bg-green-500/20 text-green-400 rounded-xl flex items-center justify-center shrink-0">
+            <Send size={24} />
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-white mb-2">2. Умные рассылки</h3>
+            <p className="text-gray-300 leading-relaxed">
+              Настраиваем Push-уведомления, SMS и Email-рассылки на собранную базу для конвертации регистрации в реальный визит на СТО.
+            </p>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+// --- Marketing Slide 5: Channels Ecosystem ---
+export const MarketingChannelsSlide: React.FC = () => {
+  return (
+    <div className="h-full flex flex-col justify-center px-12 md:px-24">
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="mb-8">
+        <span className="text-uremont-accent font-mono text-sm tracking-wider">05 / МАРКЕТИНГ ПЛАН</span>
+        <h2 className="text-3xl md:text-5xl font-bold mt-2">
+          Экосистема <span className="text-uremont-blue">каналов</span>
+        </h2>
+      </motion.div>
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl">
+        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-white/5 p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+          <MonitorPlay className="text-blue-400 mb-4" size={32} />
+          <h4 className="font-bold text-white text-lg mb-2">DOOH (Медиафасады)</h4>
+          <p className="text-sm text-gray-400">1-3 точки. Съемка для вирусного перепоста в соцсети.</p>
+        </motion.div>
+        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-white/5 p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+          <Mic className="text-orange-400 mb-4" size={32} />
+          <h4 className="font-bold text-white text-lg mb-2">Радио реклама</h4>
+          <p className="text-sm text-gray-400">Утренние и вечерние слоты (дорожный трафик).</p>
+        </motion.div>
+        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-white/5 p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+          <RadioTower className="text-purple-400 mb-4" size={32} />
+          <h4 className="font-bold text-white text-lg mb-2">Подкаст на радио</h4>
+          <p className="text-sm text-gray-400">Широкие охваты, нарезка на Reels, подогрев органикой.</p>
+        </motion.div>
+        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-white/5 p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+          <TrendingUp className="text-green-400 mb-4" size={32} />
+          <h4 className="font-bold text-white text-lg mb-2">Digital & Media Performance</h4>
+          <p className="text-sm text-gray-400">Яндекс.Карты, РСЯ, пиратские кинотеатры (широкий охват).</p>
+        </motion.div>
+        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-white/5 p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+          <MessageCircle className="text-yellow-400 mb-4" size={32} />
+          <h4 className="font-bold text-white text-lg mb-2">Social / PR</h4>
+          <p className="text-sm text-gray-400">Точечные рекламные посевы в профильных Telegram-каналах.</p>
+        </motion.div>
+        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-white/5 p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+          <Car className="text-gray-400 mb-4" size={32} />
+          <h4 className="font-bold text-white text-lg mb-2">Indoor</h4>
+          <p className="text-sm text-gray-400">Автомойки и заправки (если позволит бюджет).</p>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+
+// --- Marketing Slide 12: Forecast ---
+export const MarketingForecastSlide: React.FC = () => {
+  return (
+    <div className="h-full flex flex-col justify-center px-12 md:px-24">
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="mb-6">
+        <span className="text-uremont-accent font-mono text-sm tracking-wider">05 / МАРКЕТИНГ ПЛАН</span>
+        <h2 className="text-3xl md:text-5xl font-bold mt-2">
+          План-прогноз <span className="text-uremont-blue">Воронки</span>
+        </h2>
+      </motion.div>
+
+      <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="w-full max-w-6xl overflow-hidden rounded-2xl bg-[#0f172a] border border-white/10 shadow-2xl">
+        <div className="overflow-x-auto">
+          <table className="w-full text-left text-sm whitespace-nowrap">
+            <thead>
+              <tr className="bg-white/5 border-b border-white/10 text-gray-400">
+                <th className="p-3 font-medium border-r border-white/10">Параметр</th>
+                <th className="p-3 font-medium text-center w-32 border-r border-white/10">Март План</th>
+                <th className="p-3 font-medium text-center w-32 border-r border-white/10">Апрель План</th>
+                <th className="p-3 font-medium text-center w-32">Май План</th>
+              </tr>
+            </thead>
+            <tbody>
+              {/* === SECTION 1 === */}
+              <tr className="bg-blue-900/40 border-y border-blue-500/30">
+                <td colSpan={4} className="p-2 px-4 font-bold text-blue-200 uppercase tracking-wider text-xs">Вводные параметры</td>
+              </tr>
+              <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                <td className="p-2.5 px-4 font-medium text-gray-200 border-r border-white/10">Маркетинг: бюджет (digital), ₽</td>
+                <td className="p-2.5 text-center font-mono text-red-400 border-r border-white/10">1 000 000 ₽</td>
+                <td className="p-2.5 text-center font-mono text-red-400 border-r border-white/10">2 000 000 ₽</td>
+                <td className="p-2.5 text-center font-mono text-red-400">4 000 000 ₽</td>
+              </tr>
+              <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                <td className="p-2.5 px-4 text-gray-400 border-r border-white/10">Стоимость запроса ИИ (₽/запрос)</td>
+                <td className="p-2.5 text-center font-mono text-blue-400 border-r border-white/10">443 ₽</td>
+                <td className="p-2.5 text-center font-mono text-blue-400 border-r border-white/10">443 ₽</td>
+                <td className="p-2.5 text-center font-mono text-blue-400">443 ₽</td>
+              </tr>
+              <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                <td className="p-2.5 px-4 text-gray-400 border-r border-white/10">Органика к платным запросам</td>
+                <td className="p-2.5 text-center font-mono text-blue-400 border-r border-white/10">50%</td>
+                <td className="p-2.5 text-center font-mono text-blue-400 border-r border-white/10">50%</td>
+                <td className="p-2.5 text-center font-mono text-blue-400">50%</td>
+              </tr>
+              <tr className="border-b border-white/5 hover:bg-white/5 transition-colors bg-cyan-500/10">
+                <td className="p-2.5 px-4 text-white font-medium border-r border-cyan-500/20">CR ИИ → лид (звонок+заявка)</td>
+                <td className="p-2.5 text-center font-mono text-cyan-400 border-r border-cyan-500/20">10%</td>
+                <td className="p-2.5 text-center font-mono text-cyan-400 border-r border-cyan-500/20">12%</td>
+                <td className="p-2.5 text-center font-mono text-cyan-400">13%</td>
+              </tr>
+
+              {/* === SECTION 2 === */}
+              <tr className="bg-blue-900/40 border-y border-blue-500/30">
+                <td colSpan={4} className="p-2 px-4 font-bold text-blue-200 uppercase tracking-wider text-xs">Расчёт воронки</td>
+              </tr>
+              <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                <td className="p-2.5 px-4 font-bold border-r border-white/10">Запросы ИИ (всего), шт</td>
+                <td className="p-2.5 text-center font-mono font-bold border-r border-white/10">4 515</td>
+                <td className="p-2.5 text-center font-mono font-bold border-r border-white/10">9 029</td>
+                <td className="p-2.5 text-center font-mono font-bold">18 059</td>
+              </tr>
+              <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                <td className="p-2.5 px-4 border-r border-white/10 text-gray-300">Лиды (звонок+заявка), шт</td>
+                <td className="p-2.5 text-center font-mono border-r border-white/10 text-gray-300">451</td>
+                <td className="p-2.5 text-center font-mono border-r border-white/10 text-gray-300">1 084</td>
+                <td className="p-2.5 text-center font-mono text-gray-300">2 348</td>
+              </tr>
+              <tr className="border-b border-white/5 hover:bg-white/5 transition-colors bg-cyan-500/10">
+                <td className="p-3 px-4 font-black text-cyan-400 text-base border-r border-cyan-500/20">Ремонты (итого), шт</td>
+                <td className="p-3 text-center font-mono font-black text-cyan-400 text-lg border-r border-cyan-500/20">41</td>
+                <td className="p-3 text-center font-mono font-black text-cyan-400 text-lg border-r border-cyan-500/20">173</td>
+                <td className="p-3 text-center font-mono font-black text-cyan-400 text-lg">467</td>
+              </tr>
+
+              {/* Final CR */}
+              <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                <td className="p-2.5 px-4 text-gray-400 border-r border-white/10">CR ИИ → ремонт</td>
+                <td className="p-2.5 text-center font-mono text-gray-400 border-r border-white/10">1%</td>
+                <td className="p-2.5 text-center font-mono text-gray-400 border-r border-white/10">2%</td>
+                <td className="p-2.5 text-center font-mono text-gray-400">3%</td>
+              </tr>
+              <tr className="hover:bg-white/5 transition-colors">
+                <td className="p-2.5 px-4 font-medium text-gray-200 border-r border-white/10">CR: Лиды (звонок+заявка) → ремонт</td>
+                <td className="p-2.5 text-center font-mono font-medium text-gray-200 border-r border-white/10">9,0%</td>
+                <td className="p-2.5 text-center font-mono font-medium text-gray-200 border-r border-white/10">16,0%</td>
+                <td className="p-2.5 text-center font-mono font-medium text-gray-200">19,9%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </motion.div>
+    </div>
+  );
+};
+
+// --- Marketing Slide 10: Timing ---
+export const MarketingTimingSlide: React.FC = () => {
+  return (
+    <div className="h-full flex flex-col justify-center px-12 md:px-24">
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="mb-8">
+        <span className="text-uremont-accent font-mono text-sm tracking-wider">05 / МАРКЕТИНГ ПЛАН</span>
+        <h2 className="text-3xl md:text-5xl font-bold mt-2">
+          Время <span className="text-green-400">Запуска</span>
+        </h2>
+      </motion.div>
+      <div className="max-w-6xl w-full relative">
+        <div className="absolute top-1/2 left-0 right-0 h-1 bg-white/10 -translate-y-1/2 hidden md:block"></div>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 relative z-10">
+          <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-[#0f172a] p-6 rounded-2xl border border-green-500/30 text-center relative shadow-lg">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-green-500 border-4 border-[#0f172a] hidden md:block"></div>
+            <div className="text-xl font-bold text-white mb-1">Неделя 1-2</div>
+            <div className="text-xs font-mono text-gray-500 mb-3">10 мар - 23 мар</div>
+            <h4 className="text-green-400 font-bold mb-4 uppercase tracking-wider text-sm">Подготовка & Тесты</h4>
+            <p className="text-sm text-gray-400">Настройка трекинга AppsFlyer, интеграция Я.Карт, тестовые рассылки.</p>
+          </motion.div>
+          <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-[#0f172a] p-6 rounded-2xl border border-blue-500/30 text-center relative shadow-lg">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-blue-500 border-4 border-[#0f172a] hidden md:block"></div>
+            <div className="text-xl font-bold text-white mb-1">Неделя 3-4</div>
+            <div className="text-xs font-mono text-gray-500 mb-3">24 мар - 6 апр</div>
+            <h4 className="text-blue-400 font-bold mb-4 uppercase tracking-wider text-sm">Спецпроект av.by</h4>
+            <p className="text-sm text-gray-400">Запуск промо "UREMONT Заправляет". Сбор первых регистраций.</p>
+          </motion.div>
+          <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-[#0f172a] p-6 rounded-2xl border border-yellow-500/30 text-center relative shadow-lg">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-yellow-500 border-4 border-[#0f172a] hidden md:block"></div>
+            <div className="text-xl font-bold text-white mb-1">Неделя 5-8</div>
+            <div className="text-xs font-mono text-gray-500 mb-3">7 апр - 4 мая</div>
+            <h4 className="text-yellow-400 font-bold mb-4 uppercase tracking-wider text-sm">Медиа Скалирование</h4>
+            <p className="text-sm text-gray-400">DOOH, Радио, Яндекс пины, массовый посев. Разгон Retention машины.</p>
+          </motion.div>
+          <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-[#0f172a] p-6 rounded-2xl border border-purple-500/30 text-center relative shadow-lg">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-purple-500 border-4 border-[#0f172a] hidden md:block"></div>
+            <div className="text-xl font-bold text-white mb-1">Неделя 9+</div>
+            <div className="text-xs font-mono text-gray-500 mb-3">от 5 мая</div>
+            <h4 className="text-purple-400 font-bold mb-4 uppercase tracking-wider text-sm">Оптимизация</h4>
+            <p className="text-sm text-gray-400">Оценка CAC/LTV, отключение неэффективных каналов, допушинг базы.</p>
+          </motion.div>
         </div>
       </div>
     </div>
   );
 };
 
-// --- Slide 6: Solution 2 (Database & Services) ---
-export const SolutionSlide2: React.FC = () => {
-  const [lines, setLines] = useState<string[]>([]);
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  const servicesList = [
-    "Свечи накаливания: снятие и установка",
-    "Теплообменник: снятие и установка",
-    "Топливная форсунка (дизельная): снятие и установка",
-    "Бампер задний: снятие и установка",
-    "Бампер передний: снятие и установка",
-    "Бачок омывателя: снятие и установка",
-    "Фара противотуманная: снятие и установка",
-    "Сцепление: прокачать",
-    "Трос коробки передач: снятие и установка",
-    "Диагностика ходовой части",
-    "Антифриз: замена",
-    "Бак топливный: слить и залить топливо",
-    "Воздушный фильтр: снятие и установка",
-    "Редуктор заднего моста: снятие и установка",
-    "Редуктор переднего моста: снятие и установка",
-    "Втулки стабилизатора заднего: снятие и установка",
-    "Защита ДВС: снятие и установка",
-    "Карданный вал: снятие и установка",
-    "Глушитель: снятие и установка",
-    "Воздушный фильтр: снятие и установка",
-    "Направляющие суппорта: замена",
-    "Опора шаровая: снятие и установка",
-    "Подрамник задний: снятие и установка",
-    "Приводной вал: снятие и установка",
-    "Тормозная жидкость: замена",
-    "Датчик температуры испарителя: снятие и установка",
-    "Лампа стоп-сигнала: снятие и установка",
-    "Предохранители: проверка",
-  ];
-
-  useEffect(() => {
-    let currentIndex = 0;
-    const interval = setInterval(() => {
-      if (currentIndex < servicesList.length) {
-        setLines(prev => [...prev, servicesList[currentIndex]]);
-        currentIndex++;
-      } else {
-        clearInterval(interval);
-      }
-    }, 150); // Speed of typing
-
-    return () => clearInterval(interval);
-  }, []);
-
-  useEffect(() => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
-    }
-  }, [lines]);
-
-  return (
-    <div className="h-full flex flex-col justify-center px-6 md:pl-12 md:pr-24">
-       <div className="grid grid-cols-1 md:grid-cols-[0.8fr_1.4fr] gap-6 lg:gap-10 items-center">
-          
-          {/* Left Column: Text & Stats */}
-          <motion.div
-             initial="hidden"
-             whileInView="visible"
-             variants={containerVariants}
-             className="order-2 md:order-1"
-          >
-             <motion.span variants={itemVariants} className="text-uremont-accent font-mono text-sm tracking-wider">РЕШЕНИЕ #2</motion.span>
-             <motion.h2 variants={itemVariants} className="text-3xl lg:text-5xl font-bold mt-2 mb-6">Масштабирование <br /><span className="text-uremont-blue">базы данных</span></motion.h2>
-             
-             <motion.div variants={itemVariants} className="grid grid-cols-2 gap-4 mb-6">
-                <div className="bg-white/5 p-4 rounded-xl border border-white/10 hover:border-uremont-blue transition-colors">
-                   <div className="text-3xl lg:text-4xl font-bold text-uremont-blue mb-1">428</div>
-                   <div className="text-xs text-gray-400 uppercase tracking-widest">Услуг</div>
-                </div>
-                <div className="bg-white/5 p-4 rounded-xl border border-white/10 hover:border-uremont-accent transition-colors">
-                   <div className="text-3xl lg:text-4xl font-bold text-uremont-accent mb-1">2025</div>
-                   <div className="text-xs text-gray-400 uppercase tracking-widest">Модельный год</div>
-                </div>
-             </motion.div>
-
-             <motion.p variants={itemVariants} className="text-sm lg:text-base text-gray-300 leading-relaxed">
-               Полностью переработанные справочники. Пользователи могут найти любую специфичную услугу и выбрать любой автомобиль, включая новинки рынка. Внедрена поддержка добавления автомобилей и услуг вручную.
-             </motion.p>
-          </motion.div>
-
-          {/* Right Column: Terminal Visual */}
-          <motion.div 
-             initial={{ x: 50, opacity: 0 }}
-             whileInView={{ x: 0, opacity: 1 }}
-             transition={{ duration: 0.7 }}
-             className="w-full aspect-[16/10] relative order-1 md:order-2"
-          >
-             <BrowserWindow title="uremont-db-migration.ts">
-                <div className="w-full h-full bg-[#0c0c0c] p-4 font-mono text-xs md:text-sm overflow-hidden flex flex-col">
-                   <div className="flex items-center gap-2 text-gray-500 mb-2 border-b border-white/10 pb-2">
-                      <Terminal size={14} />
-                      <span>Console Output</span>
-                   </div>
-                   <div ref={scrollRef} className="flex-1 overflow-y-auto space-y-1 scrollbar-hide">
-                      <div className="text-gray-400 italic mb-2">// Initializing DB Migration Seed...</div>
-                      {lines.map((line, index) => (
-                        <motion.div 
-                          key={index}
-                          initial={{ opacity: 0, x: -10 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          className="flex gap-2"
-                        >
-                           <span className="text-green-500 font-bold shrink-0">[SUCCESS]</span>
-                           <span className="text-white opacity-90">Added service: {line}</span>
-                        </motion.div>
-                      ))}
-                      <div className="flex items-center gap-1 mt-2">
-                        <span className="text-blue-500">➜</span>
-                        <span className="w-2 h-4 bg-gray-400 animate-pulse inline-block"></span>
-                      </div>
-                   </div>
-                </div>
-             </BrowserWindow>
-          </motion.div>
-       </div>
-    </div>
-  );
-};
-
-// --- Slide 7: Solution 3 (AI Algorithm) ---
-export const SolutionSlide3: React.FC = () => {
-  return (
-    <div className="h-full flex flex-col justify-center px-6 md:px-24">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <motion.div
-           initial="hidden"
-           whileInView="visible"
-           variants={containerVariants}
-           className="order-2 md:order-1"
-        >
-           <span className="text-uremont-accent font-mono text-sm tracking-wider">РЕШЕНИЕ #3</span>
-           <h2 className="text-3xl lg:text-4xl font-bold mt-2 mb-6">Доработки алгоритма <br /><span className="text-uremont-blue">искусственного интеллекта</span></h2>
-           <p className="text-lg text-gray-300 leading-relaxed mb-6">
-             Обновили алгоритм сопоставления запросов пользователей и ИИ-ответа. Система теперь понимает контекст и предлагает максимально релевантные решения. В настоящее время алгоритм проходит дообучение, точность будет улучшаться в процессе использования.
-           </p>
-        </motion.div>
-
-        <motion.div 
-           initial={{ y: 50, opacity: 0 }}
-           whileInView={{ y: 0, opacity: 1 }}
-           transition={{ duration: 0.7 }}
-           className="w-full max-w-[700px] aspect-square mx-auto order-1 md:order-2"
-        >
-          <BrowserWindow title="uremont.com/ai-chat">
-             <div className="w-full h-full bg-black overflow-hidden">
-                <img
-                   src="https://pim4y1v96ezxxeus.public.blob.vercel-storage.com/8.jpg"
-                   alt="AI Chat Interface"
-                   className="w-full h-full object-cover"
-                />
-             </div>
-          </BrowserWindow>
-        </motion.div>
-      </div>
-    </div>
-  );
-};
-
-// --- Slide 8: Solution 4 (Customer Path & Quality) ---
-export const SolutionSlide4: React.FC = () => {
-  return (
-    <div className="h-full flex flex-col justify-center px-6 md:px-24">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
-        <motion.div
-           initial="hidden"
-           whileInView="visible"
-           variants={containerVariants}
-        >
-           <span className="text-uremont-accent font-mono text-sm tracking-wider">РЕШЕНИЕ #4</span>
-           <h2 className="text-3xl lg:text-4xl font-bold mt-2 mb-6">Новый <span className="text-uremont-blue">клиентский путь</span> и качество сервиса</h2>
-           
-           <div className="flex flex-col gap-3">
-               <div className="flex items-center gap-4 p-3 rounded-xl border bg-white/5 border-white/10 hover:bg-white/10 transition-colors">
-                  <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0 bg-white/10 text-gray-300">
-                    <Phone size={20} />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-white text-base">Звонок в 1 клик</h3>
-                    <p className="text-xs text-gray-400">Минимизация шагов до контакта с сервисом</p>
-                  </div>
-               </div>
-               <div className="flex items-center gap-4 p-3 rounded-xl border bg-white/5 border-white/10 hover:bg-white/10 transition-colors">
-                  <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0 bg-white/10 text-gray-300">
-                    <Star size={20} />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-white text-base">Стандарт качества</h3>
-                    <p className="text-xs text-gray-400">Строгий отбор и регулярная проверка партнеров</p>
-                  </div>
-               </div>
-               <div className="flex items-center gap-4 p-3 rounded-xl border bg-white/5 border-white/10 hover:bg-white/10 transition-colors">
-                  <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0 bg-white/10 text-gray-300">
-                    <Headphones size={20} />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-white text-base">Улучшения в процессах СП</h3>
-                    <p className="text-xs text-gray-400">Переработанные скрипты, ускоренное взаимодействие с пользователем</p>
-                  </div>
-               </div>
-           </div>
-        </motion.div>
-
-        <motion.div 
-           initial={{ x: 50, opacity: 0 }}
-           whileInView={{ x: 0, opacity: 1 }}
-           transition={{ duration: 0.7 }}
-           className="relative flex justify-center items-center h-[50vh] min-h-[400px]"
-        >
-             {/* iPhone 16 Pro Frame */}
-             <div className="relative w-[280px] h-[600px] bg-black rounded-[50px] shadow-2xl border-[6px] border-[#2c2c2c] overflow-hidden ring-1 ring-white/10">
-                {/* Dynamic Island */}
-                <div className="absolute top-5 left-1/2 -translate-x-1/2 w-[90px] h-[28px] bg-black rounded-full z-20 flex items-center justify-center"></div>
-
-                {/* Video Content */}
-                <div className="w-full h-full bg-black">
-                   <video 
-                     src="https://pim4y1v96ezxxeus.public.blob.vercel-storage.com/video7.MP4" 
-                     className="w-full h-full object-cover"
-                     autoPlay
-                     muted
-                     loop
-                     playsInline
-                   />
-                </div>
-                
-                {/* Glass reflection effect */}
-                <div className="absolute inset-0 rounded-[42px] pointer-events-none shadow-[inset_0_0_20px_rgba(255,255,255,0.05)] z-10"></div>
-             </div>
-        </motion.div>
-      </div>
-    </div>
-  );
-};
-
-// --- Slide 9: Operations & Network (OperationsSlide) ---
-export const OperationsSlide: React.FC = () => {
-  return (
-    <div className="h-full flex flex-col justify-center px-8 md:px-12 lg:px-16">
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={containerVariants}
-        className="mb-8"
-      >
-        <span className="text-uremont-accent font-mono text-sm tracking-wider">03 / ОПЕРАЦИОННАЯ МОДЕЛЬ</span>
-        <h2 className="text-3xl md:text-5xl font-bold mt-2">
-          Умная телефония и <span className="text-uremont-blue">контроль качества</span>
-        </h2>
-      </motion.div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 h-auto min-h-[500px] items-center">
-        {/* Left Column: Text Content */}
-        <motion.div 
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          className="space-y-8"
-        >
-            {/* Point 1 */}
-            <motion.div variants={itemVariants} className="bg-white/5 p-6 rounded-2xl border border-white/10 hover:border-uremont-blue/50 transition-colors">
-                <div className="flex items-start gap-4">
-                    <div className="bg-red-500/20 p-3 rounded-lg text-red-500 shrink-0">
-                        <Timer size={24} />
-                    </div>
-                    <div>
-                        <h3 className="text-xl font-bold text-white mb-2">Маршрутизация и «правило 25 секунд»</h3>
-                        <p className="text-gray-400 text-sm leading-relaxed mb-3">
-                            Если СТО не отвечает <span className="text-white font-bold">25 секунд</span>, звонок переводится на оператора. 
-                            ИИ распознает автоответчики, сбросы и недозвоны — в таком случае оператор КЦ перезванивает за <span className="text-white font-bold">5 минут</span>.
-                        </p>
-                    </div>
-                </div>
-            </motion.div>
-
-            {/* Point 2 */}
-            <motion.div variants={itemVariants} className="bg-white/5 p-6 rounded-2xl border border-white/10 hover:border-uremont-blue/50 transition-colors">
-                <div className="flex items-start gap-4">
-                    <div className="bg-uremont-blue/20 p-3 rounded-lg text-uremont-blue shrink-0">
-                        <Headphones size={24} />
-                    </div>
-                    <div>
-                        <h3 className="text-xl font-bold text-white mb-2">Бесшовный клиентский путь</h3>
-                        <p className="text-gray-400 text-sm leading-relaxed mb-3">
-                            Оператор видит контекст (автомобиль, проблема, стоимость услуг). Жесткий SLA: СТО обязано перезвонить клиенту в течение <span className="text-white font-bold">20 минут</span>.
-                        </p>
-                    </div>
-                </div>
-            </motion.div>
-
-            {/* Point 3 */}
-            <motion.div variants={itemVariants} className="bg-white/5 p-6 rounded-2xl border border-white/10 hover:border-uremont-blue/50 transition-colors">
-                <div className="flex items-start gap-4">
-                    <div className="bg-green-500/20 p-3 rounded-lg text-green-500 shrink-0">
-                        <BrainCircuit size={24} />
-                    </div>
-                    <div>
-                        <h3 className="text-xl font-bold text-white mb-2">AI-Контроль качества</h3>
-                        <p className="text-gray-400 text-sm leading-relaxed">
-                            Тотальный анализ разговоров: оценка тональности, факта записи и соблюдения договоренностей.
-                        </p>
-                    </div>
-                </div>
-            </motion.div>
-        </motion.div>
-
-        {/* Right Column: Visual Timeline */}
-        <motion.div 
-           initial={{ opacity: 0, x: 50 }}
-           whileInView={{ opacity: 1, x: 0 }}
-           transition={{ duration: 0.8 }}
-           className="relative h-full min-h-[500px] bg-[#1e293b]/50 rounded-3xl border border-white/5 p-4 flex flex-col items-center justify-center"
-        >
-             {/* Center Container for Diagram */}
-             <div className="relative w-[500px] h-[400px]">
-                {/* SVG Layer for connections */}
-                <svg className="absolute inset-0 w-full h-full pointer-events-none overflow-visible">
-                    <defs>
-                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-                        <polygon points="0 0, 10 3.5, 0 7" fill="#10B981" />
-                        </marker>
-                        <marker id="arrowhead-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-                        <polygon points="0 0, 10 3.5, 0 7" fill="#EF4444" />
-                        </marker>
-                    </defs>
-                    
-                    {/* Path 1: Green Dotted (Client Left -> Station Right Top) */}
-                    <path d="M 50 200 C 120 200, 120 80, 240 80" fill="none" stroke="#10B981" strokeWidth="3" strokeDasharray="8 8" markerEnd="url(#arrowhead)" />
-                    
-                    {/* Path 2: Red Solid (Client Left -> Operator Right Bottom) */}
-                    <path d="M 50 200 C 120 200, 120 320, 240 320" fill="none" stroke="#EF4444" strokeWidth="3" markerEnd="url(#arrowhead-red)" />
-                </svg>
-
-                {/* Client + Phone Cluster (Left) */}
-                <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10 flex flex-col items-center -translate-x-1/2">
-                    <div className="relative">
-                        <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center text-black shadow-[0_0_30px_rgba(255,255,255,0.2)] z-10">
-                            <Users size={40} />
-                        </div>
-                        {/* Phone Icon overlay */}
-                    </div>
-                    <div className="mt-3 font-bold text-lg text-white">Клиент</div>
-                </div>
-
-                {/* 25s Label (Center-ish) */}
-                <div className="absolute left-[110px] top-[260px] z-10 bg-[#1e293b] px-2 rounded-lg border border-red-500/30 text-red-500 font-mono font-bold text-2xl animate-pulse">
-                    25s
-                </div>
-
-                {/* Upper Node: Station (Right Top) */}
-                <div className="absolute right-0 top-[80px] -translate-y-1/2 z-10 flex items-center gap-4">
-                    <div className="bg-[#0f172a] border border-green-500/50 p-4 rounded-2xl flex items-center gap-4 shadow-[0_0_30px_rgba(16,185,129,0.1)] min-w-[180px]">
-                        <div className="p-3 bg-green-500/20 rounded-xl text-green-500">
-                            <Building2 size={24} />
-                        </div>
-                        <div>
-                            <div className="text-xs text-gray-400">Путь 1</div>
-                            <div className="font-bold text-base leading-tight">Ответ СТО</div>
-                        </div>
-                    </div>
-                    
-                    <ArrowRight className="text-gray-600 w-6 h-6" />
-                    
-                    <div className="flex flex-col items-center">
-                        <div className="w-14 h-14 bg-green-500 text-black rounded-2xl flex items-center justify-center shadow-[0_0_20px_rgba(16,185,129,0.4)] animate-pulse">
-                            <BrainCircuit size={28} />
-                        </div>
-                        <div className="mt-2 text-[10px] text-green-400 font-bold tracking-wider">ANALYTICS</div>
-                    </div>
-                </div>
-
-                {/* Lower Node: Operator (Right Bottom) */}
-                <div className="absolute right-0 top-[320px] -translate-y-1/2 z-10 flex items-center gap-4">
-                    <div className="bg-[#0f172a] border border-red-500/50 p-4 rounded-2xl flex items-center gap-4 shadow-[0_0_30px_rgba(239,68,68,0.1)] min-w-[180px]">
-                        <div className="p-3 bg-red-500/20 rounded-xl text-red-500">
-                            <Headphones size={24} />
-                        </div>
-                        <div>
-                            <div className="text-xs text-gray-400">Путь 2 (Сбой)</div>
-                            <div className="font-bold text-base leading-tight">Оператор КЦ</div>
-                        </div>
-                    </div>
-                    
-                    <ArrowRight className="text-gray-600 w-6 h-6" />
-                    
-                    <div className="flex flex-col items-center">
-                        <div className="w-14 h-14 bg-red-500 text-white rounded-2xl flex items-center justify-center shadow-[0_0_20px_rgba(239,68,68,0.4)]">
-                            <Timer size={28} />
-                        </div>
-                        <div className="mt-2 text-[10px] text-red-400 font-bold tracking-wider">SLA 20 MIN</div>
-                    </div>
-                </div>
-             </div>
-        </motion.div>
-      </div>
-    </div>
-  );
-};
-
-// --- Slide 10: Partners & Network (PartnersSlide) ---
-export const PartnersSlide: React.FC = () => {
-  return (
-    <div className="h-full flex flex-col justify-center px-8 md:px-12 lg:px-16 overflow-hidden">
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={containerVariants}
-        className="mb-6 lg:mb-8"
-      >
-        <span className="text-uremont-accent font-mono text-sm tracking-wider">04 / СТРАТЕГИЯ ПАРТНЕРОВ</span>
-        <h2 className="text-3xl md:text-5xl font-bold mt-2">
-          Стандарты партнерской сети и <span className="text-uremont-blue">покрытие</span>
-        </h2>
-      </motion.div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 h-auto min-h-[500px]">
-        
-        {/* Left Column: Partner Profile Card */}
-        <motion.div 
-           initial="hidden"
-           whileInView="visible"
-           variants={containerVariants}
-           className="h-full"
-        >
-           <motion.div variants={itemVariants} className="bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-3xl p-8 shadow-2xl relative h-full flex flex-col">
-              <div className="absolute top-0 right-10 w-24 h-1 bg-uremont-accent shadow-[0_0_15px_#10B981] rounded-b-lg"></div>
-              
-              <div className="flex items-center gap-4 mb-8">
-                  <div className="w-16 h-16 bg-uremont-blue/20 rounded-2xl flex items-center justify-center text-uremont-blue border border-uremont-blue/30">
-                      <UserCheck size={36} />
-                  </div>
-                  <div>
-                      <h3 className="text-2xl font-bold text-white">Портрет</h3>
-                      <div className="text-sm text-gray-400 uppercase tracking-widest">идеального партнера</div>
-                  </div>
-              </div>
-
-              <div className="space-y-6 flex-1">
-                  {/* Section 1 */}
-                  <div className="bg-black/20 p-4 rounded-xl border border-white/5">
-                      <h4 className="flex items-center gap-2 text-white font-bold mb-3">
-                          <Building2 size={18} className="text-uremont-accent" />
-                          Типология
-                      </h4>
-                      <div className="space-y-2 pl-6">
-                          <div className="flex items-center gap-2 text-sm text-gray-300">
-                              <div className="w-1.5 h-1.5 rounded-full bg-uremont-accent"></div>
-                              Экс-официальные дилеры
-                          </div>
-                          <div className="flex items-center gap-2 text-sm text-gray-300">
-                              <div className="w-1.5 h-1.5 rounded-full bg-uremont-accent"></div>
-                              Сетевые станции
-                          </div>
-                          <div className="flex items-center gap-2 text-sm text-gray-300">
-                              <div className="w-1.5 h-1.5 rounded-full bg-uremont-accent"></div>
-                              НСТО с выделенным администратором
-                          </div>
-                      </div>
-                  </div>
-
-                  {/* Section 2 */}
-                  <div className="bg-black/20 p-4 rounded-xl border border-white/5">
-                      <h4 className="flex items-center gap-2 text-white font-bold mb-3">
-                          <Coffee size={18} className="text-yellow-500" />
-                          Инфраструктура
-                      </h4>
-                      <div className="grid grid-cols-2 gap-2 pl-6">
-                           <div className="flex items-center gap-2 text-xs text-gray-300 bg-white/5 px-2 py-1 rounded">
-                               <CheckCircle size={12} className="text-green-500" /> Ухоженный фасад
-                           </div>
-                           <div className="flex items-center gap-2 text-xs text-gray-300 bg-white/5 px-2 py-1 rounded">
-                               <CheckCircle size={12} className="text-green-500" /> Навигация
-                           </div>
-                           <div className="flex items-center gap-2 text-xs text-gray-300 bg-white/5 px-2 py-1 rounded">
-                               <CheckCircle size={12} className="text-green-500" /> Зона ожидания клиента
-                           </div>
-                           <div className="flex items-center gap-2 text-xs text-gray-300 bg-white/5 px-2 py-1 rounded">
-                               <CheckCircle size={12} className="text-green-500" /> Базовый комфорт (WiFi, кофе)
-                           </div>
-                      </div>
-                  </div>
-
-                  {/* Section 3 */}
-                  <div className="bg-black/20 p-4 rounded-xl border border-white/5">
-                      <h4 className="flex items-center gap-2 text-white font-bold mb-3">
-                          <MonitorCheck size={18} className="text-blue-400" />
-                          Цифровая гигиена
-                      </h4>
-                      <div className="flex gap-2 pl-6">
-                          <span className="text-xs border border-blue-500/30 text-blue-300 px-2 py-1 rounded bg-blue-500/10">CRM</span>
-                          <span className="text-xs border border-blue-500/30 text-blue-300 px-2 py-1 rounded bg-blue-500/10">ЭДО</span>
-                          <span className="text-xs border border-blue-500/30 text-blue-300 px-2 py-1 rounded bg-blue-500/10">Прозрачные цены</span>
-                      </div>
-                  </div>
-              </div>
-           </motion.div>
-        </motion.div>
-
-        {/* Right Column: Capacity Infographic */}
-        <motion.div 
-           initial="hidden"
-           whileInView="visible"
-           variants={containerVariants}
-           className="h-full"
-        >
-            <motion.div variants={itemVariants} className="bg-[#0f172a] border border-gray-700 rounded-3xl p-6 h-full flex flex-col relative overflow-hidden shadow-2xl">
-              {/* Background Map Texture - subtle */}
-              <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#4b5563_1px,transparent_1px)] bg-[size:24px_24px]" />
-              
-              <div className="relative z-10 flex flex-col h-full">
-                <div className="flex justify-between items-end mb-6">
-                  <div>
-                    <h3 className="text-xl font-bold text-white flex items-center gap-2"><LayoutDashboard className="text-uremont-blue"/> Покрытие</h3>
-                    <div className="text-sm text-gray-400">Информация о подключенных станциях</div>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-4xl font-bold text-uremont-blue">132</div>
-                    <div className="text-xs text-gray-400 uppercase tracking-wide">Локации подключено</div>
-                  </div>
-                </div>
-
-                {/* Bars/Infographic */}
-                <div className="flex-1 flex flex-col justify-center gap-6">
-                  
-                  {/* Moscow Row */}
-                  <motion.div 
-                    initial={{ width: 0 }}
-                    whileInView={{ width: "100%" }}
-                    className="bg-white/5 border border-white/10 p-5 rounded-2xl flex items-center gap-4 relative overflow-hidden group hover:border-red-500/30 transition-colors"
-                  >
-                    <div className="w-12 h-12 rounded-xl bg-red-500/20 flex items-center justify-center text-red-500 font-bold shrink-0 border border-red-500/20">M</div>
-                    <div className="flex-1 z-10">
-                      <div className="flex justify-between mb-2 items-baseline">
-                         <span className="font-bold text-white text-lg">Москва</span>
-                         <span className="font-mono text-red-400 font-bold">86</span>
-                      </div>
-                      {/* Progress Bar Visual */}
-                      <div className="h-3 bg-gray-800 rounded-full overflow-hidden border border-white/5">
-                         <motion.div 
-                           initial={{ width: 0 }}
-                           whileInView={{ width: "100%" }}
-                           transition={{ duration: 1.5, ease: "easeOut" }}
-                           className="h-full bg-gradient-to-r from-red-600 to-orange-500"
-                         />
-                      </div>
-                      <div className="mt-2 text-xs text-gray-400 flex items-center gap-2">
-                        <MapPinned size={12} /> Покрытие: 12 округов (100%)
-                      </div>
-                    </div>
-                  </motion.div>
-
-                  {/* Regions Row */}
-                  <motion.div 
-                    className="bg-white/5 border border-white/10 p-5 rounded-2xl flex items-center gap-4 relative overflow-hidden group hover:border-green-500/30 transition-colors"
-                  >
-                    <div className="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center text-green-500 font-bold shrink-0 border border-green-500/20">R</div>
-                    <div className="flex-1 z-10">
-                      <div className="flex justify-between mb-2 items-baseline">
-                         <span className="font-bold text-white text-lg">Регионы</span>
-                         <span className="font-mono text-green-400 font-bold">27</span>
-                      </div>
-                      <div className="h-3 bg-gray-800 rounded-full overflow-hidden border border-white/5">
-                         <motion.div 
-                            initial={{ width: 0 }}
-                            whileInView={{ width: "55%" }}
-                            transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
-                            className="h-full bg-gradient-to-r from-emerald-600 to-green-500"
-                         />
-                      </div>
-                      <div className="flex flex-wrap gap-2 mt-2">
-                         <span className="text-[10px] bg-green-900/30 border border-green-500/20 px-2 py-0.5 rounded text-green-200">Миллионники - по 3 и более СТО в каждом городе</span>
-                      </div>
-                    </div>
-                  </motion.div>
-
-                  {/* SPb Row */}
-                  <motion.div 
-                    className="bg-white/5 border border-white/10 p-5 rounded-2xl flex items-center gap-4 relative overflow-hidden group hover:border-blue-500/30 transition-colors"
-                  >
-                    <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-500 font-bold shrink-0 border border-blue-500/20">S</div>
-                    <div className="flex-1 z-10">
-                      <div className="flex justify-between mb-2 items-baseline">
-                         <span className="font-bold text-white text-lg">Санкт-Петербург</span>
-                         <span className="font-mono text-blue-400 font-bold">19</span>
-                      </div>
-                      <div className="h-3 bg-gray-800 rounded-full overflow-hidden border border-white/5">
-                         <motion.div 
-                            initial={{ width: 0 }}
-                            whileInView={{ width: "25%" }}
-                            transition={{ duration: 1.5, ease: "easeOut", delay: 0.4 }}
-                            className="h-full bg-gradient-to-r from-blue-600 to-cyan-500"
-                         />
-                      </div>
-                    </div>
-                  </motion.div>
-
-                </div>
-                
-                <div className="mt-auto pt-6 border-t border-white/10 flex justify-between items-center text-xs text-gray-500">
-                   <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-uremont-accent animate-pulse"></div>
-                      <span className="text-uremont-accent font-bold">60% подключенных партнеров соответствуют новому портрету</span>
-                   </div>
-                </div>
-              </div>
-            </motion.div>
-        </motion.div>
-      </div>
-    </div>
-  );
-};
-
-// --- Slide 11: Future Plans (PlanSlide) ---
-export const PlanSlide: React.FC = () => {
-  const mainPlans = [
-    {
-       icon: TrendingUp,
-       title: "Экспертное УТП",
-       desc: "Доработка текстов и лендингов в сторону помощи в принятии решений."
-    },
-    {
-       icon: Bot,
-       title: "ИИ-автомеханик",
-       desc: "Умный помощник, который помогает пользователю с автомобильными вопросами 24/7."
-    },
-    {
-       icon: Repeat,
-       title: "Retention & LTV",
-       desc: "Проработка подписочных механик для удержания клиентов."
-    },
-    {
-       icon: Car,
-       title: "Новые вертикали",
-       desc: "Расширение в мойки, детейлинг и смежные услуги."
-    }
-  ];
-
-  const dataPlan = {
-       icon: FileBarChart,
-       title: "Data-driven Dev",
-       desc: "Доработки по данным, полученным в ходе A/B тестирований и анализа воронки на трафике."
-  };
-
+// --- Marketing Slide 11: Budget ---
+export const MarketingBudgetSlide: React.FC = () => {
   return (
     <div className="h-full flex flex-col justify-center px-12 md:px-24">
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={containerVariants}
-        className="mb-6 lg:mb-10"
-      >
-        <span className="text-uremont-accent font-mono text-sm tracking-wider">05 / ПЛАНЫ</span>
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="mb-8">
+        <span className="text-uremont-accent font-mono text-sm tracking-wider">05 / МАРКЕТИНГ ПЛАН</span>
         <h2 className="text-3xl md:text-5xl font-bold mt-2">
-           Планы по улучшениям на <span className="text-uremont-blue">Q1 2026</span>
+          Примерный <span className="text-uremont-blue">Бюджет</span>
         </h2>
       </motion.div>
+      <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-white/5 border border-white/10 p-8 rounded-3xl max-w-4xl relative overflow-hidden">
+        <div className="absolute right-0 top-0 bottom-0 w-64 bg-gradient-to-l from-uremont-blue/10 to-transparent pointer-events-none"></div>
+        <div className="flex items-center gap-4 mb-8">
+          <Wallet className="text-uremont-blue" size={32} />
+          <h3 className="text-2xl font-bold text-white">Медиаплан на старт (1 месяц)</h3>
+        </div>
 
-      <motion.div 
-         variants={containerVariants}
-         initial="hidden"
-         whileInView="visible"
-         className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6 max-w-7xl h-auto"
-      >
-         {/* Left Column: 2x2 Grid */}
-         <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4 h-full">
-            {mainPlans.map((plan, i) => (
-                <motion.div 
-                   key={i}
-                   variants={itemVariants}
-                   className="bg-white/5 p-4 lg:p-6 rounded-2xl border border-white/10 hover:border-uremont-blue hover:bg-white/10 transition-all flex flex-col justify-between group min-h-[140px]"
-                >
-                   <div className="bg-uremont-blue/20 w-10 h-10 flex items-center justify-center rounded-xl text-uremont-blue group-hover:bg-uremont-blue group-hover:text-white transition-colors mb-3">
-                      <plan.icon size={20} />
-                   </div>
-                   <div>
-                      <h3 className="text-base lg:text-lg font-bold text-white mb-1">{plan.title}</h3>
-                      <p className="text-gray-400 text-xs leading-relaxed">
-                         {plan.desc}
-                      </p>
-                   </div>
-                </motion.div>
-            ))}
-         </div>
-
-         {/* Right Column: Big Highlighted Block */}
-         <motion.div 
-            variants={itemVariants}
-            className="lg:col-span-1 bg-gradient-to-br from-uremont-blue/20 to-uremont-dark border border-uremont-blue/50 p-6 lg:p-8 rounded-2xl flex flex-col justify-center items-center text-center relative overflow-hidden group min-h-[200px]"
-         >
-            <div className="absolute inset-0 bg-uremont-blue/10 blur-3xl group-hover:bg-uremont-blue/20 transition-colors" />
-            
-            <div className="relative z-10">
-                <div className="bg-uremont-blue w-16 h-16 lg:w-20 lg:h-20 mx-auto flex items-center justify-center rounded-2xl text-white shadow-lg shadow-uremont-blue/30 mb-4 lg:mb-6 scale-100 group-hover:scale-110 transition-transform duration-500">
-                    <dataPlan.icon size={32} />
-                </div>
-                <h3 className="text-xl lg:text-2xl font-bold text-white mb-3">{dataPlan.title}</h3>
-                <p className="text-gray-300 text-xs lg:text-sm leading-relaxed">
-                   {dataPlan.desc}
-                </p>
-                <div className="mt-6 px-4 py-1 rounded-full border border-uremont-blue/50 text-uremont-blue text-[10px] font-mono">
-                    ОСНОВА ИЗМЕНЕНИЙ
-                </div>
+        <div className="space-y-4 font-mono">
+          <div className="flex items-end justify-between border-b border-white/10 pb-2">
+            <div>
+              <div className="text-white font-bold text-lg leading-none">Спецпроект av.by (2000L Топлива)</div>
+              <div className="text-gray-400 text-xs mt-1 font-sans">Призовой фонд + Размещение</div>
             </div>
-         </motion.div>
+            <div className="text-yellow-400 font-bold text-xl whitespace-nowrap overflow-hidden">--- ---</div>
+          </div>
+          <div className="flex items-end justify-between border-b border-white/10 pb-2">
+            <div>
+              <div className="text-white font-bold text-lg leading-none">Яндекс.Карты / Навигатор</div>
+              <div className="text-gray-400 text-xs mt-1 font-sans">Пины, биллборды, баннеры в маршруте</div>
+            </div>
+            <div className="text-white font-bold text-xl whitespace-nowrap overflow-hidden">--- ---</div>
+          </div>
+          <div className="flex items-end justify-between border-b border-white/10 pb-2">
+            <div>
+              <div className="text-white font-bold text-lg leading-none">Радиостанции</div>
+              <div className="text-gray-400 text-xs mt-1 font-sans">Ролики + Интеграции</div>
+            </div>
+            <div className="text-white font-bold text-xl whitespace-nowrap overflow-hidden">--- ---</div>
+          </div>
+          <div className="flex items-end justify-between border-b border-white/10 pb-2">
+            <div>
+              <div className="text-white font-bold text-lg leading-none">Digital Performance & Social</div>
+              <div className="text-gray-400 text-xs mt-1 font-sans">Установки App, Telegram посевы</div>
+            </div>
+            <div className="text-white font-bold text-xl whitespace-nowrap overflow-hidden">--- ---</div>
+          </div>
+          <div className="flex items-end justify-between pt-4 mt-8">
+            <div className="text-white text-2xl font-black font-sans uppercase">Итого</div>
+            <div className="text-uremont-accent font-bold text-4xl">TBD</div>
+          </div>
+        </div>
       </motion.div>
     </div>
   );
 };
 
-// --- Slide 12: Discussion (DiscussionSlide) ---
+// --- Slide 17: Discussion ---
 export const DiscussionSlide: React.FC = () => {
   return (
     <div className="h-full flex flex-col justify-center px-12 md:px-24">
       <div className="flex flex-col items-center justify-center text-center">
         <motion.div
-           initial={{ opacity: 0, y: 30 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           transition={{ duration: 0.6 }}
-           className="mb-8"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mb-8"
         >
-           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Свободное обсуждение</h2>
-           <p className="text-lg md:text-xl text-gray-400">Готов ответить на ваши вопросы</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Свободное обсуждение</h2>
+          <p className="text-lg md:text-xl text-gray-400">Готов ответить на ваши вопросы</p>
         </motion.div>
 
-        <motion.div 
-           initial={{ opacity: 0, scale: 0.9 }}
-           whileInView={{ opacity: 1, scale: 1 }}
-           transition={{ delay: 0.3, duration: 0.6 }}
-           className="w-full max-w-5xl aspect-[16/10]"
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+          className="w-full max-w-5xl aspect-[16/10]"
         >
-           <BrowserWindow title="uremont.com/demo">
-              <div className="w-full h-full bg-black">
-                  <video 
-                     src="https://pim4y1v96ezxxeus.public.blob.vercel-storage.com/U3ntitled.mp4" 
-                     className="w-full h-full object-cover"
-                     autoPlay
-                     muted
-                     loop
-                     playsInline
-                   />
-              </div>
-           </BrowserWindow>
+          <BrowserWindow title="uremont.com/demo">
+            <div className="w-full h-full bg-black">
+              <video
+                src="https://pim4y1v96ezxxeus.public.blob.vercel-storage.com/U3ntitled.mp4"
+                className="w-full h-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+              />
+            </div>
+          </BrowserWindow>
         </motion.div>
       </div>
     </div>

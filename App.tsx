@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Logo } from './components/Logo';
 import { Navigation } from './components/Navigation';
-import { WelcomeSlide, AgendaSlide, ProblemSlide, DataSlide, DataSlide2, SubscriptionSlide, SolutionSlide1, SolutionSlide2, SolutionSlide3, SolutionSlide4, OperationsSlide, PartnersSlide, PlanSlide, DiscussionSlide } from './components/Slides';
+import { FunnelResultsSlide, AgendaSlide, SolutionSlide, CustomerProcessSlide2, LoyaltyProgramSlide, MarketingStatsSlide, MarketingProblemSlide, MarketingPromoSlide, MarketingAvBySlide, MarketingPostcampSlide, MarketingChannelsSlide, MarketingTimingSlide, MarketingBudgetSlide, MarketingForecastSlide, DiscussionSlide } from './components/Slides';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const TOTAL_SLIDES = 14;
+const TOTAL_SLIDES = 15;
 
 const App: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -38,7 +38,7 @@ const App: React.FC = () => {
     let timeout: ReturnType<typeof setTimeout>;
     const handleWheel = (e: WheelEvent) => {
       if (isAnimating) return;
-      
+
       clearTimeout(timeout);
       timeout = setTimeout(() => {
         if (e.deltaY > 50) {
@@ -90,41 +90,42 @@ const App: React.FC = () => {
 
   const renderSlide = () => {
     switch (currentSlide) {
-      case 0: return <WelcomeSlide />;
-      case 1: return <AgendaSlide onNavigate={changeSlide} />;
-      case 2: return <ProblemSlide />;
-      case 3: return <DataSlide />;
-      case 4: return <DataSlide2 />;
-      case 5: return <SubscriptionSlide />;
-      case 6: return <SolutionSlide1 />;
-      case 7: return <SolutionSlide2 />;
-      case 8: return <SolutionSlide3 />;
-      case 9: return <SolutionSlide4 />;
-      case 10: return <OperationsSlide />;
-      case 11: return <PartnersSlide />;
-      case 12: return <PlanSlide />;
-      case 13: return <DiscussionSlide />;
-      default: return <WelcomeSlide />;
+      case 0: return <AgendaSlide onNavigate={changeSlide} />;
+      case 1: return <FunnelResultsSlide />;
+      case 2: return <SolutionSlide />;
+      case 3: return <CustomerProcessSlide2 />;
+      case 4: return <LoyaltyProgramSlide />;
+      case 5: return <MarketingStatsSlide />;
+      case 6: return <MarketingProblemSlide />;
+      case 7: return <MarketingPromoSlide />;
+      case 8: return <MarketingAvBySlide />;
+      case 9: return <MarketingPostcampSlide />;
+      case 10: return <MarketingChannelsSlide />;
+      case 11: return <MarketingTimingSlide />;
+      case 12: return <MarketingBudgetSlide />;
+      case 13: return <MarketingForecastSlide />;
+      case 14: return <DiscussionSlide />;
+      default: return <AgendaSlide onNavigate={changeSlide} />;
     }
   };
 
   return (
     <div className="relative w-full h-screen bg-uremont-dark overflow-hidden text-white selection:bg-uremont-blue selection:text-white">
-      
+
       {/* --- Mobile/Tablet Block Overlay --- */}
       {/* Hidden on lg (1024px) and above, visible on smaller screens */}
       <div className="fixed inset-0 z-[100] bg-uremont-dark flex flex-col items-center justify-center p-8 text-center lg:hidden">
         <div className="mb-8 scale-150 transform">
-           <Logo />
+          <Logo />
         </div>
         <h2 className="text-2xl font-bold mb-4 text-white">Ой!</h2>
         <p className="text-gray-400 mb-8 max-w-md leading-relaxed">
-          Этот сайт доступен только с компьютера. <br/>
+          Этот сайт доступен только с компьютера. <br />
           А пока переходите на наш uremont.com и ремонтируйтесь с кайфом.
         </p>
-        <a 
-          href="https://uremont.com" 
-          target="_blank" 
+        <a
+          href="https://uremont.com"
+          target="_blank"
           rel="noreferrer"
           className="bg-uremont-blue hover:bg-blue-600 text-white px-8 py-3 rounded-full transition-colors font-bold shadow-lg shadow-uremont-blue/30"
         >
@@ -138,16 +139,16 @@ const App: React.FC = () => {
       </div>
 
       {/* --- Right Navigation --- */}
-      <Navigation 
-        currentSlide={currentSlide} 
-        totalSlides={TOTAL_SLIDES} 
-        onNavigate={changeSlide} 
+      <Navigation
+        currentSlide={currentSlide}
+        totalSlides={TOTAL_SLIDES}
+        onNavigate={changeSlide}
       />
 
       {/* --- Fixed Footer (Only slides > 0) --- */}
       <AnimatePresence>
         {currentSlide > 0 && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
@@ -160,7 +161,7 @@ const App: React.FC = () => {
               </div>
               <div className="h-8 w-[1px] bg-gray-700"></div>
               <div className="text-xl font-mono text-gray-500">
-                {currentSlide < 10 ? `0${currentSlide + 1}` : currentSlide + 1} <span className="text-gray-700 text-sm">/ {TOTAL_SLIDES}</span>
+                {currentSlide < 9 ? `0${currentSlide + 1}` : currentSlide + 1} <span className="text-gray-700 text-sm">/ {TOTAL_SLIDES}</span>
               </div>
             </div>
           </motion.div>
@@ -185,8 +186,8 @@ const App: React.FC = () => {
       </div>
 
       {/* Background Noise/Grid overlay for texture */}
-      <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.03]" 
-           style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.65\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\'/%3E%3C/svg%3E")' }}>
+      <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.03]"
+        style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.65\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\'/%3E%3C/svg%3E")' }}>
       </div>
     </div>
   );
