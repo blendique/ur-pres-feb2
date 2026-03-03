@@ -48,7 +48,7 @@ export const FunnelResultsSlide: React.FC = () => {
       <motion.div initial="hidden" animate="visible" variants={containerVariants} className="mb-8">
         <span className="text-uremont-accent font-mono text-sm tracking-wider">01 / ИТОГИ ФЕВРАЛЯ</span>
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mt-2 text-white">
-          Оцифровка воронки и <span className="text-cyan-400">результаты</span>
+          Оцифровка воронки и <span className="text-uremont-blue">результаты</span>
         </h2>
       </motion.div>
 
@@ -71,9 +71,9 @@ export const FunnelResultsSlide: React.FC = () => {
         </motion.div>
       </div>
 
-      <motion.div variants={itemVariants} className="bg-[#0f172a] border border-cyan-500/20 rounded-3xl p-6 lg:p-8 max-w-7xl shadow-2xl relative overflow-hidden">
-        <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-l from-cyan-500/10 to-transparent pointer-events-none"></div>
-        <h3 className="text-lg font-bold text-cyan-400 uppercase tracking-widest mb-6 border-b border-cyan-500/20 pb-4">Расчёт воронки</h3>
+      <motion.div variants={itemVariants} className="bg-[#0f172a] border border-uremont-blue/20 rounded-3xl p-6 lg:p-8 max-w-7xl shadow-2xl relative overflow-hidden">
+        <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-l from-uremont-blue/10 to-transparent pointer-events-none"></div>
+        <h3 className="text-lg font-bold text-uremont-blue uppercase tracking-widest mb-6 border-b border-uremont-blue/20 pb-4">Расчёт воронки</h3>
 
         <div className="flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-6">
           <div className="text-center w-full lg:w-[18%] shrink-0">
@@ -86,22 +86,22 @@ export const FunnelResultsSlide: React.FC = () => {
           </div>
 
           <div className="flex flex-col items-center justify-center relative w-full lg:w-[8%] shrink-0 lg:translate-y-4">
-            <ArrowRight className="text-cyan-500/50 hidden lg:block" size={32} />
-            <ArrowDown className="text-cyan-500/50 block lg:hidden my-2" size={24} />
-            <div className="lg:absolute lg:-top-7 bg-cyan-500/20 text-cyan-400 text-[10px] font-bold px-2 py-0.5 rounded-full border border-cyan-500/30 whitespace-nowrap">
+            <ArrowRight className="text-uremont-blue/50 hidden lg:block" size={32} />
+            <ArrowDown className="text-uremont-blue/50 block lg:hidden my-2" size={24} />
+            <div className="lg:absolute lg:-top-7 bg-uremont-blue/20 text-uremont-blue text-[10px] font-bold px-2 py-0.5 rounded-full border border-uremont-blue/30 whitespace-nowrap">
               CR 10%
             </div>
           </div>
 
           <div className="text-center bg-white/5 p-4 rounded-2xl border border-white/5 w-full lg:w-[42%] shrink-0 shadow-inner">
             <div className="text-4xl lg:text-5xl font-black text-white mb-2">173</div>
-            <div className="text-sm font-medium text-gray-300 mb-3">Лиды (звонки 69% + 31% заявки)</div>
+            <div className="text-sm font-medium text-gray-300 mb-3">Лиды (звонки 70% + 30% заявки)</div>
             <div className="flex xl:flex-row flex-col justify-center gap-2 xl:gap-4 text-[10px] lg:text-xs">
-              <div className="bg-black/30 px-3 py-2 rounded-lg text-left flex-1 border border-white/5 whitespace-nowrap">
+              <div className="bg-black/30 px-3 py-2 rounded-lg text-center flex-1 border border-white/5 whitespace-nowrap">
                 <div className="text-gray-400">Звонки: <span className="text-white font-bold">120 шт.</span></div>
                 <div className="text-gray-500 mt-1">CR в ремонт: <span className="font-bold text-gray-400">N/A</span></div>
               </div>
-              <div className="bg-black/30 px-3 py-2 rounded-lg text-left flex-1 border border-white/5 whitespace-nowrap">
+              <div className="bg-black/30 px-3 py-2 rounded-lg text-center flex-1 border border-white/5 whitespace-nowrap">
                 <div className="text-gray-400">Заявки: <span className="text-white font-bold">53 шт.</span></div>
                 <div className="text-green-400 mt-1">CR в ремонт: <span className="font-bold">38%</span></div>
               </div>
@@ -109,15 +109,15 @@ export const FunnelResultsSlide: React.FC = () => {
           </div>
 
           <div className="flex flex-col items-center justify-center relative w-full lg:w-[8%] shrink-0 lg:translate-y-4">
-            <ArrowRight className="text-cyan-500/50 hidden lg:block" size={32} />
-            <ArrowDown className="text-cyan-500/50 block lg:hidden my-2" size={24} />
-            <div className="lg:absolute lg:-top-7 bg-cyan-500/20 text-cyan-400 text-[10px] font-bold px-2 py-0.5 rounded-full border border-cyan-500/30 whitespace-nowrap">
+            <ArrowRight className="text-uremont-blue/50 hidden lg:block" size={32} />
+            <ArrowDown className="text-uremont-blue/50 block lg:hidden my-2" size={24} />
+            <div className="lg:absolute lg:-top-7 bg-uremont-blue/20 text-uremont-blue text-[10px] font-bold px-2 py-0.5 rounded-full border border-uremont-blue/30 whitespace-nowrap">
               CR 12%
             </div>
           </div>
 
           <div className="text-center w-full lg:w-[18%] shrink-0">
-            <div className="text-5xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-cyan-500 drop-shadow-lg mb-2">20</div>
+            <div className="text-5xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-br from-green-400 to-uremont-blue drop-shadow-lg mb-2">20</div>
             <div className="text-sm font-bold text-white uppercase tracking-wider">Ремонты (итого)</div>
           </div>
         </div>
@@ -129,10 +129,10 @@ export const FunnelResultsSlide: React.FC = () => {
 // --- Slide 2: Detailed Call Funnel ---
 export const CallFunnelSlide: React.FC = () => {
   const metrics = [
-    { label: "Всего звонков", value: "120", sub: "100%", icon: Phone, color: "text-white", note: "87 уник. чел" },
-    { label: "Дозвонились сразу", value: "99", sub: "82,5%", icon: CheckCircle, color: "text-green-400" },
-    { label: "Перехватили ГЛ", value: "19", sub: "15,8%", icon: Headphones, color: "text-blue-400" },
-    { label: "Процент потерь", value: "1,7%", valueClass: "text-red-500", sub: "2 шт", icon: AlertCircle, color: "text-red-500" },
+    { label: "Всего звонков", value: "120", sub: " / 87 человек", icon: Phone, color: "text-white" },
+    { label: "Дозвонились сразу", value: "99", sub: " / 83%", icon: CheckCircle, color: "text-green-400" },
+    { label: "Переведено на ГЛ", value: "15", sub: " / 16%", icon: Headphones, color: "text-blue-400" },
+    { label: "Потери", value: "6", valueClass: "text-red-500", sub: " / 5%", icon: AlertCircle, color: "text-red-500" },
   ];
 
   return (
@@ -174,8 +174,8 @@ export const CallFunnelSlide: React.FC = () => {
         viewport={{ once: true }}
         className="mt-12 p-6 bg-white/5 border border-white/10 rounded-2xl max-w-3xl"
       >
-        <p className="text-gray-400 italic text-sm">
-          * Answer Rate по СТО составил 82,5%. Основной объем звонков переведен на горячую линию для предотвращения упущенных заявок.
+        <p className="text-gray-400 text-sm">
+          Answer Rate по СТО составил 83% — оставшийся объем звонков был переведен на горячую линию для предотвращения упущенных обращений.
         </p>
       </motion.div>
     </div>
@@ -186,9 +186,9 @@ export const CallFunnelSlide: React.FC = () => {
 export const RequestFunnelSlide: React.FC = () => {
   const metrics = [
     { label: "Всего заявок", value: "53", sub: "100%", icon: FileText, color: "text-white" },
+    { label: "План на месяц (AR)", value: "24", sub: "45%", icon: Target, color: "text-gray-400" },
     { label: "Взяли в работу (AR)", value: "32", sub: "60%", icon: UserCheck, color: "text-green-400" },
-    { label: "План на месяц", value: "45%", icon: Target, color: "text-gray-400" },
-    { label: "Ремонт завершен (CR)", value: "20", sub: "38%", icon: Wrench, color: "text-cyan-400", highlight: true },
+    { label: "Ремонт завершен (CR)", value: "20", sub: "38%", icon: Wrench, color: "text-uremont-blue", highlight: true },
   ];
 
   return (
@@ -196,7 +196,7 @@ export const RequestFunnelSlide: React.FC = () => {
       <motion.div initial="hidden" animate="visible" variants={containerVariants} className="mb-10">
         <span className="text-uremont-accent font-mono text-sm tracking-wider">01 / ИТОГИ ФЕВРАЛЯ</span>
         <h2 className="text-3xl md:text-5xl font-bold mt-2 text-white">
-          Эффективность <span className="text-cyan-400">работы с заявками</span>
+          Подробная воронка <span className="text-uremont-blue">по заявкам</span>
         </h2>
       </motion.div>
 
@@ -208,15 +208,15 @@ export const RequestFunnelSlide: React.FC = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className={`p-8 rounded-3xl shadow-xl relative overflow-hidden group border transition-all ${m.highlight ? 'bg-cyan-500/10 border-cyan-500/30' : 'bg-[#0f172a] border-white/5 hover:border-white/10'
+            className={`p-8 rounded-3xl shadow-xl relative overflow-hidden group border transition-all ${m.highlight ? 'bg-uremont-blue/10 border-uremont-blue/30' : 'bg-[#0f172a] border-white/5 hover:border-white/10'
               }`}
           >
-            <div className={`absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity ${m.highlight ? 'text-cyan-400' : ''}`}>
+            <div className={`absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity ${m.highlight ? 'text-uremont-blue' : ''}`}>
               <m.icon size={48} />
             </div>
             <div className={`text-[10px] lg:text-xs uppercase tracking-widest font-bold mb-4 ${m.color} opacity-80 min-h-[2rem]`}>{m.label}</div>
             <div className="flex items-baseline gap-2 flex-wrap">
-              <div className={`text-4xl lg:text-5xl font-black ${m.highlight ? 'text-cyan-400' : 'text-white'}`}>{m.value}</div>
+              <div className={`text-4xl lg:text-5xl font-black ${m.highlight ? 'text-uremont-blue' : 'text-white'}`}>{m.value}</div>
               {m.sub && <div className="text-gray-500 font-mono text-lg">{m.sub}</div>}
             </div>
           </motion.div>
@@ -236,8 +236,8 @@ export const RequestFunnelSlide: React.FC = () => {
           </div>
           <p className="text-gray-400 text-sm">План 45% vs Факт 60%. СТО стали активнее брать заявки в работу.</p>
         </div>
-        <div className="p-5 bg-cyan-500/5 border border-cyan-500/20 rounded-2xl">
-          <div className="text-cyan-400 font-bold mb-2 flex items-center gap-2">
+        <div className="p-5 bg-uremont-blue/5 border border-uremont-blue/20 rounded-2xl">
+          <div className="text-uremont-blue font-bold mb-2 flex items-center gap-2">
             <CheckCircle size={16} /> Высокий CR
           </div>
           <p className="text-gray-400 text-sm">38% конверсия из заявки в итоговый ремонт подтверждает качество лидов.</p>
@@ -1185,11 +1185,11 @@ export const MarketingForecastSlide: React.FC = () => {
                 <td className="p-2.5 text-center font-mono text-blue-400 border-r border-white/10">50%</td>
                 <td className="p-2.5 text-center font-mono text-blue-400">50%</td>
               </tr>
-              <tr className="border-b border-white/5 hover:bg-white/5 transition-colors bg-cyan-500/10">
-                <td className="p-2.5 px-4 text-white font-medium border-r border-cyan-500/20">CR ИИ → лид (звонок+заявка)</td>
-                <td className="p-2.5 text-center font-mono text-cyan-400 border-r border-cyan-500/20">10%</td>
-                <td className="p-2.5 text-center font-mono text-cyan-400 border-r border-cyan-500/20">12%</td>
-                <td className="p-2.5 text-center font-mono text-cyan-400">13%</td>
+              <tr className="border-b border-white/5 hover:bg-white/5 transition-colors bg-uremont-blue/10">
+                <td className="p-2.5 px-4 text-white font-medium border-r border-uremont-blue/20">CR ИИ → лид (звонок+заявка)</td>
+                <td className="p-2.5 text-center font-mono text-uremont-blue border-r border-uremont-blue/20">10%</td>
+                <td className="p-2.5 text-center font-mono text-uremont-blue border-r border-uremont-blue/20">12%</td>
+                <td className="p-2.5 text-center font-mono text-uremont-blue">13%</td>
               </tr>
 
               {/* === SECTION 2 === */}
@@ -1208,11 +1208,11 @@ export const MarketingForecastSlide: React.FC = () => {
                 <td className="p-2.5 text-center font-mono border-r border-white/10 text-gray-300">1 084</td>
                 <td className="p-2.5 text-center font-mono text-gray-300">2 348</td>
               </tr>
-              <tr className="border-b border-white/5 hover:bg-white/5 transition-colors bg-cyan-500/10">
-                <td className="p-3 px-4 font-black text-cyan-400 text-base border-r border-cyan-500/20">Ремонты (итого), шт</td>
-                <td className="p-3 text-center font-mono font-black text-cyan-400 text-lg border-r border-cyan-500/20">41</td>
-                <td className="p-3 text-center font-mono font-black text-cyan-400 text-lg border-r border-cyan-500/20">173</td>
-                <td className="p-3 text-center font-mono font-black text-cyan-400 text-lg">467</td>
+              <tr className="border-b border-white/5 hover:bg-white/5 transition-colors bg-uremont-blue/10">
+                <td className="p-3 px-4 font-black text-uremont-blue text-base border-r border-uremont-blue/20">Ремонты (итого), шт</td>
+                <td className="p-3 text-center font-mono font-black text-uremont-blue text-lg border-r border-uremont-blue/20">41</td>
+                <td className="p-3 text-center font-mono font-black text-uremont-blue text-lg border-r border-uremont-blue/20">173</td>
+                <td className="p-3 text-center font-mono font-black text-uremont-blue text-lg">467</td>
               </tr>
 
               {/* Final CR */}
