@@ -1195,17 +1195,27 @@ export const MarketingForecastSlide: React.FC = () => {
 // --- Marketing Slide 11: Budget ---
 export const MarketingBudgetSlide: React.FC = () => {
   return (
-    <div className="h-full flex flex-col justify-center px-8 md:px-12 lg:px-24">
-      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="mb-6 lg:mb-10 shrink-0">
+    <div className="h-full flex flex-col justify-center px-8 md:px-12 lg:px-24 relative overflow-hidden">
+      {/* Background Vertical Labels */}
+      <div className="absolute left-6 h-full flex flex-col justify-around py-24 pointer-events-none opacity-20">
+        <div className="rotate-[-90deg] origin-center -translate-x-12 translate-y-[-100px]">
+          <span className="text-uremont-accent font-bold uppercase tracking-[1em] text-[10px] whitespace-nowrap">Бюджет</span>
+        </div>
+        <div className="rotate-[-90deg] origin-center -translate-x-12 translate-y-[200px]">
+          <span className="text-uremont-accent font-bold uppercase tracking-[1em] text-[10px] whitespace-nowrap">Таймлайн</span>
+        </div>
+      </div>
+
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="mb-6 lg:mb-8 md:ml-12">
         <span className="text-uremont-accent font-mono text-sm tracking-wider">05 / МАРКЕТИНГ ПЛАН</span>
         <h2 className="text-3xl md:text-5xl font-bold mt-2">
           Таймлайн и <span className="text-uremont-blue">бюджет</span>
         </h2>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 max-w-7xl w-full mx-auto mb-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 max-w-7xl w-full mx-auto mb-10 md:ml-12">
         {/* Март */}
-        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-[#0f172a] border border-blue-500/30 p-5 lg:p-6 rounded-3xl relative shadow-lg flex flex-col">
+        <motion.div variants={itemVariants} className="bg-[#0f172a] border border-blue-500/30 p-5 lg:p-6 rounded-3xl relative shadow-lg flex flex-col">
           <div className="flex items-center gap-2 mb-4">
             <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center border border-blue-500/50 text-blue-400 font-bold text-sm">03</div>
             <h3 className="text-2xl font-bold text-white tracking-tight">Март</h3>
@@ -1239,7 +1249,7 @@ export const MarketingBudgetSlide: React.FC = () => {
         </motion.div>
 
         {/* Апрель */}
-        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-[#0f172a] border border-green-500/30 p-5 lg:p-6 rounded-3xl relative shadow-xl flex flex-col z-10 box-shadow-green">
+        <motion.div variants={itemVariants} className="bg-[#0f172a] border border-green-500/30 p-5 lg:p-6 rounded-3xl relative shadow-xl flex flex-col z-10 box-shadow-green">
           <div className="flex items-center gap-2 mb-4">
             <div className="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center border border-green-500/50 text-green-400 font-bold text-sm">04</div>
             <h3 className="text-2xl font-bold text-white tracking-tight">Апрель</h3>
@@ -1275,7 +1285,7 @@ export const MarketingBudgetSlide: React.FC = () => {
         </motion.div>
 
         {/* Май */}
-        <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="bg-[#0f172a] border border-yellow-500/30 p-5 lg:p-6 rounded-3xl relative shadow-lg flex flex-col">
+        <motion.div variants={itemVariants} className="bg-[#0f172a] border border-yellow-500/30 p-5 lg:p-6 rounded-3xl relative shadow-lg flex flex-col">
           <div className="flex items-center gap-2 mb-4">
             <div className="w-8 h-8 rounded-full bg-yellow-500/20 flex items-center justify-center border border-yellow-500/50 text-yellow-500 font-bold text-sm">05</div>
             <h3 className="text-2xl font-bold text-white tracking-tight">Май</h3>
@@ -1318,65 +1328,50 @@ export const MarketingBudgetSlide: React.FC = () => {
       </div>
 
       {/* Full Gantt Chart Section */}
-      <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="w-full max-w-7xl mx-auto flex flex-col">
-        <div className="flex items-center gap-3 mb-4">
-          <Calendar className="text-uremont-blue" size={20} />
-          <h3 className="text-xl font-bold text-white">Гантт-таймлайн запуска</h3>
-        </div>
-
+      <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="w-full max-w-7xl mx-auto flex flex-col md:ml-12">
         <div className="relative w-full bg-black/20 rounded-2xl border border-white/5 p-6 lg:p-8 overflow-hidden">
           {/* Timeline Grid Markers */}
-          <div className="absolute inset-0 grid grid-cols-4 pointer-events-none opacity-20">
-            <div className="border-r border-white/10 h-full"></div>
+          <div className="absolute inset-0 grid grid-cols-3 pointer-events-none opacity-20">
             <div className="border-r border-white/10 h-full"></div>
             <div className="border-r border-white/10 h-full"></div>
             <div className="h-full"></div>
           </div>
 
           {/* Header Months */}
-          <div className="grid grid-cols-4 gap-0 mb-8 border-b border-white/5 pb-2 relative z-10">
+          <div className="grid grid-cols-3 gap-0 mb-6 border-b border-white/5 pb-2 relative z-10">
             <div className="text-[10px] text-gray-500 uppercase font-mono tracking-widest text-center">Март</div>
             <div className="text-[10px] text-gray-500 uppercase font-mono tracking-widest text-center">Апрель</div>
             <div className="text-[10px] text-gray-500 uppercase font-mono tracking-widest text-center">Май</div>
-            <div className="text-[10px] text-gray-500 uppercase font-mono tracking-widest text-center">Пост-кампейн</div>
           </div>
 
           {/* Gantt Rows */}
-          <div className="space-y-4 relative z-10">
+          <div className="space-y-3 relative z-10">
             {/* Row 1: Preparation */}
-            <div className="relative h-10 flex items-center">
-              <div className="absolute left-[8%] w-[15%] h-7 bg-green-500/20 border border-green-500/40 rounded-lg flex items-center justify-center group shadow-lg shadow-green-500/5">
-                <div className="absolute inset-0 bg-green-500/10 group-hover:bg-green-500/20 transition-colors"></div>
-                <span className="text-[9px] font-bold text-green-400 uppercase text-center px-1">Подготовка</span>
+            <div className="relative h-8 flex items-center">
+              <div className="absolute left-[8%] w-fit h-6 bg-green-500/20 border border-green-500/40 rounded-lg flex items-center px-4 shadow-lg shadow-green-500/5 whitespace-nowrap">
+                <span className="text-[10px] font-medium text-green-400">Инфраструктура: AppsFlyer, Я.Карты, тесты трекинга</span>
               </div>
-              <div className="ml-[25%] text-[11px] text-gray-400 opacity-60">Настройка трекинга AppsFlyer, интеграция Я.Карт, тесты</div>
             </div>
 
             {/* Row 2: Promo Launch */}
-            <div className="relative h-10 flex items-center">
-              <div className="absolute left-[22%] w-[15%] h-7 bg-blue-500/20 border border-blue-500/40 rounded-lg flex items-center justify-center group shadow-lg shadow-blue-500/5">
-                <div className="absolute inset-0 bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors"></div>
-                <span className="text-[9px] font-bold text-blue-400 uppercase text-center px-1">Спецпроект</span>
+            <div className="relative h-8 flex items-center">
+              <div className="absolute left-[22%] w-fit h-6 bg-blue-500/20 border border-blue-500/40 rounded-lg flex items-center px-4 shadow-lg shadow-blue-500/5 whitespace-nowrap">
+                <span className="text-[10px] font-medium text-blue-400">Старт охватного спецпроекта «UREMONT Заправляет»</span>
               </div>
-              <div className="ml-[39%] text-[11px] text-gray-400 opacity-60">Запуск промо «UREMONT Заправляет». Сбор регистраций</div>
             </div>
 
             {/* Row 3: Scaling */}
-            <div className="relative h-10 flex items-center">
-              <div className="absolute left-[34%] w-[38%] h-7 bg-yellow-500/20 border border-yellow-500/40 rounded-lg flex items-center justify-center group shadow-lg shadow-yellow-500/5">
-                <div className="absolute inset-0 bg-yellow-500/10 group-hover:bg-yellow-500/20 transition-colors"></div>
-                <span className="text-[9px] font-bold text-yellow-500 uppercase text-center px-1">Масштабирование (Радио, DOOH, Карты)</span>
+            <div className="relative h-8 flex items-center">
+              <div className="absolute left-[34%] w-fit h-6 bg-yellow-500/20 border border-yellow-500/40 rounded-lg flex items-center px-4 shadow-lg shadow-yellow-500/5 whitespace-nowrap">
+                <span className="text-[10px] font-medium text-yellow-500">Медиа: Радио, DOOH, Яндекс Пины, SMM, PR</span>
               </div>
-              <div className="ml-[74%] text-[11px] text-gray-400 opacity-60">Разгон Retention-машины и охват</div>
             </div>
 
             {/* Row 4: Optimization */}
-            <div className="relative h-10 flex items-center">
-              <div className="absolute left-[75%] w-[20%] h-7 bg-purple-500/20 border border-purple-500/40 rounded-lg flex items-center justify-center group shadow-lg shadow-purple-500/5">
-                <div className="absolute inset-0 bg-purple-500/10 group-hover:bg-purple-500/20 transition-colors"></div>
-                <span className="text-[9px] font-bold text-purple-400 uppercase text-center px-1">Оптимизация</span>
+            <div className="relative h-8 flex items-center">
+              <div className="absolute left-[65%] right-[2%] h-6 bg-purple-500/20 border border-purple-500/40 rounded-lg flex items-center px-4 shadow-lg shadow-purple-500/5">
+                <span className="text-[10px] font-medium text-purple-400">DATA & CRM: Retention, оценка CAC/LTV, масштабирование ROI</span>
               </div>
-              <div className="ml-[10%] text-[11px] text-gray-500 uppercase font-bold tracking-tighter opacity-10">Data-driven performance</div>
             </div>
           </div>
         </div>
