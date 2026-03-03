@@ -145,27 +145,25 @@ const App: React.FC = () => {
         onNavigate={changeSlide}
       />
 
-      {/* --- Fixed Footer (Only slides > 0) --- */}
+      {/* --- Fixed Footer --- */}
       <AnimatePresence>
-        {currentSlide > 0 && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 20 }}
-            className="absolute bottom-8 right-12 z-40 hidden md:block"
-          >
-            <div className="flex items-center gap-4">
-              <div className="text-right">
-                <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold">Презентация</p>
-                <p className="text-sm font-bold text-uremont-blue">UREMONT AI 2.0</p>
-              </div>
-              <div className="h-8 w-[1px] bg-gray-700"></div>
-              <div className="text-xl font-mono text-gray-500">
-                {currentSlide < 9 ? `0${currentSlide + 1}` : currentSlide + 1} <span className="text-gray-700 text-sm">/ {TOTAL_SLIDES}</span>
-              </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 20 }}
+          className="absolute bottom-8 right-12 z-40 hidden md:block"
+        >
+          <div className="flex items-center gap-4">
+            <div className="text-right">
+              <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold">Презентация</p>
+              <p className="text-sm font-bold text-uremont-blue">UREMONT AI 2.0</p>
             </div>
-          </motion.div>
-        )}
+            <div className="h-8 w-[1px] bg-gray-700"></div>
+            <div className="text-xl font-mono text-gray-500">
+              {currentSlide < 9 ? `0${currentSlide + 1}` : currentSlide + 1} <span className="text-gray-700 text-sm">/ {TOTAL_SLIDES}</span>
+            </div>
+          </div>
+        </motion.div>
       </AnimatePresence>
 
       {/* --- Main Content Area --- */}
