@@ -93,16 +93,16 @@ export const FunnelResultsSlide: React.FC = () => {
             </div>
           </div>
 
-          <div className="text-center bg-white/5 p-4 rounded-2xl border border-white/5 w-full lg:w-[38%] shrink-0 shadow-inner">
+          <div className="text-center bg-white/5 p-4 rounded-2xl border border-white/5 w-full lg:w-[42%] shrink-0 shadow-inner">
             <div className="text-4xl lg:text-5xl font-black text-white mb-2">173</div>
             <div className="text-sm font-medium text-gray-300 mb-3">Лиды (звонки 69% + 31% заявки)</div>
             <div className="flex xl:flex-row flex-col justify-center gap-2 xl:gap-4 text-[10px] lg:text-xs">
               <div className="bg-black/30 px-3 py-2 rounded-lg text-left flex-1 border border-white/5 whitespace-nowrap">
-                <div className="text-gray-400">Звонки: <span className="text-white font-bold">120 шт</span></div>
+                <div className="text-gray-400">Звонки: <span className="text-white font-bold">120 шт.</span></div>
                 <div className="text-gray-500 mt-1">CR в ремонт: <span className="font-bold text-gray-400">N/A</span></div>
               </div>
               <div className="bg-black/30 px-3 py-2 rounded-lg text-left flex-1 border border-white/5 whitespace-nowrap">
-                <div className="text-gray-400">Заявки: <span className="text-white font-bold">53 шт</span></div>
+                <div className="text-gray-400">Заявки: <span className="text-white font-bold">53 шт.</span></div>
                 <div className="text-green-400 mt-1">CR в ремонт: <span className="font-bold">38%</span></div>
               </div>
             </div>
@@ -129,10 +129,10 @@ export const FunnelResultsSlide: React.FC = () => {
 // --- Slide 2: Detailed Call Funnel ---
 export const CallFunnelSlide: React.FC = () => {
   const metrics = [
-    { label: "Всего звонков", value: "XX", sub: "100%", icon: Phone, color: "text-white" },
-    { label: "Дозвонились в СТО сразу", value: "XX", sub: "XX%", icon: CheckCircle, color: "text-green-400" },
-    { label: "Переводов на ГЛ", value: "XX", sub: "XX%", icon: Headphones, color: "text-blue-400" },
-    { label: "Процент потерь", value: "XX%", valueClass: "text-red-500", icon: AlertCircle, color: "text-red-500" },
+    { label: "Всего звонков", value: "120", sub: "100%", icon: Phone, color: "text-white", note: "87 уник. чел" },
+    { label: "Дозвонились сразу", value: "99", sub: "82,5%", icon: CheckCircle, color: "text-green-400" },
+    { label: "Перехватили ГЛ", value: "19", sub: "15,8%", icon: Headphones, color: "text-blue-400" },
+    { label: "Процент потерь", value: "1,7%", valueClass: "text-red-500", sub: "2 шт", icon: AlertCircle, color: "text-red-500" },
   ];
 
   return (
@@ -140,7 +140,7 @@ export const CallFunnelSlide: React.FC = () => {
       <motion.div initial="hidden" animate="visible" variants={containerVariants} className="mb-10">
         <span className="text-uremont-accent font-mono text-sm tracking-wider">01 / ИТОГИ ФЕВРАЛЯ</span>
         <h2 className="text-3xl md:text-5xl font-bold mt-2 text-white">
-          Подробная <span className="text-uremont-blue">воронка по звонкам</span>
+          Подробная воронка <span className="text-uremont-blue">по звонкам</span>
         </h2>
       </motion.div>
 
@@ -157,11 +157,12 @@ export const CallFunnelSlide: React.FC = () => {
             <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
               <m.icon size={48} />
             </div>
-            <div className={`text-sm uppercase tracking-widest font-bold mb-4 ${m.color} opacity-80`}>{m.label}</div>
-            <div className="flex items-baseline gap-3">
+            <div className={`text-[10px] lg:text-xs uppercase tracking-widest font-bold mb-4 ${m.color} opacity-80 min-h-[2rem]`}>{m.label}</div>
+            <div className="flex items-baseline gap-2 flex-wrap">
               <div className={`text-4xl lg:text-5xl font-black ${m.valueClass || 'text-white'}`}>{m.value}</div>
               {m.sub && <div className="text-gray-500 font-mono text-lg">{m.sub}</div>}
             </div>
+            {m.note && <div className="text-xs text-gray-500 mt-2 font-mono">{m.note}</div>}
           </motion.div>
         ))}
       </div>
@@ -174,8 +175,73 @@ export const CallFunnelSlide: React.FC = () => {
         className="mt-12 p-6 bg-white/5 border border-white/10 rounded-2xl max-w-3xl"
       >
         <p className="text-gray-400 italic text-sm">
-          * Данные по звонкам анализируются на основе системы телефонии. Основной фокус на минимизацию потерь при переводах и улучшение AR (Answer Rate) на стороне СТО.
+          * Answer Rate по СТО составил 82,5%. Основной объем звонков переведен на горячую линию для предотвращения упущенных заявок.
         </p>
+      </motion.div>
+    </div>
+  );
+};
+
+// --- Slide 3: Detailed Request Funnel ---
+export const RequestFunnelSlide: React.FC = () => {
+  const metrics = [
+    { label: "Всего заявок", value: "53", sub: "100%", icon: FileText, color: "text-white" },
+    { label: "Взяли в работу (AR)", value: "32", sub: "60%", icon: UserCheck, color: "text-green-400" },
+    { label: "План на месяц", value: "45%", icon: Target, color: "text-gray-400" },
+    { label: "Ремонт завершен (CR)", value: "20", sub: "38%", icon: Wrench, color: "text-cyan-400", highlight: true },
+  ];
+
+  return (
+    <div className="h-full flex flex-col justify-center px-8 md:px-12 lg:px-24">
+      <motion.div initial="hidden" animate="visible" variants={containerVariants} className="mb-10">
+        <span className="text-uremont-accent font-mono text-sm tracking-wider">01 / ИТОГИ ФЕВРАЛЯ</span>
+        <h2 className="text-3xl md:text-5xl font-bold mt-2 text-white">
+          Эффективность <span className="text-cyan-400">работы с заявками</span>
+        </h2>
+      </motion.div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl">
+        {metrics.map((m, idx) => (
+          <motion.div
+            key={idx}
+            variants={itemVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className={`p-8 rounded-3xl shadow-xl relative overflow-hidden group border transition-all ${m.highlight ? 'bg-cyan-500/10 border-cyan-500/30' : 'bg-[#0f172a] border-white/5 hover:border-white/10'
+              }`}
+          >
+            <div className={`absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity ${m.highlight ? 'text-cyan-400' : ''}`}>
+              <m.icon size={48} />
+            </div>
+            <div className={`text-[10px] lg:text-xs uppercase tracking-widest font-bold mb-4 ${m.color} opacity-80 min-h-[2rem]`}>{m.label}</div>
+            <div className="flex items-baseline gap-2 flex-wrap">
+              <div className={`text-4xl lg:text-5xl font-black ${m.highlight ? 'text-cyan-400' : 'text-white'}`}>{m.value}</div>
+              {m.sub && <div className="text-gray-500 font-mono text-lg">{m.sub}</div>}
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
+      <motion.div
+        variants={itemVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl"
+      >
+        <div className="p-5 bg-green-500/5 border border-green-500/20 rounded-2xl">
+          <div className="text-green-400 font-bold mb-2 flex items-center gap-2">
+            <TrendingUp size={16} /> Перевыполнение AR
+          </div>
+          <p className="text-gray-400 text-sm">План 45% vs Факт 60%. СТО стали активнее брать заявки в работу.</p>
+        </div>
+        <div className="p-5 bg-cyan-500/5 border border-cyan-500/20 rounded-2xl">
+          <div className="text-cyan-400 font-bold mb-2 flex items-center gap-2">
+            <CheckCircle size={16} /> Высокий CR
+          </div>
+          <p className="text-gray-400 text-sm">38% конверсия из заявки в итоговый ремонт подтверждает качество лидов.</p>
+        </div>
       </motion.div>
     </div>
   );
@@ -189,13 +255,14 @@ interface AgendaSlideProps {
 export const AgendaSlide: React.FC<AgendaSlideProps> = ({ onNavigate }) => {
   const points = [
     { id: 1, title: "Результаты UREMONT AI 2.0", desc: "Ключевые метрики и расчет воронки", targetSlide: 1 },
-    { id: 2, title: "Воронка звонков", desc: "Подробная статистика по входящей связи", targetSlide: 2 },
-    { id: 3, title: "Решение: Звонок -> Ремонт", desc: "Новый путь обработки и регистрация", targetSlide: 3 },
-    { id: 4, title: "Процесс клиента", desc: "Личный кабинет и PDF-направление", targetSlide: 4 },
-    { id: 5, title: "Программа лояльности", desc: "Статусы, скидки и преимущества клиентов", targetSlide: 5 },
-    { id: 6, title: "Маркетинг план", desc: "Спецпроект, выбранные каналы трафика и бюджетирование", targetSlide: 6 },
-    { id: 7, title: "Таймлайн и бюджет", desc: "Детализация запуска и финансовые показатели", targetSlide: 12 },
-    { id: 8, title: "Свободное обсуждение", desc: "Q&A сессия по результатам презентации", targetSlide: 15 },
+    { id: 2, title: "Воронка звонков", desc: "Анализ Answer Rate и переводов", targetSlide: 2 },
+    { id: 3, title: "Воронка заявок", desc: "Эффективность СТО и конверсия в ремонт", targetSlide: 3 },
+    { id: 4, title: "Решение: Звонок -> Ремонт", desc: "Новый путь обработки и регистрация", targetSlide: 4 },
+    { id: 5, title: "Процесс клиента", desc: "Личный кабинет и PDF-направление", targetSlide: 5 },
+    { id: 6, title: "Программа лояльности", desc: "Статусы, скидки и преимущества клиентов", targetSlide: 6 },
+    { id: 7, title: "Маркетинг план", desc: "Спецпроект, выбранные каналы трафика и бюджетирование", targetSlide: 7 },
+    { id: 8, title: "Таймлайн и бюджет", desc: "Детализация запуска и финансовые показатели", targetSlide: 13 },
+    { id: 9, title: "Свободное обсуждение", desc: "Q&A сессия по результатам презентации", targetSlide: 16 },
   ];
 
   return (
@@ -371,12 +438,12 @@ export const SolutionSlide: React.FC = () => {
   const steps = [
     {
       icon: PhoneCall,
-      title: "1. Карта и Регистрация",
+      title: "1. Карта и регистрация",
       desc: "На карте изначально видны только «процентики». Для отображения и получения скидки нужно ввести номер (бесшовная регистрация в карточке СТО), затем звонок / заявка."
     },
     {
       icon: FileCheck,
-      title: "2. Генерация Направления",
+      title: "2. Генерация направления",
       desc: "Формируется цифровая сущность с авто, деталями и скидкой."
     },
     {
