@@ -260,12 +260,12 @@ export const AgendaSlide: React.FC<AgendaSlideProps> = ({ onNavigate }) => {
     { id: 2, title: "Звонки -> Ремонты", desc: "Способ отслеживания ремонтов из звонков и обновление клиентского пути", targetSlide: 4 },
     { id: 3, title: "Программа лояльности", desc: "Статусы, скидки и преимущества клиентов", targetSlide: 6 },
     { id: 4, title: "Маркетинг-план", desc: "Спецпроект, выбранные каналы трафика и бюджетирование", targetSlide: 7 },
-    { id: 5, title: "Таймлайн и бюджет", desc: "Детализация запуска и финансовые показатели", targetSlide: 12 },
-    { id: 6, title: "Свободное обсуждение", desc: "Q&A сессия по результатам презентации", targetSlide: 14 },
+    { id: 5, title: "Таймлайн и бюджет", desc: "Детализация запуска и финансовые показатели", targetSlide: 11 },
+    { id: 6, title: "Свободное обсуждение", desc: "Q&A сессия по результатам презентации", targetSlide: 13 },
   ];
 
   return (
-    <div className="h-full flex flex-col justify-start pt-64 px-12 md:px-24">
+    <div className="h-full flex flex-col justify-start pt-32 px-12 md:px-24">
       <motion.div
         className="mb-8"
         initial={{ opacity: 0, x: -20 }}
@@ -1150,20 +1150,7 @@ export const MarketingForecastSlide: React.FC = () => {
 // --- Marketing Slide 11: Budget ---
 export const MarketingBudgetSlide: React.FC = () => {
   return (
-    <div className="h-full flex flex-col justify-start pt-24 px-8 md:px-12 lg:px-24 relative overflow-hidden">
-      {/* Background Vertical Labels - Enhanced and Correctly Positioned */}
-      <div className="absolute left-2 inset-y-0 w-16 flex flex-col pointer-events-none z-0">
-        <div className="flex-1 flex items-center justify-center">
-          <div className="rotate-[-90deg] whitespace-nowrap">
-            <span className="text-uremont-accent font-bold uppercase tracking-[1em] text-sm lg:text-base opacity-40">Бюджет</span>
-          </div>
-        </div>
-        <div className="flex-[0.8] flex items-center justify-center">
-          <div className="rotate-[-90deg] whitespace-nowrap">
-            <span className="text-uremont-accent font-bold uppercase tracking-[1em] text-sm lg:text-base opacity-40">Таймлайн</span>
-          </div>
-        </div>
-      </div>
+    <div className="h-full flex flex-col justify-start pt-28 px-8 md:px-12 lg:px-24 relative overflow-hidden">
 
       <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="mb-4 lg:mb-6 md:ml-12 relative z-10">
         <span className="text-uremont-accent font-mono text-sm tracking-wider">05 / МАРКЕТИНГ ПЛАН</span>
@@ -1351,7 +1338,7 @@ export const DiscussionSlide: React.FC = () => {
           className="mb-8"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Свободное обсуждение</h2>
-          <p className="text-lg md:text-xl text-gray-400">Готов ответить на ваши вопросы</p>
+          <p className="text-lg md:text-xl text-gray-400">Готовы ответить на ваши вопросы</p>
         </motion.div>
 
         <motion.div
