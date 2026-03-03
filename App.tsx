@@ -134,11 +134,9 @@ const App: React.FC = () => {
       </div>
 
       {/* --- Fixed Header --- */}
-      {currentSlide !== 12 && (
-        <div className="absolute top-8 left-8 md:left-12 z-50">
-          <Logo className="cursor-pointer hover:opacity-80 transition-opacity" />
-        </div>
-      )}
+      <div className="absolute top-8 left-8 md:left-12 z-50">
+        <Logo className="cursor-pointer hover:opacity-80 transition-opacity" />
+      </div>
 
       {/* --- Right Navigation --- */}
       <Navigation

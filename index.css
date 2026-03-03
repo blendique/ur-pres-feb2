@@ -6,12 +6,16 @@
     --color-uremont-accent: #10B981;
 }
 
+html {
+    zoom: 1.25;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: #020617;
     color: white;
     overflow: hidden;
-    zoom: 1.25;
+    height: 100%;
 }
 
 /* Custom Scrollbar hide */
