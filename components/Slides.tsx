@@ -189,7 +189,6 @@ export const CallFunnelSlide: React.FC = () => {
 export const RequestFunnelSlide: React.FC = () => {
   const metrics = [
     { label: "Всего заявок", value: "53", sub: "100%", icon: FileText, color: "text-white" },
-    { label: "План на месяц (AR)", value: "24", sub: "45%", icon: Target, color: "text-gray-400" },
     { label: "Взяли в работу (AR)", value: "32", sub: "60%", icon: UserCheck, color: "text-green-400" },
     { label: "Ремонт завершен (CR)", value: "20", sub: "38%", icon: Wrench, color: "text-uremont-blue", highlight: true },
   ];
@@ -203,7 +202,7 @@ export const RequestFunnelSlide: React.FC = () => {
         </h2>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl">
         {metrics.map((m, idx) => (
           <motion.div
             key={idx}
@@ -235,7 +234,7 @@ export const RequestFunnelSlide: React.FC = () => {
       >
         <div className="p-5 bg-green-500/5 border border-green-500/20 rounded-2xl">
           <div className="text-green-400 font-bold mb-2 flex items-center gap-2">
-            <TrendingUp size={16} /> Перевыполнение AR
+            <TrendingUp size={16} /> Высокий процент AR
           </div>
           <p className="text-gray-400 text-sm">СТО достаточно активно забирают заявки в работу.</p>
         </div>
