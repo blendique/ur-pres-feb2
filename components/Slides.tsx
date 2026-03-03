@@ -1055,10 +1055,7 @@ export const MarketingForecastSlide: React.FC = () => {
   return (
     <div className="h-full flex flex-col justify-center px-12 md:px-24">
       <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="mb-4">
-        <span className="text-uremont-accent font-mono text-sm tracking-wider">05 / МАРКЕТИНГ ПЛАН</span>
-        <h2 className="text-3xl md:text-5xl font-bold mt-2">
-          План-прогноз <span className="text-uremont-blue">Воронки</span>
-        </h2>
+        <span className="text-uremont-accent font-mono text-sm tracking-wider">05 / ПЛАН-ПРОГНОЗ ВОРОНКИ</span>
       </motion.div>
 
       <motion.div variants={itemVariants} initial="hidden" whileInView="visible" className="w-full max-w-6xl overflow-hidden rounded-2xl bg-[#0f172a] border border-white/10 shadow-2xl">
@@ -1067,10 +1064,10 @@ export const MarketingForecastSlide: React.FC = () => {
             <thead>
               <tr className="bg-white/5 border-b border-white/10 text-gray-400 font-medium tracking-wide">
                 <th className="p-2 border-r border-white/10">Параметр</th>
-                <th className="p-2 text-center w-28 border-r border-white/10">Февраль Факт</th>
-                <th className="p-2 text-center w-28 border-r border-white/10">Март План</th>
-                <th className="p-2 text-center w-28 border-r border-white/10">Апрель План</th>
-                <th className="p-2 text-center w-28">Май План</th>
+                <th className="p-2 text-center w-28 border-r border-white/10">Февраль (факт)</th>
+                <th className="p-2 text-center w-28 border-r border-white/10">Март (план)</th>
+                <th className="p-2 text-center w-28 border-r border-white/10">Апрель (план)</th>
+                <th className="p-2 text-center w-28">Май (план)</th>
               </tr>
             </thead>
             <tbody>
@@ -1287,13 +1284,9 @@ export const MarketingBudgetSlide: React.FC = () => {
           </div>
 
           <div className="bg-white/5 rounded-xl p-4 border border-white/10 mt-auto">
-            <div className="flex justify-between text-gray-500 text-[10px] mb-1">
-              <span>Сумма без НДС:</span>
+            <div className="flex justify-between text-blue-400 font-bold text-lg">
+              <span>Итого</span>
               <span>1 353 600 ₽</span>
-            </div>
-            <div className="flex justify-between text-blue-400 font-bold text-base">
-              <span>Итого (с НДС)</span>
-              <span>1 624 320 ₽</span>
             </div>
           </div>
         </motion.div>
@@ -1317,13 +1310,9 @@ export const MarketingBudgetSlide: React.FC = () => {
           </div>
 
           <div className="bg-white/5 rounded-xl p-4 border border-green-500/30 mt-auto backdrop-blur-sm">
-            <div className="flex justify-between text-gray-400 text-[10px] mb-1">
-              <span>Сумма без НДС:</span>
-              <span>6 980 000 ₽</span>
-            </div>
             <div className="flex justify-between text-green-400 font-bold text-lg">
-              <span>Итого (с НДС)</span>
-              <span>8 376 000 ₽</span>
+              <span>Итого</span>
+              <span>6 980 000 ₽</span>
             </div>
           </div>
         </motion.div>
@@ -1351,13 +1340,9 @@ export const MarketingBudgetSlide: React.FC = () => {
           </div>
 
           <div className="bg-white/5 rounded-xl p-4 border border-white/10 mt-auto">
-            <div className="flex justify-between text-gray-500 text-[10px] mb-1">
-              <span>Сумма без НДС:</span>
+            <div className="flex justify-between text-yellow-500 font-bold text-lg">
+              <span>Итого</span>
               <span>3 628 160 ₽</span>
-            </div>
-            <div className="flex justify-between text-yellow-400 font-bold text-base">
-              <span>Итого (с НДС)</span>
-              <span>4 353 792 ₽</span>
             </div>
           </div>
         </motion.div>
