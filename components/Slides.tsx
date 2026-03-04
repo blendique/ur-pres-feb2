@@ -134,7 +134,7 @@ export const FunnelResultsSlide: React.FC = () => {
 
 // --- Slide 2: Detailed Call Funnel ---
 export const CallFunnelSlide: React.FC = () => {
-  const metrics = [
+  const metrics: Array<{ label: string, value: string, sub?: string, icon: any, color: string, valueClass?: string, note?: string }> = [
     { label: "Всего звонков", value: "120", sub: " / 87 человек", icon: Phone, color: "text-white" },
     { label: "Дозвонились сразу", value: "99", sub: " / 83%", icon: CheckCircle, color: "text-green-400" },
     { label: "Переведено на ГЛ", value: "15", sub: " / 12%", icon: Headphones, color: "text-blue-400" },
@@ -1296,8 +1296,8 @@ export const MarketingBudgetSlide: React.FC = () => {
             Таймлайн и <span className="text-uremont-blue">бюджет</span>
           </h2>
         </div>
-        <div className="text-gray-500/50 text-sm font-mono mt-4 md:mt-0 pb-2">
-          Общий бюджет: 11 436 760 ₽
+        <div className="text-white text-sm font-mono mt-4 md:mt-0 pb-2">
+          Общий бюджет: 11 436 760 ₽ / Лидов: 2 301 (звонки и заявки) / Ремонтов: 433
         </div>
       </motion.div>
 
