@@ -436,29 +436,46 @@ export const SolutionSlide: React.FC = () => {
 
   const steps = [
     {
-      icon: PhoneCall,
-      title: "1. Карта и регистрация",
-      desc: "На карте изначально видны только «процентики». Для отображения и получения скидки нужно ввести номер (бесшовная регистрация в карточке СТО), затем звонок / заявка."
+      icon: Map,
+      title: "1. Гостевая карта",
+      desc: "На карте рядом с СТО изначально видны только «проценты» скидки и информация о том, что скидку можно получить, пройдя регистрацию.",
+      image: "https://pim4y1v96ezxxeus.public.blob.vercel-storage.com/sk1.png",
+      imageAspect: "1/1"
     },
     {
-      icon: FileCheck,
-      title: "2. Генерация направления",
-      desc: "Формируется цифровая сущность с авто, деталями и скидкой."
+      icon: PhoneCall,
+      title: "2. Бесшовная регистрация",
+      desc: "Клиент может пройти регистрацию прямо из карточки СТО, введя номер телефона.",
+      image: "https://pim4y1v96ezxxeus.public.blob.vercel-storage.com/sk2.png",
+      imageAspect: "1/1"
+    },
+    {
+      icon: Percent,
+      title: "3. Скидка и выбор СТО",
+      desc: "После регистрации, на карте видны все СТО, у которых есть скидка. СТО устанавливает скидку на запчасти, работы или чек целиком.",
+      image: "https://pim4y1v96ezxxeus.public.blob.vercel-storage.com/sk3.png",
+      imageAspect: "1/1"
     },
     {
       icon: QrCode,
-      title: "3. Клиенту — PDF с QR",
-      desc: "Отправляется по SMS или в ЛК, клиент показывает QR при приемке."
+      title: "4. Клиенту — PDF с QR",
+      desc: "Отправляется по SMS или в ЛК, клиент показывает QR при приемке.",
+      image: "https://pim4y1v96ezxxeus.public.blob.vercel-storage.com/naprav.png",
+      imageAspect: "642/995"
     },
     {
       icon: MonitorCheck,
-      title: "4. СТО берет в работу",
-      desc: "У СТО есть возможность ручного доступа к заявке в своем кабинете, но сканирование QR также напрямую ведет в нужный раздел."
+      title: "5. СТО берет в работу",
+      desc: "У СТО есть возможность ручного доступа к заявке в своем кабинете, но сканирование QR также напрямую ведет в нужный раздел.",
+      image: "https://pim4y1v96ezxxeus.public.blob.vercel-storage.com/sk4.png",
+      imageAspect: "1/1"
     },
     {
       icon: Star,
-      title: "5. История и BigData",
-      desc: "Ремонт остается в истории ремонтов в личном кабинете пользователя, а также отправляется в BigData для аналитики и персонализации."
+      title: "6. История и BigData",
+      desc: "Ремонт остается в истории ремонтов в личном кабинете пользователя, а также отправляется в BigData для аналитики и персонализации.",
+      image: null,
+      imageAspect: "1/1"
     }
   ];
 
@@ -485,7 +502,7 @@ export const SolutionSlide: React.FC = () => {
           transition={{ delay: 0.1, duration: 0.7 }}
           className="relative"
         >
-          <div className="space-y-4 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-0 md:before:translate-x-5 before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-white/20 before:to-transparent">
+          <div className="space-y-3 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-0 md:before:translate-x-5 before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-white/20 before:to-transparent">
             {steps.map((step, idx) => {
               const Icon = step.icon;
               const isActive = activeStep === idx;
@@ -498,9 +515,9 @@ export const SolutionSlide: React.FC = () => {
                   <div className={`flex items-center justify-center w-10 h-10 rounded-full border shrink-0 z-10 shadow-md transition-colors duration-300 ${isActive ? 'bg-uremont-blue border-uremont-blue text-white' : 'border-white/20 bg-[#0f172a] text-gray-400 group-hover:bg-uremont-blue/50 group-hover:text-white'}`}>
                     <Icon size={18} />
                   </div>
-                  <div className={`ml-6 w-full bg-white/5 border p-4 rounded-xl shadow transition-colors duration-300 ${isActive ? 'border-uremont-blue/50 bg-white/10' : 'border-white/10 group-hover:border-white/20'}`}>
-                    <h3 className={`font-bold mb-1 transition-colors duration-300 ${isActive ? 'text-uremont-blue' : 'text-white'}`}>{step.title}</h3>
-                    <p className="text-xs text-gray-400">{step.desc}</p>
+                  <div className={`ml-6 w-full bg-white/5 border p-3 rounded-xl shadow transition-colors duration-300 ${isActive ? 'border-uremont-blue/50 bg-white/10' : 'border-white/10 group-hover:border-white/20'}`}>
+                    <h3 className={`font-bold text-sm mb-0.5 transition-colors duration-300 ${isActive ? 'text-uremont-blue' : 'text-white'}`}>{step.title}</h3>
+                    <p className="text-xs text-gray-400 leading-snug">{step.desc}</p>
                   </div>
                 </div>
               )
@@ -508,72 +525,48 @@ export const SolutionSlide: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Right Column: Interactive Content Area (1:1 Aspect Ratio) */}
+        {/* Right Column: Interactive Image Preview */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2 }}
-          className="bg-white/5 rounded-3xl border border-white/10 flex flex-col justify-center items-center aspect-square shadow-2xl relative overflow-hidden p-8"
+          className="flex items-center justify-center"
         >
           <AnimatePresence mode="popLayout">
-            {activeStep === 1 ? (
+            {steps[activeStep]?.image ? (
               <motion.div
-                key="step-1"
+                key={`img-${activeStep}`}
                 initial={{ opacity: 0, scale: 0.95, y: 10 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: -10 }}
-                transition={{ duration: 0.2 }}
-                className="w-full h-full flex flex-col justify-center"
-              >
-                <div className="flex justify-between items-start mb-6">
-                  <div>
-                    <div className="text-2xl lg:text-3xl font-bold text-white mb-2"><span className="text-uremont-blue">«Направление на ремонт»</span></div>
-                  </div>
-                  <FileCheck className="text-uremont-blue w-10 h-10" />
-                </div>
-                <div className="space-y-6">
-                  <div className="flex gap-4 items-center">
-                    <Car className="text-gray-500 w-6 h-6 shrink-0" />
-                    <span className="text-base text-gray-300">Клиент, авто, описание проблемы, расшифровка ИИ.</span>
-                  </div>
-                  <div className="flex gap-4 items-center">
-                    <Building2 className="text-gray-500 w-6 h-6 shrink-0" />
-                    <span className="text-base text-gray-300">Выбранное СТО, размер скидки по статусу.</span>
-                  </div>
-                  <div className="flex gap-4 items-center">
-                    <QrCode className="text-gray-500 w-6 h-6 shrink-0" />
-                    <span className="text-base text-gray-300">Уникальный QR и PDF-квиток.</span>
-                  </div>
-                </div>
-              </motion.div>
-            ) : activeStep === 2 ? (
-              <motion.div
-                key="step-2"
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.2 }}
-                className="w-full h-full flex items-center justify-center p-2"
+                transition={{ duration: 0.25 }}
+                className="w-full flex items-center justify-center"
               >
                 <img
-                  src="https://placehold.co/519x806/0f172a/ffffff?text=QR+PDF"
-                  alt="PDF Preview"
-                  className="max-h-[100%] max-w-[100%] object-contain rounded-2xl border border-white/10 shadow-lg"
+                  src={steps[activeStep].image!}
+                  alt={steps[activeStep].title}
+                  style={{
+                    maxHeight: '65vh',
+                    width: 'auto',
+                    aspectRatio: steps[activeStep].imageAspect,
+                    objectFit: 'contain'
+                  }}
+                  className="rounded-2xl border border-white/10 shadow-2xl"
                 />
               </motion.div>
             ) : (
               <motion.div
-                key={`step-placeholder-${activeStep}`}
+                key={`text-${activeStep}`}
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.2 }}
-                className="w-full h-full border-2 border-dashed border-white/20 rounded-2xl flex flex-col items-center justify-center bg-black/20"
+                transition={{ duration: 0.25 }}
+                className="w-full aspect-square bg-white/5 rounded-3xl border border-white/10 flex flex-col justify-center items-center p-8 shadow-2xl"
               >
-                <div className="text-gray-500 mb-4 opacity-50">
+                <div className="text-gray-500 mb-6 opacity-40">
                   {React.createElement(steps[activeStep].icon, { size: 64 })}
                 </div>
-                <span className="text-gray-400 font-mono text-sm text-center px-4">Место для скриншота<br />600x600px (1:1)</span>
+                <p className="text-gray-400 text-center leading-relaxed">{steps[activeStep].desc}</p>
               </motion.div>
             )}
           </AnimatePresence>
