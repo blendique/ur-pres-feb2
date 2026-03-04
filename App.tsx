@@ -98,11 +98,11 @@ const App: React.FC = () => {
       case 5: return <CustomerProcessSlide2 />;
       case 6: return <LoyaltyProgramSlide />;
       case 7: return <MarketingProblemSlide />;
-      case 8: return <MarketingPromoSlide />;
-      case 9: return <MarketingPostcampSlide />;
-      case 10: return <MarketingChannelsSlide />;
-      case 11: return <MarketingBudgetSlide />;
-      case 12: return <MarketingForecastSlide />;
+      case 8: return <MarketingBudgetSlide />;
+      case 9: return <MarketingForecastSlide />;
+      case 10: return <MarketingPromoSlide />;
+      case 11: return <MarketingPostcampSlide />;
+      case 12: return <MarketingChannelsSlide />;
       case 13: return <DiscussionSlide />;
       default: return <AgendaSlide onNavigate={changeSlide} />;
     }

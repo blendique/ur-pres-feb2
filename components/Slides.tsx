@@ -73,6 +73,7 @@ export const FunnelResultsSlide: React.FC = () => {
           <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white/5 to-transparent"></div>
           <div className="text-sm text-gray-400 mb-1">Средняя стоимость ремонта</div>
           <div className="text-3xl lg:text-4xl font-bold text-white">7 320 <span className="text-uremont-accent text-xl">₽</span></div>
+          <div className="text-xs text-green-400 mt-2 font-medium">платит клиент в СТО</div>
         </motion.div>
       </div>
 
@@ -265,7 +266,7 @@ export const AgendaSlide: React.FC<AgendaSlideProps> = ({ onNavigate }) => {
     { id: 2, title: "Звонки -> Ремонты", desc: "Способ отслеживания ремонтов из звонков и обновление клиентского пути", targetSlide: 4 },
     { id: 3, title: "Программа лояльности", desc: "Статусы, скидки и преимущества клиентов", targetSlide: 6 },
     { id: 4, title: "Маркетинг-план", desc: "Спецпроект, выбранные каналы трафика и бюджетирование", targetSlide: 7 },
-    { id: 5, title: "Таймлайн и бюджет", desc: "Детализация запуска и финансовые показатели", targetSlide: 11 },
+    { id: 5, title: "Таймлайн и бюджет", desc: "Детализация запуска и финансовые показатели", targetSlide: 8 },
     { id: 6, title: "Свободное обсуждение", desc: "Q&A сессия по результатам презентации", targetSlide: 13 },
   ];
 
@@ -1288,11 +1289,16 @@ export const MarketingBudgetSlide: React.FC = () => {
   return (
     <div className="h-full flex flex-col justify-center px-8 md:px-12 lg:px-24 relative overflow-hidden">
 
-      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="mb-4 lg:mb-6 md:ml-12 relative z-10">
-        <span className="text-uremont-accent font-mono text-sm tracking-wider">05 / МАРКЕТИНГ ПЛАН</span>
-        <h2 className="text-3xl md:text-5xl font-bold mt-2">
-          Таймлайн и <span className="text-uremont-blue">бюджет</span>
-        </h2>
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants} className="mb-4 lg:mb-6 md:ml-12 relative z-10 flex flex-col md:flex-row md:items-end justify-between max-w-7xl">
+        <div>
+          <span className="text-uremont-accent font-mono text-sm tracking-wider">05 / МАРКЕТИНГ ПЛАН</span>
+          <h2 className="text-3xl md:text-5xl font-bold mt-2">
+            Таймлайн и <span className="text-uremont-blue">бюджет</span>
+          </h2>
+        </div>
+        <div className="text-gray-500/50 text-sm font-mono mt-4 md:mt-0 pb-2">
+          Общий бюджет: 11 436 760 ₽
+        </div>
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 max-w-7xl w-full mx-auto mb-10 md:ml-12 relative z-10">
@@ -1310,14 +1316,14 @@ export const MarketingBudgetSlide: React.FC = () => {
             </div>
             <div className="flex justify-between border-b border-white/5 pb-1.5">
               <span className="text-gray-400">Перформанс (digital)</span>
-              <span className="text-white font-medium">600 000₽</span>
+              <span className="text-white font-medium">450 000₽</span>
             </div>
           </div>
 
           <div className="bg-white/5 rounded-xl p-4 border border-white/10 mt-auto">
             <div className="flex justify-between text-blue-400 font-bold text-lg">
               <span>Итого</span>
-              <span>1 353 600₽</span>
+              <span>1 203 600₽</span>
             </div>
           </div>
         </motion.div>
@@ -1336,14 +1342,14 @@ export const MarketingBudgetSlide: React.FC = () => {
             </div>
             <div className="flex justify-between border-b border-white/5 pb-1.5">
               <span className="text-gray-400">Перформанс (digital)</span>
-              <span className="text-white font-medium">700 000₽</span>
+              <span className="text-white font-medium">550 000₽</span>
             </div>
           </div>
 
           <div className="bg-white/5 rounded-xl p-4 border border-green-500/30 mt-auto backdrop-blur-sm">
             <div className="flex justify-between text-green-400 font-bold text-lg">
               <span>Итого</span>
-              <span>6 980 000₽</span>
+              <span>6 830 000₽</span>
             </div>
           </div>
         </motion.div>
@@ -1362,7 +1368,7 @@ export const MarketingBudgetSlide: React.FC = () => {
             </div>
             <div className="flex justify-between border-b border-white/5 pb-1.5">
               <span className="text-gray-400">Перформанс (digital)</span>
-              <span className="text-white font-medium">700 000₽</span>
+              <span className="text-white font-medium">550 000₽</span>
             </div>
             <div className="flex justify-between border-b border-white/5 pb-1.5">
               <span className="text-gray-400">1000 литров топлива</span>
@@ -1373,7 +1379,7 @@ export const MarketingBudgetSlide: React.FC = () => {
           <div className="bg-white/5 rounded-xl p-4 border border-white/10 mt-auto">
             <div className="flex justify-between text-yellow-500 font-bold text-lg">
               <span>Итого</span>
-              <span>3 553 160₽</span>
+              <span>3 403 160₽</span>
             </div>
           </div>
         </motion.div>
