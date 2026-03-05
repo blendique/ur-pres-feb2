@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Logo } from './components/Logo';
 import { Navigation } from './components/Navigation';
-import { /* FunnelResultsSlide, CallFunnelSlide, RequestFunnelSlide, AgendaSlide, SolutionSlide, */ CustomerProcessSlide2, LoyaltyProgramSlide /* , MarketingProblemSlide, MarketingPromoSlide, MarketingPostcampSlide, MarketingChannelsSlide, MarketingBudgetSlide, MarketingForecastSlide, DiscussionSlide */ } from './components/Slides';
+import { /* FunnelResultsSlide, CallFunnelSlide, RequestFunnelSlide, AgendaSlide, CustomerProcessSlide2, */ SolutionSlide, LoyaltyProgramSlide /* , MarketingProblemSlide, MarketingPromoSlide, MarketingPostcampSlide, MarketingChannelsSlide, MarketingBudgetSlide, MarketingForecastSlide, DiscussionSlide */ } from './components/Slides';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const TOTAL_SLIDES = 2; // было 14, временно оставлено только slide 5 и slide 7
@@ -90,9 +90,9 @@ const App: React.FC = () => {
 
   const renderSlide = () => {
     switch (currentSlide) {
-      // Временно оставлены только slide 5 и slide 7
-      case 0: return <CustomerProcessSlide2 />; // slide 5
-      case 1: return <LoyaltyProgramSlide />;   // slide 7
+      // Временно оставлены только slide 5 (SolutionSlide) и slide 7 (LoyaltyProgramSlide)
+      case 0: return <SolutionSlide />;        // slide 5 — путь клиента с hover-фотками
+      case 1: return <LoyaltyProgramSlide />;  // slide 7 — программа лояльности
       // case 0: return <AgendaSlide onNavigate={changeSlide} />;
       // case 1: return <FunnelResultsSlide />;
       // case 2: return <CallFunnelSlide />;
@@ -107,7 +107,7 @@ const App: React.FC = () => {
       // case 11: return <MarketingPostcampSlide />;
       // case 12: return <MarketingChannelsSlide />;
       // case 13: return <DiscussionSlide />;
-      default: return <CustomerProcessSlide2 />;
+      default: return <SolutionSlide />;
     }
   };
 
