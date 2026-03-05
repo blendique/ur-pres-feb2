@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Logo } from './components/Logo';
 import { Navigation } from './components/Navigation';
-import { FunnelResultsSlide, CallFunnelSlide, RequestFunnelSlide, AgendaSlide, SolutionSlide, CustomerProcessSlide2, LoyaltyProgramSlide, MarketingProblemSlide, MarketingPromoSlide, MarketingPostcampSlide, MarketingChannelsSlide, MarketingBudgetSlide, MarketingForecastSlide, DiscussionSlide } from './components/Slides';
+import { /* FunnelResultsSlide, CallFunnelSlide, RequestFunnelSlide, AgendaSlide, SolutionSlide, */ CustomerProcessSlide2, LoyaltyProgramSlide /* , MarketingProblemSlide, MarketingPromoSlide, MarketingPostcampSlide, MarketingChannelsSlide, MarketingBudgetSlide, MarketingForecastSlide, DiscussionSlide */ } from './components/Slides';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const TOTAL_SLIDES = 14;
+const TOTAL_SLIDES = 2; // было 14, временно оставлено только slide 5 и slide 7
 
 const App: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -90,21 +90,24 @@ const App: React.FC = () => {
 
   const renderSlide = () => {
     switch (currentSlide) {
-      case 0: return <AgendaSlide onNavigate={changeSlide} />;
-      case 1: return <FunnelResultsSlide />;
-      case 2: return <CallFunnelSlide />;
-      case 3: return <RequestFunnelSlide />;
-      case 4: return <SolutionSlide />;
-      case 5: return <CustomerProcessSlide2 />;
-      case 6: return <LoyaltyProgramSlide />;
-      case 7: return <MarketingProblemSlide />;
-      case 8: return <MarketingBudgetSlide />;
-      case 9: return <MarketingForecastSlide />;
-      case 10: return <MarketingPromoSlide />;
-      case 11: return <MarketingPostcampSlide />;
-      case 12: return <MarketingChannelsSlide />;
-      case 13: return <DiscussionSlide />;
-      default: return <AgendaSlide onNavigate={changeSlide} />;
+      // Временно оставлены только slide 5 и slide 7
+      case 0: return <CustomerProcessSlide2 />; // slide 5
+      case 1: return <LoyaltyProgramSlide />;   // slide 7
+      // case 0: return <AgendaSlide onNavigate={changeSlide} />;
+      // case 1: return <FunnelResultsSlide />;
+      // case 2: return <CallFunnelSlide />;
+      // case 3: return <RequestFunnelSlide />;
+      // case 4: return <SolutionSlide />;
+      // case 5: return <CustomerProcessSlide2 />;
+      // case 6: return <LoyaltyProgramSlide />;
+      // case 7: return <MarketingProblemSlide />;
+      // case 8: return <MarketingBudgetSlide />;
+      // case 9: return <MarketingForecastSlide />;
+      // case 10: return <MarketingPromoSlide />;
+      // case 11: return <MarketingPostcampSlide />;
+      // case 12: return <MarketingChannelsSlide />;
+      // case 13: return <DiscussionSlide />;
+      default: return <CustomerProcessSlide2 />;
     }
   };
 
